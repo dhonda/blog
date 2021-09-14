@@ -1,0 +1,26 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "Delanie Honda",
+      "author": [],
+      "contents": "\r\n\r\n          \r\n          \r\n          Delanie Honda\r\n          \r\n          \r\n          Home\r\n          About\r\n          Projects\r\n          ☰\r\n          \r\n          \r\n      \r\n        \r\n          \r\n            \r\n              \r\n            \r\n              Delanie Honda\r\n            \r\n            \r\n              \r\n                \r\n                    \r\n                      \r\n                        LinkedIn\r\n                      \r\n                    \r\n                  \r\n                                    \r\n                    \r\n                      \r\n                        Twitter\r\n                      \r\n                    \r\n                  \r\n                                    \r\n                    \r\n                      \r\n                        GitHub\r\n                      \r\n                    \r\n                  \r\n                                  \r\n            \r\n          \r\n        \r\n        \r\n        \r\n          \r\n            \r\n            Bio\r\n            I am an educator dedicated to using data and evidence driven practices to improve students’ learning outcomes around the world. During my five years of teaching English as a Second Language (ESL) abroad, I recognized similar trends across countries which prevented learners from gaining a high-quality education. I returned to school and received a Masters in Education, where I focused on program evaluation in developing contexts. I have experience with conducting research in the areas of education technology, girls’ education, and the future of work.\r\n            \r\n            \r\n            Education\r\n            Masters in Education, International Education Policy\r\n            \r\n            Harvard Graduate School of Education, Massachusetts | May 2020\r\n            \r\n            Bachelor of Arts, English Literature\r\n            \r\n            Wheaton College, Massachusetts | May 2014\r\n            \r\n            \r\n          \r\n        \r\n      \r\n    \r\n\r\n    \r\n      \r\n        \r\n          \r\n            \r\n              \r\n            \r\n              Delanie Honda\r\n            \r\n            \r\n              \r\n                \r\n                                    \r\n                    \r\n                      LinkedIn\r\n                    \r\n                  \r\n                                    \r\n                    \r\n                      Twitter\r\n                    \r\n                  \r\n                                    \r\n                    \r\n                      GitHub\r\n                    \r\n                  \r\n                                  \r\n              \r\n            \r\n            \r\n              \r\n              Bio\r\n              I am an educator dedicated to using data and evidence driven practices to improve students’ learning outcomes around the world. During my five years of teaching English as a Second Language (ESL) abroad, I recognized similar trends across countries which prevented learners from gaining a high-quality education. I returned to school and received a Masters in Education, where I focused on program evaluation in developing contexts. I have experience with conducting research in the areas of education technology, girls’ education, and the future of work.\r\n              \r\n              \r\n              Education\r\n              Masters in Education, International Education Policy\r\n              \r\n              Harvard Graduate School of Education, Massachusetts | May 2020\r\n              \r\n              Bachelor of Arts, English Literature\r\n              \r\n              Wheaton College, Massachusetts | May 2014\r\n              \r\n              \r\n            \r\n        \r\n      \r\n    \r\n\r\n    \r\n    \r\n    ",
+      "last_modified": "2021-09-12T15:19:25-04:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Blog",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-09-13T10:29:17-04:00"
+    },
+    {
+      "path": "projects.html",
+      "title": "Projects",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-09-12T15:42:35-04:00"
+    }
+  ],
+  "collections": ["posts/posts.json", "projects/projects.json"]
+}

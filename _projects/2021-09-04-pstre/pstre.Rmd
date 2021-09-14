@@ -1,0 +1,196 @@
+---
+title: "Problem-solving in technology rich environments"
+description: |
+  How prepared are workers to complete tasks in the 21st century?
+preview: image.jpg
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include = FALSE}
+library(dplyr)
+library(plotly)
+library(ggthemes)
+library(hrbrthemes)
+library(countrycode)
+library(shiny)
+library(magrittr)
+library (rgdal)
+library (leaflet)
+library (htmltools)
+```
+
+``` {r setup_data, include = FALSE, cache = TRUE}
+#avg_bar_plot 
+country_mean <- read.csv("psl_means.csv")
+country_mean$TYPE3 %<>% factor(levels = c("Low", "Middle", "High"), labels = c("Low Income", "Middle Income", "High Income"))
+
+#leaflet
+map_data <- read.csv("prof_levels_country_full.csv")
+
+world_shp <- readOGR("TM_WORLD_BORDERS-0.3/TM_WORLD_BORDERS-0.3.shp")
+
+#get data aligned for leaflet
+map_data <- subset(map_data, is.element(map_data$ISO3, world_shp$ISO3))
+world_shp <- subset(world_shp, is.element(world_shp$ISO3, map_data$ISO3))
+map_data <- map_data[order(match(map_data$ISO3, world_shp$ISO3)),]
+
+#skills grap
+skills <- read.csv("prof_levels_skill.csv")
+skills$Benchmarks %<>% factor(labels = c('Below Level 1', 'Level 1', 'Level 2', 'Level 3')) %>% factor(levels = c('Below Level 1', 'Level 1', 'Level 2', 'Level 3')) 
+skills$ISCOSKIL4 %<>%factor(labels = c("Elementary", "Semi-skilled blue collar", "Semi-skilled white collar", "Skilled"))
+```
+
+# About
+<i>This was my final project submission for the course S054: Making Data Count: Asking and Answering Questions with Data taught at the Harvard Graduate School of Education.</i>
+
+![Workers may soon find themselves out on a limb if they are not prepared for the 21st century labor market](image.jpg "A man cutting down branches from a tree and suspended by ropes")
+
+# Introduction
+
+**Imagine that you are planning a party** and have sent out email invitations. In your email inbox, you have gathered the responses to the invite and have a set of folders. You need to sort the “Yes” and “No” responses into the appropriate folder. This scenario may seem like a relatively straightforward task. But 45% of respondents who attempted this question for the Survey of Adult Skills either incorrectly or only partially answered.
+
+This result should concern governments and business leaders. The 21st century world of work will require workers to be better versed in using digital tools and have strong non-routine cognitive skills to process and navigate information. Yet a large percentage of adults in OECD member countries are operating at a basic level in this domain. A workforce which lacks skills that are becoming increasingly fundamental will have both social and economic consequences for workers and industries.
+
+```{r avg_bar_graph, echo = FALSE, warning=FALSE, cache = TRUE, fig.height= 8.5}
+avg_bar_graph <- ggplot(subset(country_mean, !is.na(Mean)), 
+       aes(fill = TYPE3, x = reorder(CNTRYID, -Mean), Mean)) + 
+  geom_bar(stat = "identity") + 
+  coord_flip() + 
+  theme_ipsum_rc() + 
+  labs(x = NULL, y = "Average PSTRE score", fill = NULL) + 
+  scale_fill_manual(values = c("orangered2", "lightblue", "steelblue"), na.value = "gray50", labels = c("Low Income", "Middle Income", "High Income", "Average")) + 
+  labs(title = "Average PSTRE score by country", subtitle = "Higher income does not always equal higher average scores", caption = "Figure 1 | Low income: GNI < $25,000, Middle income: $25,000 > GNI > $50,000, High income: GNI > $50,000") + 
+  theme(plot.title = element_text(size = 18), legend.text = element_text(size = 9), legend.title = element_text(size = 9), axis.text.y = element_text(size = 9), legend.position = "top")
+
+avg_bar_graph
+```
+
+Using questions like the one described above, the Survey of Adult Skills measures respondents’ problem-solving ability in technology-rich environments (PSTRE). It defines this domain as “using digital technology, communication tools and networks to acquire and evaluate information, communicate with others and perform practical tasks.” ^[OECD. (2016). *Skills Matter: Further Results from the Survey of Adult Skills*. OECD. https://doi.org/10.1787/9789264258051-en] The survey, designed by the <a href = "https://www.oecd.org/skills/piaac/">OECD Programme for the International Assessment of Adult Competencies</a>, has been conducted in over 40 countries and measures the literacy, numeracy and PSTRE skills of people ages 16 to 65. Scores for PSTRE are between 0 and 500, and there are four benchmarks. Those scoring “Below Level 1” can complete simple, well-defined tasks which require few steps to solve and use a generic interface. The highest proficiency is Level 3, which translates to being able to complete complex, multi-step tasks which may require respondents to make use of specific functions and evaluate the relevance or reliability of information.
+
+The graph above shows average PSTRE scores for the 33 OECD member countries with this data. Upper-middle- and high-income nations such as Japan, Finland and Sweden have as much as a 70 point higher average PSTRE score compared to lower income countries, such as Ecuador, Peru, and Turkey. While the difference may be unsurprising given the positive relationship between development and ICT penetration, ^[International Telecommunication Union. (2019). *Measuring digital development: Facts and figures 2019*. International Telecommunication Union. https://www.itu.int/en/ITU-D/Statistics/Documents/facts/FactsFigures2019.pdf] a nation’s GNI does not necessarily mean its citizens are better prepared to perform well. The United States has nearly 20% of respondents scoring “Below Level 1” which can be seen in the map below. This proportion is comparable to Estonia.
+
+### **Percent of respondents at different levels of proficency**
+Two thirds of countries surveyed had the majority of individuals scoring at Level 1 proficiency
+
+*Select different proficiency levels to see variations across and between countries*
+
+```{r leaflet_setup, echo = FALSE, cache = TRUE}
+bins2 <- c(8, 16, 24, 32, 40, 48, 56, 64)
+
+bins3 <- c(0, 2, 4, 6, 8, 10, 12, 14)
+
+mypalette_below1 <- colorBin(palette = "viridis", domain = map_data$Below.Level.1, bins = bins2)
+mypalette_1 <- colorBin(palette = "viridis", domain = map_data$Level.1, bins = bins2)
+mypalette_2 <- colorBin(palette = "viridis", domain = map_data$Level.2, bins = bins2)
+mypalette_3 <- colorBin(palette = "viridis", domain = map_data$Level.3, bins = bins3)
+
+popup_below1 <- paste0("Country: ", map_data$CNTRYID, "<br>", "Below Level 1: ", map_data$Below.Level.1, "%")
+popup_1 <- paste0("Country: ", map_data$CNTRYID, "<br>", "Level 1: ", map_data$Level.1, "%")
+popup_2 <- paste0("Country: ", map_data$CNTRYID, "<br>", "Level 2: ", map_data$Level.2, "%")
+popup_3 <- paste0("Country: ", map_data$CNTRYID, "<br>", "Level 3: ", map_data$Level.3, "%")
+
+```
+```{r create_map, include=FALSE}
+my_map <- leaflet() %>%
+  addProviderTiles("Esri.WorldGrayCanvas")%>%
+  setView(-5,40,2) %>%
+  addPolygons(data = world_shp, 
+              weight = 1,
+              color = "white",
+              fillOpacity = 0.8,
+              fillColor = ~mypalette_below1(map_data$Below.Level.1),
+              highlight = highlightOptions(
+                weight = 3,
+                color = "black",
+                fillOpacity = 0.6),
+              label = lapply(popup_below1, HTML),
+              group = "Below Level 1") %>%
+  addLegend(pal = mypalette_below1,
+            title = "Percentage Below Level 1",
+            values = map_data$Below.Level.1,
+            opacity = 0.8,
+            position = "bottomleft",
+            labFormat = labelFormat(suffix = "%"),
+            group = "Below Level 1") %>%
+  addPolygons(data = world_shp, 
+              weight = 1,
+              color = "white",
+              fillOpacity = 0.8,
+              fillColor = ~mypalette_1(map_data$Level.1),
+              highlight = highlightOptions(
+                weight = 3,
+                color = "black",
+                fillOpacity = 0.6),
+              label = lapply(popup_1, HTML),
+              group = "Level 1") %>%
+  addLegend(pal = mypalette_1,
+            title = "Percentage at Level 1",
+            values = map_data$Level.1,
+            opacity = 0.8,
+            position = "bottomleft",
+            labFormat = labelFormat(suffix = "%"),
+            group = "Level 1") %>%
+  addPolygons(data = world_shp, 
+              weight = 1,
+              color = "white",
+              fillOpacity = 0.8,
+              fillColor = ~mypalette_2(map_data$Level.2),
+              highlight = highlightOptions(
+                weight = 3,
+                color = "black",
+                fillOpacity = 0.6),
+              label = lapply(popup_2, HTML),
+              group = "Level 2") %>%
+  addLegend(pal = mypalette_2,
+            title = "Percentage at Level 2",
+            values = map_data$Level.2,
+            opacity = 0.8,
+            position = "bottomleft",
+            labFormat = labelFormat(suffix = "%"),
+            group = "Level 2") %>%
+  addPolygons(data = world_shp, 
+              weight = 1,
+              color = "white",
+              fillOpacity = 0.8,
+              fillColor = ~mypalette_3(map_data$Level.3),
+              highlight = highlightOptions(
+                weight = 3,
+                color = "black",
+                fillOpacity = 0.6),
+              label = lapply(popup_3, HTML),
+              group = "Level 3") %>%
+  addLegend(pal = mypalette_3,
+            title = "Percentage at Level 3",
+            values = map_data$Level.3,
+            opacity = 0.8,
+            position = "bottomleft",
+            labFormat = labelFormat(suffix = "%"),
+            group = "Level 3") %>%
+  addLayersControl(
+    overlayGroups = c("Below Level 1", "Level 1", "Level 2", "Level 3"),
+    position = "bottomleft",
+    options = layersControlOptions(collapsed = FALSE)) %>%
+  hideGroup(c("Level 1", "Level 2", "Level 3"))
+```
+
+``` {r print_map, out.width='100%', fig.height=7.5, echo = FALSE}
+my_map
+```
+
+A consequence of the gap between low and high performing adults within countries could be exacerbated inequalities. Low-skill and blue-collar workers face more job uncertainty. These types of work are more likely to be automated and workers in these occupations have the smallest percentage of respondents reaching Level 2 or Level 3 proficiency as seen in Figure 3. In some countries, particularly in South America, workers already feel constrained. When asked if the lack of ICT skills effected their career, 29% of Ecuadorian respondents answered “Yes.” Without access to training or education which will prepare these workers for the future of work, they will fall farther behind their higher skilled peers.
+
+```{r skills_graph, echo = FALSE, warning=FALSE, fig.height=7.7, cache = TRUE}
+skills_plot1 <- ggplot(subset(skills, !is.na(ISCOSKIL4)), aes(x = Benchmarks, y = Percentage, fill = ISCOSKIL4)) + 
+  geom_bar(stat = "identity", position = "dodge", color = "black") + 
+  labs(x = NULL, title = "Proficiency levels by occupation types", subtitle = "Low-skilled and blue-collar labor workers tend to have lower PSTRE \nproficiency", caption = "Figure 3")
+
+skills_plot1 + 
+  theme_ipsum_rc() + theme(legend.title = element_blank(), legend.position = "top") + 
+  scale_fill_brewer(palette = "Blues") + theme(axis.title.y = (element_text(size = 12)))
+```
+
+Another consequence of low proficiency across countries is a loss in labor productivity. A Dutch study by the University of Twente finds that for the Netherlands, an average of 13 minutes and 7 seconds of productive labor time per day is lost due to insufficient ICT skills. ^[van Deursen, A. J. A. M., & van Dijk, J. A. G. M. (2012). *CTRL ALT DELETE: Lost productivity due to IT problems and inadequate computer skills in the workplace*. University of Twente.] The greatest contributor is Internet use, where PSTRE skill is most relevant because of its unstructured nature and vast quantities of information. When combined with lost productive time due to ICT malfunctions, the author estimates the productivity loss could cost 19.3 billion euros ($25.5bn USD). While the study acknowledges the limitation of the cost estimate because it relies on self-reported data, this figure points towards considerable financial loss.
+
+As the first comprehensive, cross-national assessment of problem-solving skills in technology rich environments, the Survey provides valuable data for countries. This information can be used to inform curriculum for adult education, upskilling programs and vocation and technical training. The results of the Survey should also be shared with industry leaders, to encourage investment in workforce training programs. However, the focus should not be solely on increasing ICT penetration or computer literacy skills. Although building infrastructure and providing equipment is part of the solution, developing the problem-solving and other cognitive skills of adults should be the priority. Any company that found that 45% of its workers lacked fundamental skills to operate machinery would immediately conduct performance reviews and implement training. We should do the same for our global workforce.

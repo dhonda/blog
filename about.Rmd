@@ -1,0 +1,27 @@
+---
+title: "Delanie Honda"
+image: "avatar.png"
+links:
+  - label: LinkedIn
+    url: "https://linkedin.com/in/delanie-honda"
+  - label: Twitter
+    url: "https://twitter.com/delaniehonda"
+  - label: GitHub
+    url: "https://github.com/dhonda"
+output:
+  postcards::trestles
+---
+
+### Bio
+
+I am an educator dedicated to using data and evidence driven practices to improve students' learning outcomes around the world. During my five years of teaching English as a Second Language (ESL) abroad, I recognized similar trends across countries which prevented learners from gaining a high-quality education. I returned to school and received a Masters in Education, where I focused on program evaluation in developing contexts. I have experience with conducting research in the areas of education technology, girls' education, and the future of work. 
+
+### Education
+
+**Masters in Education, International Education Policy** 
+<p>Harvard Graduate School of Education, Massachusetts | May 2020</p>
+
+**Bachelor of Arts, English Literature**
+<p>Wheaton College, Massachusetts | May 2014</p>
+
+

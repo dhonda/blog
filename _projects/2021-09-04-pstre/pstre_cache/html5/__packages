@@ -1,0 +1,13 @@
+base
+dplyr
+ggplot2
+plotly
+ggthemes
+hrbrthemes
+countrycode
+shiny
+magrittr
+sp
+rgdal
+leaflet
+htmltools

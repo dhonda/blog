@@ -1,0 +1,212 @@
+---
+title: "I'm Your Neighbor Books"
+image: "banner.png"
+description: |
+  Exploring a collection of 500+ children and young adult literature featuring New Arrivals and New Americans 
+preview: banner.png
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+#setup--------------------------------------------####
+#library needed packages and load dataset
+library(viridis)
+library(ggmap)
+library(tidyverse)
+library(dplyr)
+library(magrittr)
+library(stringr)
+library(countrycode)
+library(plotly)
+library(treemap)
+library(d3treeR)
+```
+```{r load, include = FALSE, cache = TRUE}
+books <- read.csv("books_master.csv")
+
+#Explore tab-----------------------------------------####
+#make variables for inputs
+books$age <- factor(books$age, levels = c("2+", "3+", "4+", "5+", "6+", "7+", "8+", "9+", "10+", "11+", "12+", "13+", "14+", "15+", "16+"))
+
+age_unique <- unique(books$age)
+author_unique <- unique(books$author)
+origin_unique<- unique(c(as.character(books$origin_1), as.character(books$origin_2)))
+setting_unique<- unique(c(as.character(books$primary_setting), as.character(books$secondary_setting)))
+
+#descriptive plots--------------------------------------####
+#setup for inputs
+continent_unique <- unique(books$continent)
+
+#interactive--------------------------------------------####
+##opinons and books
+gallup2 <- read.csv("gallup2.csv")
+
+#rename my variables
+gallup2 %<>% rename(poll_date = Date2, present_level = Present.Level, increase = Increased, decrease = Decreased, no_opinon = No.opinion, book_num = Number_of_books)
+names(gallup2)
+
+##Bubble plot
+coords <- read.csv("countries.csv")
+
+#create new columns with iso3c and region 
+books$iso <- countrycode(books$primary_setting, origin = 'country.name', destination = 'iso2c')
+books$region <- countrycode(books$primary_setting, origin = 'country.name', destination = 'region')
+
+#rename the country variable to match variables in other datasets
+coords %<>% rename(iso = country, lat = latitude, long = longitude)
+
+#subset coord data set to only include those found in the books dataset
+coords_points <- subset(coords, is.element(coords$iso, books$iso))
+is.element(coords_points$iso, books$iso) #check to see if they line up
+
+#subest books dataset to only include those with recognized country settings, merge with coordinates, group to get the counts of each setting
+books_map <- subset(books, !is.na(books$iso))
+books_map <- merge(books_map, coords_points, by = "iso")
+books_map1 <- books_map %>%
+  group_by(long, lat, region, iso, primary_setting) %>% summarize(n = n())
+
+#set up new data frame with list of books with 2 settings
+books$iso2 <- countrycode(books$secondary_setting, origin = 'country.name', destination = 'iso2c')
+books_route <- subset(books, !is.na(books$iso2))
+
+coords_route <- subset(coords, is.element(coords$iso, books_route$iso2))
+coords_route %<>% rename(iso2 = iso, long2 = long, lat2 = lat) #rename iso column name to match with books_route
+
+#merge dataset
+books_route <- inner_join(books_route, books_map)
+books_route <- merge(books_route, coords_route, by = 'iso2')
+books_route$region2 <- countrycode(books_route$secondary_setting, origin = 'country.name', destination = 'region')
+names(books_route)
+
+#create a count of the number of connections
+summary <- books_route %>% 
+  dplyr::count(lat, long , region, lat2, long2, region2) %>%
+  arrange(n)
+#check that no countries start and end in the same place
+summary_sub <- subset(summary, lat != lat2 & long != long2)
+```
+
+# About
+<i>This was my final project submission for S022: Introduction to Statistical Computing and Data Science in Education taught at the Harvard Graduate School of Education. The original output was an interactive Shiny dashboard. Pieces of the project are recreated here. Co-created with Stella T., (MPA in International Development).</i>
+
+![I'm Your Neighbor](banner.png "An image of the I'm Your Neighbor logo on the left: a speech bubble with the text \"i'm your neighbor\" in English and other languages. Next to the logo is the text \"Sharing children's books featuring New Arrivals and New Americans to build a stronger culture of Belonging and Welcoming\"")
+
+I’m Your Neighbor Books is a database of children and young adult literature which have refugee or immigrant themes. The focus of these books are “new arrivals” or groups of people who have immigrated (mainly to Western countries) in the late 20th and early 21st centuries. The book database is used by the nonprofit organization the Welcoming Library, which provides schools and libraries with curated sets of books and accompanying learning materials. Learn more about <a href = "https://imyourneighborbooks.org">**I'm Your Neighbor**</a> and <a href = "https://imyourneighborbooks.org/welcoming-library/">**The Welcoming Library**</a>.
+
+# Descriptive Analysis
+
+These three charts which visualize the database characteristics by age, type of book, and “own voices.” For this last characteristic, “Yes” means that the author matches the cultural identity of the character(s) represented. In the collection, about 1/3 of the authors are writing about their own culture. This is important to note as people increasingly discuss diversity in children literature and sharing authentic stories that reflect different experiences. 
+
+```{r age_plot, include = FALSE, cache= TRUE}
+age_plot <- ggplot(data = books, aes(x=age)) +
+  geom_bar(fill="#7570B3") +
+  geom_text(stat='count', aes(label=..count..), vjust=-0.5) + 
+  labs(title = "Number of books by age", x="Age", y = "Count") +
+  theme(panel.background = element_blank(), axis.text.x = element_text(size =11), axis.text.y = element_text(size = 10)) +
+  coord_cartesian(ylim=c(0,85))
+```
+```{r age_plot_graph, echo = FALSE}
+age_plot
+```
+
+``` {r book_type, include = FALSE, cache = TRUE}
+type_plot <- ggplot(data= books, aes(x=forcats::fct_infreq(type)),stat = "count") +
+  geom_bar(fill="#D95F02") +
+  geom_text(stat='count', aes(label=..count..), hjust = -0.2) + 
+  labs(title = "Types of books", x="Type of Books", y = "Count") +
+  theme (panel.background = element_blank(), axis.text.x = element_text(size = 10), axis.text.y = element_text(size = 11)) + coord_flip()
+```
+
+```{r book_type_plot, echo = FALSE}
+type_plot
+```
+
+```{r own_voices, include = FALSE, cache = TRUE}
+voice_table <- books %>% group_by(own_voice) %>% tally() %>% mutate(share=n/sum(n)*100.0)
+
+voice_plot <- ggplot(data = voice_table, aes(x="", y=share, fill=own_voice)) +
+  geom_bar(position="stack", stat = "identity", color="white") +
+  coord_polar(theta = "y") +
+  geom_text(aes(label = paste(own_voice, round(share), "%")), 
+            position = position_stack(vjust = 0.5)) +
+  guides(fill = guide_legend(reverse = TRUE))+ theme_void() +
+  theme(panel.background = element_blank(), legend.position = "none") +
+  labs(title = "Own voices: Are authors writing about their own culture?") +
+  scale_fill_brewer(palette = "Dark2") 
+```
+
+```{r own_voices_plot, echo = FALSE}
+voice_plot
+```
+
+# Map
+The interactive map below visualizes the immigrant connection depicted within the collection. This map is not able to show the direction of travel (for example, if a character comes to the United States from Afghanistan), which is why lines refer to "connections" rather than "journeys." However, in the majority of cases, characters are leaving their country of origin to come to the United States, Canada, or Europe.
+
+```{r map, include = FALSE}
+geo <- list(showland = TRUE, 
+            landcolor = toRGB("seashell2"),
+            showcoastlines = FALSE,
+            coastlinewidth =0.2,
+            showcountries = TRUE,
+            countrywidth = 0.1,
+            framewidth = 0.2,
+            projection = list(type = 'miller')
+            )
+fig <- plot_geo() %>% add_markers(data = books_map1, x = ~long, y = ~lat, size = ~n, color = ~region, opacity = 1, text = ~paste0("Books set in", "<br>", books_map1$primary_setting,": ", books_map1$n), hoverinfo = "text", showlegend = FALSE) %>% add_segments(data = summary_sub, x = ~long, xend = ~long2, y = ~lat, yend = ~lat2, color = ~region, hoverinfo = "none", alpha = 0.5, size = I(2), visible = "legendonly")
+fig<- fig %>% layout(geo = geo) %>% layout(legend = list(x = 0, y =1, orientation = "h", title = list(text = "<b>Immigrant Connections</b>")))
+```
+``` {r map_plot, echo = FALSE, fig.height = 6}
+fig
+```
+
+# Tree map
+We also created a tree map to present characters' country of origin. The visualization is interactive, so users can click on a region of the world and see the countries represented in each region, as well as the number of books set in that country. To return to the full treemap, click on the top bar with the title "Setting tree map". 
+```{r tree_map, include = FALSE, cache = TRUE}
+books$country <- countrycode(books$primary_setting, origin = 'country.name', destination = 'country.name')
+PS_country_count <- books %>%
+  group_by(country) %>% tally()
+PS_country_count$region <- countrycode(PS_country_count$country, origin = 'country.name', destination = 'region')
+PS_country_count$label <- paste(PS_country_count$country, PS_country_count$n, sep = ", ")
+
+PS_tree <- treemap(
+        dtf = PS_country_count,
+        index=c("region", "label"),
+        vSize="n",
+        type="index",
+        vColor = "region",
+        palette = "Dark2"
+)
+```
+
+```{r tree_map_plot, echo = FALSE, fig.height = 6}
+d3tree3(PS_tree, "Setting tree map")
+```
+
+# Opinions and books
+### Is there a relationship between books published and American opinions about immigrants?
+
+We wanted to see if there was a relationship between the number of books published and American opinions about immigration. We wondered if the number of books published about refugees or immigrants might reflect a reaction to American discourse around these new arrivals. We do see a dramatic increase of books published since 2000 and an overall increase of opinion in favor of increasing the level of immigrants to America. However, since our dataset is small, we did not feel confident performing any statistical analysis to test for a relationship. This could be a topic of qualitative research with book publishers, authors, and illustrators to understand their motivations for writing and publishing these titles with these characters.
+
+```{r opinion_graph, echo = FALSE, cache = TRUE }
+#graph using plotly
+opinions_graph <- gallup2 %>%
+  plot_ly(x = ~poll_date, height = 750) %>% 
+  add_bars(y = ~book_num, name = "Books Published", marker = list(color = "rgb(102, 102, 102", opacity = 0.7), text = ~book_num, textposition = "outside", hoverinfo = 'none', showlegend = FALSE) %>%
+  layout(uniformtext=list(minsize = 12, mode='hide')) %>%
+  add_trace(x = ~poll_date, y = ~present_level, type = "scatter", mode = "lines+markers", line = list(color = 'rgb(27, 158, 119)', width = 3), marker = list(color = 'rgb(27, 158, 119)'), name = "Present level", yaxis = "y2", hovertemplate = paste("%{y}%","<br><b>Year:</b> %{x}")) %>%
+  add_trace(x = ~poll_date, y = ~increase, type = "scatter", mode = "lines+markers", line = list(color = 'rgb(217, 95, 2)', width = 3), marker = list(color = 'rgb(217, 95, 2)'),name = "Increase", yaxis = "y2", hovertemplate = paste("%{y}%","<br><b>Year:</b> %{x}")) %>% 
+  add_trace(x = ~poll_date, y = ~decrease, type = "scatter", mode = "lines+markers", line = list(color = 'rgb(117, 112, 179)', width = 3), marker = list(color = 'rgb(117, 112, 179)'), name = "Decrease", yaxis = "y2", hovertemplate = paste("%{y}%","<br><b>Year:</b> %{x}"))
+
+opinions_graph  <- opinions_graph %>%
+  layout(xaxis = list(title ="Year"), yaxis = list(title = "Number of Books"), yaxis2 = list(title = "Percent", overlaying = "y", side = "right", showgrid = FALSE, automargin = T)) %>% layout(legend = list(x = 0, y = 1, orientation = 'h', title = list(text = "<b>Opinion  </b>")))
+```
+
+**American opinions about immigration and number of books published with immigrant/refugee characters (2000-2020)**\
+*Respondents to Gallup poll: Thinking now about immigrants -- that is, people who come from other countries to live here in the United States, in your view, should immigration be kept at its present level, increased or decreased?*
+
+``` {r opinions_graph_plot, echo = FALSE}
+opinions_graph 
+```

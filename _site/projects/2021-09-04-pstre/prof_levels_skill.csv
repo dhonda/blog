@@ -1,0 +1,21 @@
+"","ISCOSKIL4","Benchmarks","Percentage","Std. err."
+"1","Elementary occupations","Below/equal to 241",26.28,1.01
+"2","Elementary occupations","greater than 241 to less/equal than 291",41.54,1.15
+"3","Elementary occupations","greater than 291 to less/equal than 341",26.82,1.02
+"4","Elementary occupations","Above 341",5.36,0.45
+"5","Semi-skilled blue-collar occupations","Below/equal to 241",30.15,0.9
+"6","Semi-skilled blue-collar occupations","greater than 241 to less/equal than 291",42.41,0.97
+"7","Semi-skilled blue-collar occupations","greater than 291 to less/equal than 341",23.44,0.87
+"8","Semi-skilled blue-collar occupations","Above 341",4,0.4
+"9","Semi-skilled white-collar occupations","Below/equal to 241",22.72,0.81
+"10","Semi-skilled white-collar occupations","greater than 241 to less/equal than 291",41.07,0.92
+"11","Semi-skilled white-collar occupations","greater than 291 to less/equal than 341",30.69,0.77
+"12","Semi-skilled white-collar occupations","Above 341",5.52,0.4
+"13","Skilled occupations","Below/equal to 241",12.93,0.52
+"14","Skilled occupations","greater than 241 to less/equal than 291",35.41,0.67
+"15","Skilled occupations","greater than 291 to less/equal than 341",40.52,0.71
+"16","Skilled occupations","Above 341",11.14,0.51
+"17",NA,"Below/equal to 241",25.7,1.16
+"18",NA,"greater than 241 to less/equal than 291",40.8,1.12
+"19",NA,"greater than 291 to less/equal than 341",28.22,1.2
+"20",NA,"Above 341",5.27,0.54

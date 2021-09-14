@@ -1,0 +1,20 @@
+name: "blog"
+title: "Delanie Honda"
+description: |
+  Delanie Honda
+output_dir: "_site"
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+    - text: "Projects"
+      href: projects.html
+output: distill::distill_article
+theme: theme.css
+collections:
+  posts:
+    categories: true
+  projects:
+    categories: true

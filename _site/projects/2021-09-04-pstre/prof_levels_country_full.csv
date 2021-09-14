@@ -1,0 +1,250 @@
+CNTRYID,ISO3,Below Level 1,Level 1,Level 2,Level 3,Mean
+Ecuador,ECU,58.7,29.19,8.86,3.26,227.72
+Japan,JPN,12.24,31.89,42.54,13.33,294.03
+Peru,PER,52.56,31.98,12.2,3.26,236.97
+Singapore,SGP,16.73,33.6,39.32,10.35,286.64
+New Zealand,NZL,16.45,34.19,38,11.37,286.88
+Israel,ISR,26.53,35.01,29.23,9.22,273.53
+Sweden,SWE,14.95,35.01,40.06,9.98,287.77
+Finland,FIN,13.54,35.43,40.78,10.25,289.37
+Canada,CAN,18.24,36.93,36.1,8.73,282.29
+Slovenia,SVN,28.75,37.21,29.04,4.99,267.8
+Netherlands,NLD,14.41,37.61,39.58,8.41,286.4
+Belgium,BEL,18.75,37.68,36.29,7.28,280.76
+Germany,DEU,17.79,37.69,36.1,8.42,282.58
+Poland,POL,23.94,37.77,30.58,7.71,274.92
+Norway,NOR,13.57,37.77,41.44,7.23,286.49
+Chile,CHL,39.85,38.27,18.61,3.28,252.25
+Czechia,CZE,17.25,38.44,35.46,8.85,282.99
+Denmark,DNK,16.27,38.47,37.84,7.42,283.08
+Russian Federation,RUS,22.25,38.57,30.7,8.48,276.25
+Lithuania,LTU,35.23,40.36,21.54,2.88,258.49
+United Kingdom of Great Britain and Northern Ireland (the),GBR,18.05,40.43,34.77,6.74,280.33
+Greece,GRC,36.14,41.2,18.58,4.07,256.84
+Estonia,EST,19.57,41.26,33.02,6.14,277.62
+United States of America,USA,19.74,41.35,32.54,6.37,277.44
+Hungary,HUN,17.8,42.14,33.65,6.41,279.4
+Austria,AUT,13.52,42.14,38.43,5.91,283.98
+South Korea ,KOR,13.98,42.43,38.44,5.15,282.97
+Mexico,MEX,32.48,43.28,20.59,3.65,260.23
+Ireland,IRL,18.65,43.77,32.91,4.67,276.8
+Turkey,TUR,37.39,43.99,16.21,2.41,253.16
+Slovakia,SVK,14.09,45.45,35.93,4.53,281.08
+Kazakhstan,KAZ,25.27,52.46,21.1,1.17,263.87
+Afghanistan,AFG,NA,NA,NA,NA,NA
+Åland Islands,ALA,NA,NA,NA,NA,NA
+Albania,ALB,NA,NA,NA,NA,NA
+Algeria,DZA,NA,NA,NA,NA,NA
+American Samoa,ASM,NA,NA,NA,NA,NA
+Andorra,AND,NA,NA,NA,NA,NA
+Angola,AGO,NA,NA,NA,NA,NA
+Anguilla,AIA,NA,NA,NA,NA,NA
+Antarctica,ATA,NA,NA,NA,NA,NA
+Antigua and Barbuda,ATG,NA,NA,NA,NA,NA
+Argentina,ARG,NA,NA,NA,NA,NA
+Armenia,ARM,NA,NA,NA,NA,NA
+Aruba,ABW,NA,NA,NA,NA,NA
+Australia,AUS,NA,NA,NA,NA,NA
+Azerbaijan,AZE,NA,NA,NA,NA,NA
+Bahamas (the),BHS,NA,NA,NA,NA,NA
+Bahrain,BHR,NA,NA,NA,NA,NA
+Bangladesh,BGD,NA,NA,NA,NA,NA
+Barbados,BRB,NA,NA,NA,NA,NA
+Belarus,BLR,NA,NA,NA,NA,NA
+Belize,BLZ,NA,NA,NA,NA,NA
+Benin,BEN,NA,NA,NA,NA,NA
+Bermuda,BMU,NA,NA,NA,NA,NA
+Bhutan,BTN,NA,NA,NA,NA,NA
+Bolivia ,BOL,NA,NA,NA,NA,NA
+"Bonaire, Sint Eustatius and Saba",BES,NA,NA,NA,NA,NA
+Bosnia and Herzegovina,BIH,NA,NA,NA,NA,NA
+Botswana,BWA,NA,NA,NA,NA,NA
+Bouvet Island,BVT,NA,NA,NA,NA,NA
+Brazil,BRA,NA,NA,NA,NA,NA
+British Indian Ocean Territory,IOT,NA,NA,NA,NA,NA
+Brunei Darussalam,BRN,NA,NA,NA,NA,NA
+Bulgaria,BGR,NA,NA,NA,NA,NA
+Burkina Faso,BFA,NA,NA,NA,NA,NA
+Burundi,BDI,NA,NA,NA,NA,NA
+Cabo Verde,CPV,NA,NA,NA,NA,NA
+Cambodia,KHM,NA,NA,NA,NA,NA
+Cameroon,CMR,NA,NA,NA,NA,NA
+Cayman Islands,CYM,NA,NA,NA,NA,NA
+Central African Republic,CAF,NA,NA,NA,NA,NA
+Chad,TCD,NA,NA,NA,NA,NA
+China,CHN,NA,NA,NA,NA,NA
+Christmas Island,CXR,NA,NA,NA,NA,NA
+Cocos (Keeling) Islands,CCK,NA,NA,NA,NA,NA
+Colombia,COL,NA,NA,NA,NA,NA
+Comoros,COM,NA,NA,NA,NA,NA
+Democratic Republic of Congo,COD,NA,NA,NA,NA,NA
+Congo,COG,NA,NA,NA,NA,NA
+Cook Islands,COK,NA,NA,NA,NA,NA
+Costa Rica,CRI,NA,NA,NA,NA,NA
+Côte d'Ivoire,CIV,NA,NA,NA,NA,NA
+Croatia,HRV,NA,NA,NA,NA,NA
+Cuba,CUB,NA,NA,NA,NA,NA
+Curaçao,CUW,NA,NA,NA,NA,NA
+Cyprus,CYP,NA,NA,NA,NA,NA
+Djibouti,DJI,NA,NA,NA,NA,NA
+Dominica,DMA,NA,NA,NA,NA,NA
+Dominican Republic,DOM,NA,NA,NA,NA,NA
+Egypt,EGY,NA,NA,NA,NA,NA
+El Salvador,SLV,NA,NA,NA,NA,NA
+Equatorial Guinea,GNQ,NA,NA,NA,NA,NA
+Eritrea,ERI,NA,NA,NA,NA,NA
+Eswatini,SWZ,NA,NA,NA,NA,NA
+Ethiopia,ETH,NA,NA,NA,NA,NA
+Falkland Islands,FLK,NA,NA,NA,NA,NA
+Faroe Islands,FRO,NA,NA,NA,NA,NA
+Fiji,FJI,NA,NA,NA,NA,NA
+France,FRA,NA,NA,NA,NA,NA
+French Guiana,GUF,NA,NA,NA,NA,NA
+French Polynesia,PYF,NA,NA,NA,NA,NA
+French Southern Territories (the),ATF,NA,NA,NA,NA,NA
+Gabon,GAB,NA,NA,NA,NA,NA
+Gambia,GMB,NA,NA,NA,NA,NA
+Georgia,GEO,NA,NA,NA,NA,NA
+Ghana,GHA,NA,NA,NA,NA,NA
+Gibraltar,GIB,NA,NA,NA,NA,NA
+Greenland,GRL,NA,NA,NA,NA,NA
+Grenada,GRD,NA,NA,NA,NA,NA
+Guadeloupe,GLP,NA,NA,NA,NA,NA
+Guam,GUM,NA,NA,NA,NA,NA
+Guatemala,GTM,NA,NA,NA,NA,NA
+Guernsey,GGY,NA,NA,NA,NA,NA
+Guinea,GIN,NA,NA,NA,NA,NA
+Guinea-Bissau,GNB,NA,NA,NA,NA,NA
+Guyana,GUY,NA,NA,NA,NA,NA
+Haiti,HTI,NA,NA,NA,NA,NA
+Heard Island and McDonald Islands,HMD,NA,NA,NA,NA,NA
+Holy See,VAT,NA,NA,NA,NA,NA
+Honduras,HND,NA,NA,NA,NA,NA
+Hong Kong,HKG,NA,NA,NA,NA,NA
+Iceland,ISL,NA,NA,NA,NA,NA
+India,IND,NA,NA,NA,NA,NA
+Indonesia,IDN,NA,NA,NA,NA,NA
+Iran,IRN,NA,NA,NA,NA,NA
+Iraq,IRQ,NA,NA,NA,NA,NA
+Isle of Man,IMN,NA,NA,NA,NA,NA
+Italy,ITA,NA,NA,NA,NA,NA
+Jamaica,JAM,NA,NA,NA,NA,NA
+Jersey,JEY,NA,NA,NA,NA,NA
+Jordan,JOR,NA,NA,NA,NA,NA
+Kenya,KEN,NA,NA,NA,NA,NA
+Kiribati,KIR,NA,NA,NA,NA,NA
+North Korea,PRK,NA,NA,NA,NA,NA
+Kuwait,KWT,NA,NA,NA,NA,NA
+Kyrgyzstan,KGZ,NA,NA,NA,NA,NA
+Lao People's Democratic Republic,LAO,NA,NA,NA,NA,NA
+Latvia,LVA,NA,NA,NA,NA,NA
+Lebanon,LBN,NA,NA,NA,NA,NA
+Lesotho,LSO,NA,NA,NA,NA,NA
+Liberia,LBR,NA,NA,NA,NA,NA
+Libya,LBY,NA,NA,NA,NA,NA
+Liechtenstein,LIE,NA,NA,NA,NA,NA
+Luxembourg,LUX,NA,NA,NA,NA,NA
+Macao,MAC,NA,NA,NA,NA,NA
+Republic of North Macedonia,MKD,NA,NA,NA,NA,NA
+Madagascar,MDG,NA,NA,NA,NA,NA
+Malawi,MWI,NA,NA,NA,NA,NA
+Malaysia,MYS,NA,NA,NA,NA,NA
+Maldives,MDV,NA,NA,NA,NA,NA
+Mali,MLI,NA,NA,NA,NA,NA
+Malta,MLT,NA,NA,NA,NA,NA
+Marshall Islands,MHL,NA,NA,NA,NA,NA
+Martinique,MTQ,NA,NA,NA,NA,NA
+Mauritania,MRT,NA,NA,NA,NA,NA
+Mauritius,MUS,NA,NA,NA,NA,NA
+Mayotte,MYT,NA,NA,NA,NA,NA
+Micronesia,FSM,NA,NA,NA,NA,NA
+Moldova,MDA,NA,NA,NA,NA,NA
+Monaco,MCO,NA,NA,NA,NA,NA
+Mongolia,MNG,NA,NA,NA,NA,NA
+Montenegro,MNE,NA,NA,NA,NA,NA
+Montserrat,MSR,NA,NA,NA,NA,NA
+Morocco,MAR,NA,NA,NA,NA,NA
+Mozambique,MOZ,NA,NA,NA,NA,NA
+Myanmar,MMR,NA,NA,NA,NA,NA
+Namibia,NAM,NA,NA,NA,NA,NA
+Nauru,NRU,NA,NA,NA,NA,NA
+Nepal,NPL,NA,NA,NA,NA,NA
+New Caledonia,NCL,NA,NA,NA,NA,NA
+Nicaragua,NIC,NA,NA,NA,NA,NA
+Niger,NER,NA,NA,NA,NA,NA
+Nigeria,NGA,NA,NA,NA,NA,NA
+Niue,NIU,NA,NA,NA,NA,NA
+Norfolk Island,NFK,NA,NA,NA,NA,NA
+Northern Mariana Islands,MNP,NA,NA,NA,NA,NA
+Oman,OMN,NA,NA,NA,NA,NA
+Pakistan,PAK,NA,NA,NA,NA,NA
+Palau,PLW,NA,NA,NA,NA,NA
+"Palestine, State of",PSE,NA,NA,NA,NA,NA
+Panama,PAN,NA,NA,NA,NA,NA
+Papua New Guinea,PNG,NA,NA,NA,NA,NA
+Paraguay,PRY,NA,NA,NA,NA,NA
+Philippines,PHL,NA,NA,NA,NA,NA
+Pitcairn,PCN,NA,NA,NA,NA,NA
+Portugal,PRT,NA,NA,NA,NA,NA
+Puerto Rico,PRI,NA,NA,NA,NA,NA
+Qatar,QAT,NA,NA,NA,NA,NA
+Réunion,REU,NA,NA,NA,NA,NA
+Romania,ROU,NA,NA,NA,NA,NA
+Rwanda,RWA,NA,NA,NA,NA,NA
+Saint Barthélemy,BLM,NA,NA,NA,NA,NA
+"Saint Helena, Ascension and Tristan da Cunha",SHN,NA,NA,NA,NA,NA
+Saint Kitts and Nevis,KNA,NA,NA,NA,NA,NA
+Saint Lucia,LCA,NA,NA,NA,NA,NA
+Saint Martin,MAF,NA,NA,NA,NA,NA
+Saint Pierre and Miquelon,SPM,NA,NA,NA,NA,NA
+Saint Vincent and the Grenadines,VCT,NA,NA,NA,NA,NA
+Samoa,WSM,NA,NA,NA,NA,NA
+San Marino,SMR,NA,NA,NA,NA,NA
+Sao Tome and Principe,STP,NA,NA,NA,NA,NA
+Saudi Arabia,SAU,NA,NA,NA,NA,NA
+Senegal,SEN,NA,NA,NA,NA,NA
+Serbia,SRB,NA,NA,NA,NA,NA
+Seychelles,SYC,NA,NA,NA,NA,NA
+Sierra Leone,SLE,NA,NA,NA,NA,NA
+Sint Maarten,SXM,NA,NA,NA,NA,NA
+Solomon Islands,SLB,NA,NA,NA,NA,NA
+Somalia,SOM,NA,NA,NA,NA,NA
+South Africa,ZAF,NA,NA,NA,NA,NA
+South Georgia and the South Sandwich Islands,SGS,NA,NA,NA,NA,NA
+South Sudan,SSD,NA,NA,NA,NA,NA
+Spain,ESP,NA,NA,NA,NA,NA
+Sri Lanka,LKA,NA,NA,NA,NA,NA
+Sudan,SDN,NA,NA,NA,NA,NA
+Suriname,SUR,NA,NA,NA,NA,NA
+Svalbard and Jan Mayen,SJM,NA,NA,NA,NA,NA
+Switzerland,CHE,NA,NA,NA,NA,NA
+Syrian Arab Republic,SYR,NA,NA,NA,NA,NA
+Taiwan,TWN,NA,NA,NA,NA,NA
+Tajikistan,TJK,NA,NA,NA,NA,NA
+Tanzania,TZA,NA,NA,NA,NA,NA
+Thailand,THA,NA,NA,NA,NA,NA
+Timor-Leste,TLS,NA,NA,NA,NA,NA
+Togo,TGO,NA,NA,NA,NA,NA
+Tokelau,TKL,NA,NA,NA,NA,NA
+Tonga,TON,NA,NA,NA,NA,NA
+Trinidad and Tobago,TTO,NA,NA,NA,NA,NA
+Tunisia,TUN,NA,NA,NA,NA,NA
+Turkmenistan,TKM,NA,NA,NA,NA,NA
+Turks and Caicos Islands,TCA,NA,NA,NA,NA,NA
+Tuvalu,TUV,NA,NA,NA,NA,NA
+Uganda,UGA,NA,NA,NA,NA,NA
+Ukraine,UKR,NA,NA,NA,NA,NA
+United Arab Emirates,ARE,NA,NA,NA,NA,NA
+United States Minor Outlying Islands,UMI,NA,NA,NA,NA,NA
+Uruguay,URY,NA,NA,NA,NA,NA
+Uzbekistan,UZB,NA,NA,NA,NA,NA
+Vanuatu,VUT,NA,NA,NA,NA,NA
+Venezuela,VEN,NA,NA,NA,NA,NA
+Viet Nam,VNM,NA,NA,NA,NA,NA
+Virgin Islands (British),VGB,NA,NA,NA,NA,NA
+Virgin Islands (U.S.),VIR,NA,NA,NA,NA,NA
+Wallis and Futuna,WLF,NA,NA,NA,NA,NA
+Western Sahara,ESH,NA,NA,NA,NA,NA
+Yemen,YEM,NA,NA,NA,NA,NA
+Zambia,ZMB,NA,NA,NA,NA,NA
+Zimbabwe,ZWE,NA,NA,NA,NA,NA
