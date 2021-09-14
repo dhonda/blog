@@ -1,0 +1,20 @@
+---
+title: "Coming Soon"
+description: |
+  The blog is up and running!
+author:
+  - name: Delanie Honda
+date: 09-14-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+# Hello World!
+
+Please keep an eye on this space for posts about education, data visualization, and R.
+
+![Photo by Aaron Burden on Unsplash](unsplash_reading.jpg "A silhouette of a boy reading a book")
+
+

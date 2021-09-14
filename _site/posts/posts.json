@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "path": "posts/2021-09-14-coming-soon/",
+    "title": "Coming Soon",
+    "description": "The blog is up and running!",
+    "author": [
+      {
+        "name": "Delanie Honda",
+        "url": {}
+      }
+    ],
+    "date": "2021-09-14",
+    "categories": [],
+    "contents": "\r\nHello World!\r\nPlease keep an eye on this space for posts about education, data visualization, and R.\r\nPhoto by Aaron Burden on Unsplash\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2021-09-14T08:53:21-04:00",
+    "input_file": "coming-soon.knit.md"
+  }
+]
