@@ -1,0 +1,2498 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #20794d; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007ba5; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #007ba5; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #007ba5; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #20794d; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+  <!--radix_placeholder_meta_tags-->
+<title>Delanie Honda: US Spending on Education</title>
+
+<meta property="description" itemprop="description" content="How much do US states spend on public education? How is spending related to student achievement?"/>
+
+
+<!--  https://schema.org/Article -->
+<meta property="article:published" itemprop="datePublished" content="2021-09-16"/>
+<meta property="article:created" itemprop="dateCreated" content="2021-09-16"/>
+<meta name="article:author" content="Delanie Honda"/>
+
+<!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+<meta property="og:title" content="Delanie Honda: US Spending on Education"/>
+<meta property="og:type" content="article"/>
+<meta property="og:description" content="How much do US states spend on public education? How is spending related to student achievement?"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:site_name" content="Delanie Honda"/>
+
+<!--  https://dev.twitter.com/cards/types/summary -->
+<meta property="twitter:card" content="summary"/>
+<meta property="twitter:title" content="Delanie Honda: US Spending on Education"/>
+<meta property="twitter:description" content="How much do US states spend on public education? How is spending related to student achievement?"/>
+
+<!--/radix_placeholder_meta_tags-->
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+<script type="text/json" id="radix-rmarkdown-metadata">
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","preview","output","draft"]}},"value":[{"type":"character","attributes":{},"value":["US Spending on Education"]},{"type":"character","attributes":{},"value":["How much do US states spend on public education? How is spending related to student achievement?"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Delanie Honda"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["09-16-2021"]},{"type":"character","attributes":{},"value":["unsplash_graduation.jpg"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"logical","attributes":{},"value":[false]}]}
+</script>
+<!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["graduation_rates.xls","unsplash_graduation.jpg","us-spending-on-education_files/figure-html5/grad_spend_plot-1.png","us-spending-on-education_files/figure-html5/graduation_plot-1.png","us-spending-on-education_files/figure-html5/higher_ed_plot-1.png","us-spending-on-education_files/figure-html5/library_spend_plot-1.png"]}
+  </script>
+  <!--radix_placeholder_navigation_in_header-->
+<meta name="distill:offset" content="../.."/>
+
+<script type="application/javascript">
+
+  window.headroom_prevent_pin = false;
+
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+
+    // initialize headroom for banner
+    var header = $('header').get(0);
+    var headerHeight = header.offsetHeight;
+    var headroom = new Headroom(header, {
+      tolerance: 5,
+      onPin : function() {
+        if (window.headroom_prevent_pin) {
+          window.headroom_prevent_pin = false;
+          headroom.unpin();
+        }
+      }
+    });
+    headroom.init();
+    if(window.location.hash)
+      headroom.unpin();
+    $(header).addClass('headroom--transition');
+
+    // offset scroll location for banner on hash change
+    // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
+    window.addEventListener("hashchange", function(event) {
+      window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
+    });
+
+    // responsive menu
+    $('.distill-site-header').each(function(i, val) {
+      var topnav = $(this);
+      var toggle = topnav.find('.nav-toggle');
+      toggle.on('click', function() {
+        topnav.toggleClass('responsive');
+      });
+    });
+
+    // nav dropdowns
+    $('.nav-dropbtn').click(function(e) {
+      $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
+      $(this).parent().siblings('.nav-dropdown')
+         .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
+    });
+    $("body").click(function(e){
+      $('.nav-dropdown-content').removeClass('nav-dropdown-active');
+    });
+    $(".nav-dropdown").click(function(e){
+      e.stopPropagation();
+    });
+  });
+</script>
+
+<style type="text/css">
+
+/* Theme (user-documented overrideables for nav appearance) */
+
+.distill-site-nav {
+  color: rgba(255, 255, 255, 0.8);
+  background-color: #0F2E3D;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.distill-site-nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.distill-site-nav a:hover {
+  color: white;
+}
+
+@media print {
+  .distill-site-nav {
+    display: none;
+  }
+}
+
+.distill-site-header {
+
+}
+
+.distill-site-footer {
+
+}
+
+
+/* Site Header */
+
+.distill-site-header {
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 3;
+}
+
+.distill-site-header .nav-left {
+  display: inline-block;
+  margin-left: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .distill-site-header .nav-left {
+    margin-left: 0;
+  }
+}
+
+
+.distill-site-header .nav-right {
+  float: right;
+  margin-right: 8px;
+}
+
+.distill-site-header a,
+.distill-site-header .title {
+  display: inline-block;
+  text-align: center;
+  padding: 14px 10px 14px 10px;
+}
+
+.distill-site-header .title {
+  font-size: 18px;
+  min-width: 150px;
+}
+
+.distill-site-header .logo {
+  padding: 0;
+}
+
+.distill-site-header .logo img {
+  display: none;
+  max-height: 20px;
+  width: auto;
+  margin-bottom: -4px;
+}
+
+.distill-site-header .nav-image img {
+  max-height: 18px;
+  width: auto;
+  display: inline-block;
+  margin-bottom: -3px;
+}
+
+
+
+@media screen and (min-width: 1000px) {
+  .distill-site-header .logo img {
+    display: inline-block;
+  }
+  .distill-site-header .nav-left {
+    margin-left: 20px;
+  }
+  .distill-site-header .nav-right {
+    margin-right: 20px;
+  }
+  .distill-site-header .title {
+    padding-left: 12px;
+  }
+}
+
+
+.distill-site-header .nav-toggle {
+  display: none;
+}
+
+.nav-dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.nav-dropdown .nav-dropbtn {
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 16px 10px;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+  margin-top: 1px;
+  z-index: 2;
+}
+
+.nav-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 4px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+  z-index: 1;
+  margin-top: 2px;
+  white-space: nowrap;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.nav-dropdown-content hr {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-dropdown-active {
+  display: block;
+}
+
+.nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
+  color: black;
+  padding: 6px 24px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.nav-dropdown-content .nav-dropdown-header {
+  display: block;
+  padding: 5px 24px;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #999999;
+  white-space: nowrap;
+}
+
+.nav-dropdown:hover .nav-dropbtn {
+  color: white;
+}
+
+.nav-dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.nav-right .nav-dropdown-content {
+  margin-left: -45%;
+  right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
+  .distill-site-header a.nav-toggle {
+    float: right;
+    display: block;
+  }
+  .distill-site-header .title {
+    margin-left: 0;
+  }
+  .distill-site-header .nav-right {
+    margin-right: 0;
+  }
+  .distill-site-header {
+    overflow: hidden;
+  }
+  .nav-right .nav-dropdown-content {
+    margin-left: 0;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .distill-site-header.responsive {position: relative; min-height: 500px; }
+  .distill-site-header.responsive a.nav-toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .distill-site-header.responsive a,
+  .distill-site-header.responsive .nav-dropdown {
+    display: block;
+    text-align: left;
+  }
+  .distill-site-header.responsive .nav-left,
+  .distill-site-header.responsive .nav-right {
+    width: 100%;
+  }
+  .distill-site-header.responsive .nav-dropdown {float: none;}
+  .distill-site-header.responsive .nav-dropdown-content {position: relative;}
+  .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/* Site Footer */
+
+.distill-site-footer {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  z-index: 3;
+  margin-top: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+/* Headroom */
+
+d-title {
+  padding-top: 6rem;
+}
+
+@media print {
+  d-title {
+    padding-top: 4rem;
+  }
+}
+
+.headroom {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.headroom--transition {
+  transition: all .4s ease-in-out;
+}
+
+.headroom--unpinned {
+  top: -100px;
+}
+
+.headroom--pinned {
+  top: 0;
+}
+
+/* adjust viewport for navbar height */
+/* helps vertically center bootstrap (non-distill) content */
+.min-vh-100 {
+  min-height: calc(100vh - 100px) !important;
+}
+
+</style>
+
+<script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+<link href="../../site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
+<link href="../../site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+<script src="../../site_libs/headroom-0.9.4/headroom.min.js"></script>
+<script src="../../site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
+<script src="../../site_libs/fuse-6.4.1/fuse.min.js"></script>
+
+<script type="application/javascript">
+
+function getMeta(metaName) {
+  var metas = document.getElementsByTagName('meta');
+  for (let i = 0; i < metas.length; i++) {
+    if (metas[i].getAttribute('name') === metaName) {
+      return metas[i].getAttribute('content');
+    }
+  }
+  return '';
+}
+
+function offsetURL(url) {
+  var offset = getMeta('distill:offset');
+  return offset ? offset + '/' + url : url;
+}
+
+function createFuseIndex() {
+
+  // create fuse index
+  var options = {
+    keys: [
+      { name: 'title', weight: 20 },
+      { name: 'categories', weight: 15 },
+      { name: 'description', weight: 10 },
+      { name: 'contents', weight: 5 },
+    ],
+    ignoreLocation: true,
+    threshold: 0
+  };
+  var fuse = new window.Fuse([], options);
+
+  // fetch the main search.json
+  return fetch(offsetURL('search.json'))
+    .then(function(response) {
+      if (response.status == 200) {
+        return response.json().then(function(json) {
+          // index main articles
+          json.articles.forEach(function(article) {
+            fuse.add(article);
+          });
+          // download collections and index their articles
+          return Promise.all(json.collections.map(function(collection) {
+            return fetch(offsetURL(collection)).then(function(response) {
+              if (response.status === 200) {
+                return response.json().then(function(articles) {
+                  articles.forEach(function(article) {
+                    fuse.add(article);
+                  });
+                })
+              } else {
+                return Promise.reject(
+                  new Error('Unexpected status from search index request: ' +
+                            response.status)
+                );
+              }
+            });
+          })).then(function() {
+            return fuse;
+          });
+        });
+
+      } else {
+        return Promise.reject(
+          new Error('Unexpected status from search index request: ' +
+                      response.status)
+        );
+      }
+    });
+}
+
+window.document.addEventListener("DOMContentLoaded", function (event) {
+
+  // get search element (bail if we don't have one)
+  var searchEl = window.document.getElementById('distill-search');
+  if (!searchEl)
+    return;
+
+  createFuseIndex()
+    .then(function(fuse) {
+
+      // make search box visible
+      searchEl.classList.remove('hidden');
+
+      // initialize autocomplete
+      var options = {
+        autoselect: true,
+        hint: false,
+        minLength: 2,
+      };
+      window.autocomplete(searchEl, options, [{
+        source: function(query, callback) {
+          const searchOptions = {
+            isCaseSensitive: false,
+            shouldSort: true,
+            minMatchCharLength: 2,
+            limit: 10,
+          };
+          var results = fuse.search(query, searchOptions);
+          callback(results
+            .map(function(result) { return result.item; })
+          );
+        },
+        templates: {
+          suggestion: function(suggestion) {
+            var img = suggestion.preview && Object.keys(suggestion.preview).length > 0
+              ? `<img src="${offsetURL(suggestion.preview)}"</img>`
+              : '';
+            var html = `
+              <div class="search-item">
+                <h3>${suggestion.title}</h3>
+                <div class="search-item-description">
+                  ${suggestion.description || ''}
+                </div>
+                <div class="search-item-preview">
+                  ${img}
+                </div>
+              </div>
+            `;
+            return html;
+          }
+        }
+      }]).on('autocomplete:selected', function(event, suggestion) {
+        window.location.href = offsetURL(suggestion.path);
+      });
+      // remove inline display style on autocompleter (we want to
+      // manage responsive display via css)
+      $('.algolia-autocomplete').css("display", "");
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
+
+});
+
+</script>
+
+<style type="text/css">
+
+.nav-search {
+  font-size: x-small;
+}
+
+/* Algolioa Autocomplete */
+
+.algolia-autocomplete {
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: sub;
+  background-color: white;
+  color: black;
+  padding: 6px;
+  padding-top: 8px;
+  padding-bottom: 0;
+  border-radius: 6px;
+  border: 1px #0F2E3D solid;
+  width: 180px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .distill-site-nav .algolia-autocomplete {
+    display: none;
+    visibility: hidden;
+  }
+  .distill-site-nav.responsive .algolia-autocomplete {
+    display: inline-block;
+    visibility: visible;
+  }
+  .distill-site-nav.responsive .algolia-autocomplete .aa-dropdown-menu {
+    margin-left: 0;
+    width: 400px;
+    max-height: 400px;
+  }
+}
+
+.algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
+  width: 90%;
+  outline: none;
+  border: none;
+}
+
+.algolia-autocomplete .aa-hint {
+  color: #999;
+}
+.algolia-autocomplete .aa-dropdown-menu {
+  width: 550px;
+  max-height: 70vh;
+  overflow-x: visible;
+  overflow-y: scroll;
+  padding: 5px;
+  margin-top: 3px;
+  margin-left: -150px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #999;
+  border-top: none;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
+  cursor: pointer;
+  padding: 5px 4px;
+  border-bottom: 1px solid #eee;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion:last-of-type {
+  border-bottom: none;
+  margin-bottom: 2px;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item {
+  overflow: hidden;
+  font-size: 0.8em;
+  line-height: 1.4em;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item h3 {
+  font-size: 1rem;
+  margin-block-start: 0;
+  margin-block-end: 5px;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-description {
+  display: inline-block;
+  overflow: hidden;
+  height: 2.8em;
+  width: 80%;
+  margin-right: 4%;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview {
+  display: inline-block;
+  width: 15%;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img {
+  height: 3em;
+  width: auto;
+  display: none;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img[src] {
+  display: initial;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
+  background-color: #eee;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+</style>
+
+
+<!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+
+<style type="text/css">
+
+body {
+  background-color: white;
+}
+
+.pandoc-table {
+  width: 100%;
+}
+
+.pandoc-table>caption {
+  margin-bottom: 10px;
+}
+
+.pandoc-table th:not([align]) {
+  text-align: left;
+}
+
+.pagedtable-footer {
+  font-size: 15px;
+}
+
+d-byline .byline {
+  grid-template-columns: 2fr 2fr;
+}
+
+d-byline .byline h3 {
+  margin-block-start: 1.5em;
+}
+
+d-byline .byline .authors-affiliations h3 {
+  margin-block-start: 0.5em;
+}
+
+.authors-affiliations .orcid-id {
+  width: 16px;
+  height:16px;
+  margin-left: 4px;
+  margin-right: 4px;
+  vertical-align: middle;
+  padding-bottom: 2px;
+}
+
+d-title .dt-tags {
+  margin-top: 1em;
+  grid-column: text;
+}
+
+.dt-tags .dt-tag {
+  text-decoration: none;
+  display: inline-block;
+  color: rgba(0,0,0,0.6);
+  padding: 0em 0.4em;
+  margin-right: 0.5em;
+  margin-bottom: 0.4em;
+  font-size: 70%;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+d-article table.gt_table td,
+d-article table.gt_table th {
+  border-bottom: none;
+}
+
+.html-widget {
+  margin-bottom: 2.0em;
+}
+
+.l-screen-inset {
+  padding-right: 16px;
+}
+
+.l-screen .caption {
+  margin-left: 10px;
+}
+
+.shaded {
+  background: rgb(247, 247, 247);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.shaded .html-widget {
+  margin-bottom: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.shaded .shaded-content {
+  background: white;
+}
+
+.text-output {
+  margin-top: 0;
+  line-height: 1.5em;
+}
+
+.hidden {
+  display: none !important;
+}
+
+d-article {
+  padding-top: 2.5rem;
+  padding-bottom: 30px;
+}
+
+d-appendix {
+  padding-top: 30px;
+}
+
+d-article>p>img {
+  width: 100%;
+}
+
+d-article h2 {
+  margin: 1rem 0 1.5rem 0;
+}
+
+d-article h3 {
+  margin-top: 1.5rem;
+}
+
+d-article iframe {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 2.0em;
+  width: 100%;
+}
+
+/* Tweak code blocks */
+
+d-article div.sourceCode code,
+d-article pre code {
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+d-article pre,
+d-article div.sourceCode,
+d-article div.sourceCode pre {
+  overflow: auto;
+}
+
+d-article div.sourceCode {
+  background-color: white;
+}
+
+d-article div.sourceCode pre {
+  padding-left: 10px;
+  font-size: 12px;
+  border-left: 2px solid rgba(0,0,0,0.1);
+}
+
+d-article pre {
+  font-size: 12px;
+  color: black;
+  background: none;
+  margin-top: 0;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+d-article pre a {
+  border-bottom: none;
+}
+
+d-article pre a:hover {
+  border-bottom: none;
+  text-decoration: underline;
+}
+
+d-article details {
+  grid-column: text;
+  margin-bottom: 0.8em;
+}
+
+@media(min-width: 768px) {
+
+d-article pre,
+d-article div.sourceCode,
+d-article div.sourceCode pre {
+  overflow: visible !important;
+}
+
+d-article div.sourceCode pre {
+  padding-left: 18px;
+  font-size: 14px;
+}
+
+d-article pre {
+  font-size: 14px;
+}
+
+}
+
+figure img.external {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+/* CSS for d-contents */
+
+.d-contents {
+  grid-column: text;
+  color: rgba(0,0,0,0.8);
+  font-size: 0.9em;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+  padding-left: 0.25em;
+  justify-self: start;
+}
+
+@media(min-width: 1000px) {
+  .d-contents.d-contents-float {
+    height: 0;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    justify-self: center;
+    padding-right: 3em;
+    padding-left: 2em;
+  }
+}
+
+.d-contents nav h3 {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.d-contents li {
+  list-style-type: none
+}
+
+.d-contents nav > ul {
+  padding-left: 0;
+}
+
+.d-contents ul {
+  padding-left: 1em
+}
+
+.d-contents nav ul li {
+  margin-top: 0.6em;
+  margin-bottom: 0.2em;
+}
+
+.d-contents nav a {
+  font-size: 13px;
+  border-bottom: none;
+  text-decoration: none
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.d-contents nav a:hover {
+  text-decoration: underline solid rgba(0, 0, 0, 0.6)
+}
+
+.d-contents nav > ul > li > a {
+  font-weight: 600;
+}
+
+.d-contents nav > ul > li > ul {
+  font-weight: inherit;
+}
+
+.d-contents nav > ul > li > ul > li {
+  margin-top: 0.2em;
+}
+
+
+.d-contents nav ul {
+  margin-top: 0;
+  margin-bottom: 0.25em;
+}
+
+.d-article-with-toc h2:nth-child(2) {
+  margin-top: 0;
+}
+
+
+/* Figure */
+
+.figure {
+  position: relative;
+  margin-bottom: 2.5em;
+  margin-top: 1.5em;
+}
+
+.figure img {
+  width: 100%;
+}
+
+.figure .caption {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+  line-height: 1.5em;
+}
+
+.figure img.external {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+.figure .caption a {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.figure .caption b,
+.figure .caption strong, {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1.0);
+}
+
+/* Citations */
+
+d-article .citation {
+  color: inherit;
+  cursor: inherit;
+}
+
+div.hanging-indent{
+  margin-left: 1em; text-indent: -1em;
+}
+
+/* Citation hover box */
+
+.tippy-box[data-theme~=light-border] {
+  background-color: rgba(250, 250, 250, 0.95);
+}
+
+.tippy-content > p {
+  margin-bottom: 0;
+  padding: 2px;
+}
+
+
+/* Tweak 1000px media break to show more text */
+
+@media(min-width: 1000px) {
+  .base-grid,
+  distill-header,
+  d-title,
+  d-abstract,
+  d-article,
+  d-appendix,
+  distill-appendix,
+  d-byline,
+  d-footnote-list,
+  d-citation-list,
+  distill-footer {
+    grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+    grid-column-gap: 16px;
+  }
+
+  .grid {
+    grid-column-gap: 16px;
+  }
+
+  d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+  }
+  figure .caption, .figure .caption, figure figcaption {
+    font-size: 13px;
+  }
+}
+
+@media(min-width: 1180px) {
+  .base-grid,
+  distill-header,
+  d-title,
+  d-abstract,
+  d-article,
+  d-appendix,
+  distill-appendix,
+  d-byline,
+  d-footnote-list,
+  d-citation-list,
+  distill-footer {
+    grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+    grid-column-gap: 32px;
+  }
+
+  .grid {
+    grid-column-gap: 32px;
+  }
+}
+
+
+/* Get the citation styles for the appendix (not auto-injected on render since
+   we do our own rendering of the citation appendix) */
+
+d-appendix .citation-appendix,
+.d-appendix .citation-appendix {
+  font-size: 11px;
+  line-height: 15px;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  padding-left: 18px;
+  border: 1px solid rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.02);
+  padding: 10px 18px;
+  border-radius: 3px;
+  color: rgba(150, 150, 150, 1);
+  overflow: hidden;
+  margin-top: -12px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Include appendix styles here so they can be overridden */
+
+d-appendix {
+  contain: layout style;
+  font-size: 0.8em;
+  line-height: 1.7em;
+  margin-top: 60px;
+  margin-bottom: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  color: rgba(0,0,0,0.5);
+  padding-top: 60px;
+  padding-bottom: 48px;
+}
+
+d-appendix h3 {
+  grid-column: page-start / text-start;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 1em;
+  margin-bottom: 0;
+  color: rgba(0,0,0,0.65);
+}
+
+d-appendix h3 + * {
+  margin-top: 1em;
+}
+
+d-appendix ol {
+  padding: 0 0 0 15px;
+}
+
+@media (min-width: 768px) {
+  d-appendix ol {
+    padding: 0 0 0 30px;
+    margin-left: -30px;
+  }
+}
+
+d-appendix li {
+  margin-bottom: 1em;
+}
+
+d-appendix a {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+d-appendix > * {
+  grid-column: text;
+}
+
+d-appendix > d-footnote-list,
+d-appendix > d-citation-list,
+d-appendix > distill-appendix {
+  grid-column: screen;
+}
+
+/* Include footnote styles here so they can be overridden */
+
+d-footnote-list {
+  contain: layout style;
+}
+
+d-footnote-list > * {
+  grid-column: text;
+}
+
+d-footnote-list a.footnote-backlink {
+  color: rgba(0,0,0,0.3);
+  padding-left: 0.5em;
+}
+
+
+
+/* Anchor.js */
+
+.anchorjs-link {
+  /*transition: all .25s linear; */
+  text-decoration: none;
+  border-bottom: none;
+}
+*:hover > .anchorjs-link {
+  margin-left: -1.125em !important;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+/* Social footer */
+
+.social_footer {
+  margin-top: 30px;
+  margin-bottom: 0;
+  color: rgba(0,0,0,0.67);
+}
+
+.disqus-comments {
+  margin-right: 30px;
+}
+
+.disqus-comment-count {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+#disqus_thread {
+  margin-top: 30px;
+}
+
+.article-sharing a {
+  border-bottom: none;
+  margin-right: 8px;
+}
+
+.article-sharing a:hover {
+  border-bottom: none;
+}
+
+.sidebar-section.subscribe {
+  font-size: 12px;
+  line-height: 1.6em;
+}
+
+.subscribe p {
+  margin-bottom: 0.5em;
+}
+
+
+.article-footer .subscribe {
+  font-size: 15px;
+  margin-top: 45px;
+}
+
+
+.sidebar-section.custom {
+  font-size: 12px;
+  line-height: 1.6em;
+}
+
+.custom p {
+  margin-bottom: 0.5em;
+}
+
+/* Styles for listing layout (hide title) */
+.layout-listing d-title, .layout-listing .d-title {
+  display: none;
+}
+
+/* Styles for posts lists (not auto-injected) */
+
+
+.posts-with-sidebar {
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.posts-list .description h2,
+.posts-list .description p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+.posts-list .description h2 {
+  font-weight: 700;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.posts-list h2.post-tag {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 12px;
+}
+.posts-list {
+  margin-top: 60px;
+  margin-bottom: 24px;
+}
+
+.posts-list .post-preview {
+  text-decoration: none;
+  overflow: hidden;
+  display: block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 24px 0;
+}
+
+.post-preview-last {
+  border-bottom: none !important;
+}
+
+.posts-list .posts-list-caption {
+  grid-column: screen;
+  font-weight: 400;
+}
+
+.posts-list .post-preview h2 {
+  margin: 0 0 6px 0;
+  line-height: 1.2em;
+  font-style: normal;
+  font-size: 24px;
+}
+
+.posts-list .post-preview p {
+  margin: 0 0 12px 0;
+  line-height: 1.4em;
+  font-size: 16px;
+}
+
+.posts-list .post-preview .thumbnail {
+  box-sizing: border-box;
+  margin-bottom: 24px;
+  position: relative;
+  max-width: 500px;
+}
+.posts-list .post-preview img {
+  width: 100%;
+  display: block;
+}
+
+.posts-list .metadata {
+  font-size: 12px;
+  line-height: 1.4em;
+  margin-bottom: 18px;
+}
+
+.posts-list .metadata > * {
+  display: inline-block;
+}
+
+.posts-list .metadata .publishedDate {
+  margin-right: 2em;
+}
+
+.posts-list .metadata .dt-authors {
+  display: block;
+  margin-top: 0.3em;
+  margin-right: 2em;
+}
+
+.posts-list .dt-tags {
+  display: block;
+  line-height: 1em;
+}
+
+.posts-list .dt-tags .dt-tag {
+  display: inline-block;
+  color: rgba(0,0,0,0.6);
+  padding: 0.3em 0.4em;
+  margin-right: 0.2em;
+  margin-bottom: 0.4em;
+  font-size: 60%;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.posts-list img {
+  opacity: 1;
+}
+
+.posts-list img[data-src] {
+  opacity: 0;
+}
+
+.posts-more {
+  clear: both;
+}
+
+
+.posts-sidebar {
+  font-size: 16px;
+}
+
+.posts-sidebar h3 {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.sidebar-section {
+  margin-bottom: 30px;
+}
+
+.categories ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.categories li {
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 0;
+}
+
+.categories li>a {
+  border-bottom: none;
+}
+
+.categories li>a:hover {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.categories .active {
+  font-weight: 600;
+}
+
+.categories .category-count {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+
+@media(min-width: 768px) {
+  .posts-list .post-preview h2 {
+    font-size: 26px;
+  }
+  .posts-list .post-preview .thumbnail {
+    float: right;
+    width: 30%;
+    margin-bottom: 0;
+  }
+  .posts-list .post-preview .description {
+    float: left;
+    width: 45%;
+  }
+  .posts-list .post-preview .metadata {
+    float: left;
+    width: 20%;
+    margin-top: 8px;
+  }
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.5em;
+    font-size: 16px;
+  }
+  .posts-with-sidebar .posts-list {
+    float: left;
+    width: 75%;
+  }
+  .posts-with-sidebar .posts-sidebar {
+    float: right;
+    width: 20%;
+    margin-top: 60px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+
+/* Improve display for browsers without grid (IE/Edge <= 15) */
+
+.downlevel {
+  line-height: 1.6em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+}
+
+.downlevel .d-title {
+  padding-top: 6rem;
+  padding-bottom: 1.5rem;
+}
+
+.downlevel .d-title h1 {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.1em;
+  margin: 0 0 0.5rem;
+}
+
+.downlevel .d-title p {
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.55em;
+  margin-top: 0;
+}
+
+.downlevel .d-byline {
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+  font-size: 0.8rem;
+  line-height: 1.8em;
+}
+
+.downlevel .section-separator {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.downlevel .d-article {
+  font-size: 1.06rem;
+  line-height: 1.7em;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+
+.downlevel .d-appendix {
+  padding-left: 0;
+  padding-right: 0;
+  max-width: none;
+  font-size: 0.8em;
+  line-height: 1.7em;
+  margin-bottom: 0;
+  color: rgba(0,0,0,0.5);
+  padding-top: 40px;
+  padding-bottom: 48px;
+}
+
+.downlevel .footnotes ol {
+  padding-left: 13px;
+}
+
+.downlevel .base-grid,
+.downlevel .distill-header,
+.downlevel .d-title,
+.downlevel .d-abstract,
+.downlevel .d-article,
+.downlevel .d-appendix,
+.downlevel .distill-appendix,
+.downlevel .d-byline,
+.downlevel .d-footnote-list,
+.downlevel .d-citation-list,
+.downlevel .distill-footer,
+.downlevel .appendix-bottom,
+.downlevel .posts-container {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+@media(min-width: 768px) {
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+  padding-left: 150px;
+  padding-right: 150px;
+  max-width: 900px;
+}
+}
+
+.downlevel pre code {
+  display: block;
+  border-left: 2px solid rgba(0, 0, 0, .1);
+  padding: 0 0 0 20px;
+  font-size: 14px;
+}
+
+.downlevel code, .downlevel pre {
+  color: black;
+  background: none;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+.downlevel .posts-list .post-preview {
+  color: inherit;
+}
+
+
+
+</style>
+
+<script type="application/javascript">
+
+function is_downlevel_browser() {
+  if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                 window.navigator.userAgent)) {
+    return true;
+  } else {
+    return window.load_distill_framework === undefined;
+  }
+}
+
+// show body when load is complete
+function on_load_complete() {
+
+  // add anchors
+  if (window.anchors) {
+    window.anchors.options.placement = 'left';
+    window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+  }
+
+
+  // set body to visible
+  document.body.style.visibility = 'visible';
+
+  // force redraw for leaflet widgets
+  if (window.HTMLWidgets) {
+    var maps = window.HTMLWidgets.findAll(".leaflet");
+    $.each(maps, function(i, el) {
+      var map = this.getMap();
+      map.invalidateSize();
+      map.eachLayer(function(layer) {
+        if (layer instanceof L.TileLayer)
+          layer.redraw();
+      });
+    });
+  }
+
+  // trigger 'shown' so htmlwidgets resize
+  $('d-article').trigger('shown');
+}
+
+function init_distill() {
+
+  init_common();
+
+  // create front matter
+  var front_matter = $('<d-front-matter></d-front-matter>');
+  $('#distill-front-matter').wrap(front_matter);
+
+  // create d-title
+  $('.d-title').changeElementType('d-title');
+
+  // create d-byline
+  var byline = $('<d-byline></d-byline>');
+  $('.d-byline').replaceWith(byline);
+
+  // create d-article
+  var article = $('<d-article></d-article>');
+  $('.d-article').wrap(article).children().unwrap();
+
+  // move posts container into article
+  $('.posts-container').appendTo($('d-article'));
+
+  // create d-appendix
+  $('.d-appendix').changeElementType('d-appendix');
+
+  // flag indicating that we have appendix items
+  var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+  // replace footnotes with <d-footnote>
+  $('.footnote-ref').each(function(i, val) {
+    appendix = true;
+    var href = $(this).attr('href');
+    var id = href.replace('#', '');
+    var fn = $('#' + id);
+    var fn_p = $('#' + id + '>p');
+    fn_p.find('.footnote-back').remove();
+    var text = fn_p.html();
+    var dtfn = $('<d-footnote></d-footnote>');
+    dtfn.html(text);
+    $(this).replaceWith(dtfn);
+  });
+  // remove footnotes
+  $('.footnotes').remove();
+
+  // move refs into #references-listing
+  $('#references-listing').replaceWith($('#refs'));
+
+  $('h1.appendix, h2.appendix').each(function(i, val) {
+    $(this).changeElementType('h3');
+  });
+  $('h3.appendix').each(function(i, val) {
+    var id = $(this).attr('id');
+    $('.d-contents a[href="#' + id + '"]').parent().remove();
+    appendix = true;
+    $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+  });
+
+  // show d-appendix if we have appendix content
+  $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+  // localize layout chunks to just output
+  $('.layout-chunk').each(function(i, val) {
+
+    // capture layout
+    var layout = $(this).attr('data-layout');
+
+    // apply layout to markdown level block elements
+    var elements = $(this).children().not('details, div.sourceCode, pre, script');
+    elements.each(function(i, el) {
+      var layout_div = $('<div class="' + layout + '"></div>');
+      if (layout_div.hasClass('shaded')) {
+        var shaded_content = $('<div class="shaded-content"></div>');
+        $(this).wrap(shaded_content);
+        $(this).parent().wrap(layout_div);
+      } else {
+        $(this).wrap(layout_div);
+      }
+    });
+
+
+    // unwrap the layout-chunk div
+    $(this).children().unwrap();
+  });
+
+  // remove code block used to force  highlighting css
+  $('.distill-force-highlighting-css').parent().remove();
+
+  // remove empty line numbers inserted by pandoc when using a
+  // custom syntax highlighting theme
+  $('code.sourceCode a:empty').remove();
+
+  // load distill framework
+  load_distill_framework();
+
+  // wait for window.distillRunlevel == 4 to do post processing
+  function distill_post_process() {
+
+    if (!window.distillRunlevel || window.distillRunlevel < 4)
+      return;
+
+    // hide author/affiliations entirely if we have no authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+    if (!have_authors)
+      $('d-byline').addClass('hidden');
+
+    // article with toc class
+    $('.d-contents').parent().addClass('d-article-with-toc');
+
+    // strip links that point to #
+    $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+    // add orcid ids
+    $('.authors-affiliations').find('.author').each(function(i, el) {
+      var orcid_id = front_matter.authors[i].orcidID;
+      if (orcid_id) {
+        var a = $('<a></a>');
+        a.attr('href', 'https://orcid.org/' + orcid_id);
+        var img = $('<img></img>');
+        img.addClass('orcid-id');
+        img.attr('alt', 'ORCID ID');
+        img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+        a.append(img);
+        $(this).append(a);
+      }
+    });
+
+    // hide elements of author/affiliations grid that have no value
+    function hide_byline_column(caption) {
+      $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+    }
+
+    // affiliations
+    var have_affiliations = false;
+    for (var i = 0; i<front_matter.authors.length; ++i) {
+      var author = front_matter.authors[i];
+      if (author.affiliation !== "&nbsp;") {
+        have_affiliations = true;
+        break;
+      }
+    }
+    if (!have_affiliations)
+      $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+    // published date
+    if (!front_matter.publishedDate)
+      hide_byline_column("Published");
+
+    // document object identifier
+    var doi = $('d-byline').find('h3:contains("DOI")');
+    var doi_p = doi.next().empty();
+    if (!front_matter.doi) {
+      // if we have a citation and valid citationText then link to that
+      if ($('#citation').length > 0 && front_matter.citationText) {
+        doi.html('Citation');
+        $('<a href="#citation"></a>')
+          .text(front_matter.citationText)
+          .appendTo(doi_p);
+      } else {
+        hide_byline_column("DOI");
+      }
+    } else {
+      $('<a></a>')
+         .attr('href', "https://doi.org/" + front_matter.doi)
+         .html(front_matter.doi)
+         .appendTo(doi_p);
+    }
+
+     // change plural form of authors/affiliations
+    if (front_matter.authors.length === 1) {
+      var grid = $('.authors-affiliations');
+      grid.children('h3:contains("Authors")').text('Author');
+      grid.children('h3:contains("Affiliations")').text('Affiliation');
+    }
+
+    // remove d-appendix and d-footnote-list local styles
+    $('d-appendix > style:first-child').remove();
+    $('d-footnote-list > style:first-child').remove();
+
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+
+    // hoverable references
+    $('span.citation[data-cites]').each(function() {
+      var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+      window.tippy(this, {
+        allowHTML: true,
+        content: refHtml,
+        maxWidth: 500,
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'light-border',
+        placement: 'bottom-start'
+      });
+    });
+
+    // clear polling timer
+    clearInterval(tid);
+
+    // show body now that everything is ready
+    on_load_complete();
+  }
+
+  var tid = setInterval(distill_post_process, 50);
+  distill_post_process();
+
+}
+
+function init_downlevel() {
+
+  init_common();
+
+   // insert hr after d-title
+  $('.d-title').after($('<hr class="section-separator"/>'));
+
+  // check if we have authors
+  var front_matter = JSON.parse($("#distill-front-matter").html());
+  var have_authors = front_matter.authors && front_matter.authors.length > 0;
+
+  // manage byline/border
+  if (!have_authors)
+    $('.d-byline').remove();
+  $('.d-byline').after($('<hr class="section-separator"/>'));
+  $('.d-byline a').remove();
+
+  // remove toc
+  $('.d-contents').remove();
+
+  // move appendix elements
+  $('h1.appendix, h2.appendix').each(function(i, val) {
+    $(this).changeElementType('h3');
+  });
+  $('h3.appendix').each(function(i, val) {
+    $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+  });
+
+
+  // inject headers into references and footnotes
+  var refs_header = $('<h3></h3>');
+  refs_header.text('References');
+  $('#refs').prepend(refs_header);
+
+  var footnotes_header = $('<h3></h3');
+  footnotes_header.text('Footnotes');
+  $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+
+  // move appendix-bottom entries to the bottom
+  $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+  $('.appendix-bottom').remove();
+
+  // remove appendix if it's empty
+  if ($('.d-appendix').children().length === 0)
+    $('.d-appendix').remove();
+
+  // prepend separator above appendix
+  $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+
+  // trim code
+  $('pre>code').each(function(i, val) {
+    $(this).html($.trim($(this).html()));
+  });
+
+  // move posts-container right before article
+  $('.posts-container').insertBefore($('.d-article'));
+
+  $('body').addClass('downlevel');
+
+  on_load_complete();
+}
+
+
+function init_common() {
+
+  // jquery plugin to change element types
+  (function($) {
+    $.fn.changeElementType = function(newType) {
+      var attrs = {};
+
+      $.each(this[0].attributes, function(idx, attr) {
+        attrs[attr.nodeName] = attr.nodeValue;
+      });
+
+      this.replaceWith(function() {
+        return $("<" + newType + "/>", attrs).append($(this).contents());
+      });
+    };
+  })(jQuery);
+
+  // prevent underline for linked images
+  $('a > img').parent().css({'border-bottom' : 'none'});
+
+  // mark non-body figures created by knitr chunks as 100% width
+  $('.layout-chunk').each(function(i, val) {
+    var figures = $(this).find('img, .html-widget');
+    if ($(this).attr('data-layout') !== "l-body") {
+      figures.css('width', '100%');
+    } else {
+      figures.css('max-width', '100%');
+      figures.filter("[width]").each(function(i, val) {
+        var fig = $(this);
+        fig.css('width', fig.attr('width') + 'px');
+      });
+
+    }
+  });
+
+  // auto-append index.html to post-preview links in file: protocol
+  // and in rstudio ide preview
+  $('.post-preview').each(function(i, val) {
+    if (window.location.protocol === "file:")
+      $(this).attr('href', $(this).attr('href') + "index.html");
+  });
+
+  // get rid of index.html references in header
+  if (window.location.protocol !== "file:") {
+    $('.distill-site-header a[href]').each(function(i,val) {
+      $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+    });
+  }
+
+  // add class to pandoc style tables
+  $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+  $('.kable-table').children('table').addClass('pandoc-table');
+
+  // add figcaption style to table captions
+  $('caption').parent('table').addClass("figcaption");
+
+  // initialize posts list
+  if (window.init_posts_list)
+    window.init_posts_list();
+
+  // implmement disqus comment link
+  $('.disqus-comment-count').click(function() {
+    window.headroom_prevent_pin = true;
+    $('#disqus_thread').toggleClass('hidden');
+    if (!$('#disqus_thread').hasClass('hidden')) {
+      var offset = $(this).offset();
+      $(window).resize();
+      $('html, body').animate({
+        scrollTop: offset.top - 35
+      });
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  if (is_downlevel_browser())
+    init_downlevel();
+  else
+    window.addEventListener('WebComponentsReady', init_distill);
+});
+
+</script>
+
+<style type="text/css">
+/* base variables */
+
+/* Edit the CSS properties in this file to create a custom
+   Distill theme. Only edit values in the right column
+   for each row; values shown are the CSS defaults.
+   To return any property to the default,
+   you may set its value to: unset
+   All rows must end with a semi-colon.                      */
+
+/* Optional: embed custom fonts here with `@import`          */
+/* This must remain at the top of this file.                 */
+
+
+
+html {
+  /*-- Main font sizes --*/
+  --title-size:      50px;
+  --body-size:       1.06rem;
+  --code-size:       14px;
+  --aside-size:      12px;
+  --fig-cap-size:    13px;
+  /*-- Main font colors --*/
+  --title-color:     #000000;
+  --header-color:    rgba(0, 0, 0, 0.8);
+  --body-color:      rgba(0, 0, 0, 0.8);
+  --aside-color:     rgba(0, 0, 0, 0.6);
+  --fig-cap-color:   rgba(0, 0, 0, 0.6);
+  /*-- Specify custom fonts ~~~ must be imported above   --*/
+  --heading-font:    sans-serif;
+  --mono-font:       monospace;
+  --body-font:       sans-serif;
+  --navbar-font:     sans-serif;  /* websites + blogs only */
+}
+
+/*-- ARTICLE METADATA --*/
+d-byline {
+  --heading-size:    0.6rem;
+  --heading-color:   rgba(0, 0, 0, 0.5);
+  --body-size:       0.8rem;
+  --body-color:      rgba(0, 0, 0, 0.8);
+}
+
+/*-- ARTICLE TABLE OF CONTENTS --*/
+.d-contents {
+  --heading-size:    18px;
+  --contents-size:   13px;
+}
+
+/*-- ARTICLE APPENDIX --*/
+d-appendix {
+  --heading-size:    15px;
+  --heading-color:   rgba(0, 0, 0, 0.65);
+  --text-size:       0.8em;
+  --text-color:      rgba(0, 0, 0, 0.5);
+}
+
+/*-- WEBSITE HEADER + FOOTER --*/
+/* These properties only apply to Distill sites and blogs  */
+
+.distill-site-header {
+  --title-size:       18px;
+  --text-color:       rgba(255, 255, 255, 0.8);
+  --text-size:        15px;
+  --hover-color:      white;
+  --bkgd-color:       #0F2E3D;
+}
+
+.distill-site-footer {
+  --text-color:       rgba(255, 255, 255, 0.8);
+  --text-size:        15px;
+  --hover-color:      white;
+  --bkgd-color:       #0F2E3D;
+}
+
+/*-- Additional custom styles --*/
+/* Add any additional CSS rules below                      */
+</style>
+<style type="text/css">
+/* base variables */
+
+/* Edit the CSS properties in this file to create a custom
+   Distill theme. Only edit values in the right column
+   for each row; values shown are the CSS defaults.
+   To return any property to the default,
+   you may set its value to: unset
+   All rows must end with a semi-colon.                      */
+
+/* Optional: embed custom fonts here with `@import`          */
+/* This must remain at the top of this file.                 */
+@import url('https://fonts.googleapis.com/css2?family=Eczar');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen+Mono');
+
+
+html {
+  /*-- Main font sizes --*/
+  --title-size:      50px;
+  --body-size:       1.06rem;
+  --code-size:       14px;
+  --aside-size:      12px;
+  --fig-cap-size:    13px;
+  /*-- Main font colors --*/
+  --title-color:     #000000;
+  --header-color:    rgba(0, 0, 0, 0.8);
+  --body-color:      rgba(0, 0, 0, 0.8);
+  --aside-color:     rgba(0, 0, 0, 0.6);
+  --fig-cap-color:   rgba(0, 0, 0, 0.6);
+  /*-- Specify custom fonts ~~~ must be imported above   --*/
+  --heading-font:    "Eczar", serif;
+  --mono-font:       "Oxygen Mono", monospace;
+  --body-font:       "Ubuntu", sans-serif;
+  --navbar-font:     "Eczar", serif;  /* websites + blogs only */
+}
+
+/*-- ARTICLE METADATA --*/
+d-byline {
+  --heading-size:    0.6rem;
+  --heading-color:   rgba(0, 0, 0, 0.5);
+  --body-size:       0.8rem;
+  --body-color:      rgba(0, 0, 0, 0.8);
+}
+
+/*-- ARTICLE TABLE OF CONTENTS --*/
+.d-contents {
+  --heading-size:    18px;
+  --contents-size:   13px;
+}
+
+/*-- ARTICLE APPENDIX --*/
+d-appendix {
+  --heading-size:    15px;
+  --heading-color:   rgba(0, 0, 0, 0.65);
+  --text-size:       0.8em;
+  --text-color:      rgba(0, 0, 0, 0.5);
+}
+
+/*-- WEBSITE HEADER + FOOTER --*/
+/* These properties only apply to Distill sites and blogs  */
+
+.distill-site-header {
+  --title-size:       24px;
+  --text-color:       rgba(255, 255, 255, 0.8);
+  --text-size:        18px;
+  --hover-color:      white;
+  --bkgd-color:       #40B0A6;
+}
+
+.distill-site-footer {
+  --text-color:       rgba(255, 255, 255, 0.8);
+  --text-size:        18px;
+  --hover-color:      white;
+  --bkgd-color:       #40B0A6;
+}
+
+/*-- Additional custom styles --*/
+/* Add any additional CSS rules below  */
+
+d-article a {
+    border-bottom: 2px solid rgba(64, 176, 166, 0.4);
+    text-decoration: none;
+}
+</style>
+<style type="text/css">
+/* base style */
+
+/* FONT FAMILIES */
+
+:root {
+  --heading-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono-default: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  --body-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+body,
+.posts-list .post-preview p,
+.posts-list .description p {
+  font-family: var(--body-font), var(--body-default);
+}
+
+h1, h2, h3, h4, h5, h6,
+.posts-list .post-preview h2,
+.posts-list .description h2 {
+  font-family: var(--heading-font), var(--heading-default);
+}
+
+d-article div.sourceCode code,
+d-article pre code {
+  font-family: var(--mono-font), var(--mono-default);
+}
+
+
+/*-- TITLE --*/
+d-title h1,
+.posts-list > h1 {
+  color: var(--title-color, black);
+}
+
+d-title h1 {
+  font-size: var(--title-size, 50px);
+}
+
+/*-- HEADERS --*/
+d-article h1,
+d-article h2,
+d-article h3,
+d-article h4,
+d-article h5,
+d-article h6 {
+  color: var(--header-color, rgba(0, 0, 0, 0.8));
+}
+
+/*-- BODY --*/
+d-article > p,  /* only text inside of <p> tags */
+d-article > ul, /* lists */
+d-article > ol {
+  color: var(--body-color, rgba(0, 0, 0, 0.8));
+  font-size: var(--body-size, 1.06rem);
+}
+
+
+/*-- CODE --*/
+d-article div.sourceCode code,
+d-article pre code {
+  font-size: var(--code-size, 14px);
+}
+
+/*-- ASIDE --*/
+d-article aside {
+  font-size: var(--aside-size, 12px);
+  color: var(--aside-color, rgba(0, 0, 0, 0.6));
+}
+
+/*-- FIGURE CAPTIONS --*/
+figure .caption,
+figure figcaption,
+.figure .caption {
+  font-size: var(--fig-cap-size, 13px);
+  color: var(--fig-cap-color, rgba(0, 0, 0, 0.6));
+}
+
+/*-- METADATA --*/
+d-byline h3 {
+  font-size: var(--heading-size, 0.6rem);
+  color: var(--heading-color, rgba(0, 0, 0, 0.5));
+}
+
+d-byline {
+  font-size: var(--body-size, 0.8rem);
+  color: var(--body-color, rgba(0, 0, 0, 0.8));
+}
+
+d-byline a,
+d-article d-byline a {
+  color: var(--body-color, rgba(0, 0, 0, 0.8));
+}
+
+/*-- TABLE OF CONTENTS --*/
+.d-contents nav h3 {
+  font-size: var(--heading-size, 18px);
+}
+
+.d-contents nav a {
+  font-size: var(--contents-size, 13px);
+}
+
+/*-- APPENDIX --*/
+d-appendix h3 {
+  font-size: var(--heading-size, 15px);
+  color: var(--heading-color, rgba(0, 0, 0, 0.65));
+}
+
+d-appendix {
+  font-size: var(--text-size, 0.8em);
+  color: var(--text-color, rgba(0, 0, 0, 0.5));
+}
+
+d-appendix d-footnote-list a.footnote-backlink {
+  color: var(--text-color, rgba(0, 0, 0, 0.5));
+}
+
+/*-- WEBSITE HEADER + FOOTER --*/
+.distill-site-header .title {
+  font-size: var(--title-size, 18px);
+  font-family: var(--navbar-font), var(--heading-default);
+}
+
+.distill-site-header a,
+.nav-dropdown .nav-dropbtn {
+  font-family: var(--navbar-font), var(--heading-default);
+}
+
+.nav-dropdown .nav-dropbtn {
+  color: var(--text-color, rgba(255, 255, 255, 0.8));
+  font-size: var(--text-size, 15px);
+}
+
+.distill-site-header a:hover,
+.nav-dropdown:hover .nav-dropbtn {
+  color: var(--hover-color, white);
+}
+
+.distill-site-header {
+  font-size: var(--text-size, 15px);
+  color: var(--text-color, rgba(255, 255, 255, 0.8));
+  background-color: var(--bkgd-color, #0F2E3D);
+}
+
+.distill-site-footer {
+  font-size: var(--text-size, 15px);
+  color: var(--text-color, rgba(255, 255, 255, 0.8));
+  background-color: var(--bkgd-color, #0F2E3D);
+}
+
+.distill-site-footer a:hover {
+  color: var(--hover-color, white);
+}</style>
+<!--/radix_placeholder_distill-->
+  <script src="../../site_libs/header-attrs-2.10/header-attrs.js"></script>
+  <script src="../../site_libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+  <script src="../../site_libs/plotly-binding-4.9.4.1/plotly.js"></script>
+  <script src="../../site_libs/typedarray-0.1/typedarray.min.js"></script>
+  <script src="../../site_libs/jquery-3.5.1/jquery.min.js"></script>
+  <link href="../../site_libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+  <script src="../../site_libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+  <link href="../../site_libs/plotly-htmlwidgets-css-1.57.1/plotly-htmlwidgets.css" rel="stylesheet" />
+  <script src="../../site_libs/plotly-main-1.57.1/plotly-latest.min.js"></script>
+  <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="../../site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="../../site_libs/anchor-4.2.2/anchor.min.js"></script>
+  <script src="../../site_libs/bowser-1.9.3/bowser.min.js"></script>
+  <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="../../site_libs/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+<!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"US Spending on Education","description":"How much do US states spend on public education? How is spending related to student achievement?","authors":[{"author":"Delanie Honda","authorURL":{},"affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-09-16T00:00:00.000-04:00","citationText":"Honda, 2021"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<header class="header header--fixed" role="banner">
+<nav class="distill-site-nav distill-site-header">
+<div class="nav-left">
+<a href="../../index.html" class="title">Delanie Honda</a>
+<input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
+</div>
+<div class="nav-right">
+<a href="../../index.html">Home</a>
+<a href="../../about.html">About</a>
+<a href="../../projects.html">Projects</a>
+<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
+</div>
+</nav>
+</header>
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>US Spending on Education</h1>
+<!--radix_placeholder_categories-->
+<!--/radix_placeholder_categories-->
+<p><p>How much do US states spend on public education? How is spending related to student achievement?</p></p>
+</div>
+
+<div class="d-byline">
+  Delanie Honda true 
+  
+<br/>09-16-2021
+</div>
+
+<div class="d-article">
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<figure>
+<img src="unsplash_graduation.jpg" title="Students throw graduation caps in the air in front of a building" alt="Photo by Photo by Vasily Koloda on Unsplash" /><figcaption aria-hidden="true">Photo by Photo by Vasily Koloda on Unsplash</figcaption>
+</figure>
+<h1 id="about">About</h1>
+<p>From the <a href="https://github.com/rfordatascience/tidytuesday">Tidy Tuesday</a> repo:</p>
+<blockquote>
+<p>A weekly data project aimed at the R ecosystem. As this project was borne out of the R4DS Online Learning Community and the R for Data Science textbook, an emphasis was placed on understanding how to summarize and arrange data to make meaningful charts with {ggplot2}, {tidyr}, {dplyr}, and other tools in the {tidyverse} ecosystem.</p>
+</blockquote>
+<blockquote>
+<p>Every week we post a raw dataset, a chart or article related to that dataset, and ask you to explore the data. While the dataset will be “tamed”, it will not always be tidy! As such you might need to apply various R for Data Science techniques to wrangle the data into a true tidy format. The goal of TidyTuesday is to apply your R skills, get feedback, explore other’s work, and connect with the greater #RStats community! As such we encourage everyone of all skills to participate!</p>
+</blockquote>
+<p>Although I haven’t participated in many Tidy Tuesday weeks, it has been a great resource for practicing R and data analysis/wrangling/visualization skills. I’ve also found the #rstats community on Twitter very welcoming and helpful to everyone. I highly recommend playing with datasets or just scrolling through the Tidy Tuesday submissions for inspiration.</p>
+<p>Around this time last year, the Tidy Tuesday dataset was about US education spending. The dataset comes from the <a href="https://datacatalog.urban.org/search/type/dataset">Urban Institute</a> and has tracked a number of variables such as SNAP spending, public spending on libraries and parks and recreation, and others from 1997 to 2018.</p>
+<h1 id="exploration">Exploration</h1>
+<p>At the time I was quite excited to make a choropleth map (I still am). I even made it animate! This map is pretty simple; it shows that state spending per pupil (adjusted for inflation) has steadily increased across all states over the past decade. Lighter colors - greens and yellows - indicate higher levels of spending per pupil.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div id="htmlwidget-38dd60bf4b950d027049" style="width:624px;height:672px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-38dd60bf4b950d027049">{"x":{"visdat":{"412c7fbb3a35":["function () ","plotlyVisDat"]},"cur_data":"412c7fbb3a35","attrs":{"412c7fbb3a35":{"locationmode":"USA-states","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"z":{},"color":{},"colorscale":"Viridis","locations":{},"frame":{},"ids":{},"text":{},"hoverinfo":"text","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"mapType":"geo","scene":{"zaxis":{"title":"inf_adj_perchild"}},"geo":{"domain":{"x":[0,1],"y":[0,1]},"scope":"usa","projection":{"type":"albers usa"},"showlakes":true,"lakecolor":"rgba(255,255,255,1)"},"hovermode":"closest","showlegend":false,"sliders":[{"currentvalue":{"prefix":"year: ","xanchor":"right","font":{"size":16,"color":"rgba(204,204,204,1)"}},"steps":[{"method":"animate","args":[["1997"],{"transition":{"duration":500,"easing":"linear"},"frame":{"duration":500,"redraw":true},"mode":"immediate"}],"label":"1997","value":"1997"},{"method":"animate","args":[["1998"],{"transition":{"duration":500,"easing":"linear"},"frame":{"duration":500,"redraw":true},"mode":"immediate"}],"label":"1998","value":"1998"},{"method":"animate","args":[["1999"],{"transition":{"duration":500,"easing":"linear"},"frame":{"duration":500,"redraw":true},"mode":"immediate"}],"label":"1999","value":"1999"},{"method":"animate","args":[["2000"],{"transition":{"duration":500,"easing":"linear"},"frame":{"duration":500,"redraw":true},"mode":"immediate"}],"label":"2000","value":"2000"},{"method":"animate","args":[["2001"],{"transition":{"duration":500,"easing":"linear"},"frame":{"duration":500,"redraw":true},"mode":"immediate"}],"label":"2001","value":"2001"},{"method":"animate","args":[["2002"],{"transition":{"duration":500,"easing":"linear"},"frame":{"duration":500,"redraw":true},"mode":"immediate"}],"label":"2002","value":"2002"},{"method":"animate","args":[["2003"],{"transition":{"duration":500,"easing":"linear"},"frame":{"duration":500,"redraw":true},"mode":"immediate"}],"label":"2003","value":"2003"},{"method":"animate","args":[["2004"],{"transition":{"duration":500,"easing":"linear"},"frame":{"duration":500,"redraw":true},"mode":"immediate"}],"label":"2004","value":"2004"},{"method":"animate","args":[["2005"],{"transition":{"duration":500,"easing":"linear"},"frame":{"duration":500,"redraw":true},"mode":"immediate"}],"label":"2005","value":"2005"},{"method":"animate","args":[["2006"],{"transition":{"duration":500,"easing":"linear"},"frame":{"duration":500,"redraw":true},"mode":"immediate"}],"label":"2006","value":"2006"},{"method":"animate","args":[["2007"],{"transition":{"duration":500,"easing":"linear"},"frame":{"duration":500,"redraw":true},"mode":"immediate"}],"label":"2007","value":"2007"},{"method":"animate","args":[["2008"],{"transition":{"duration":500,"easing":"linear"},"frame":{"duration":500,"redraw":true},"mode":"immediate"}],"label":"2008","value":"2008"},{"method":"animate","args":[["2009"],{"transition":{"duration":500,"easing":"linear"},"frame":{"duration":500,"redraw":true},"mode":"immediate"}],"label":"2009","value":"2009"},{"method":"animate","args":[["2010"],{"transition":{"duration":500,"easing":"linear"},"frame":{"duration":500,"redraw":true},"mode":"immediate"}],"label":"2010","value":"2010"},{"method":"animate","args":[["2011"],{"transition":{"duration":500,"easing":"linear"},"frame":{"duration":500,"redraw":true},"mode":"immediate"}],"label":"2011","value":"2011"},{"method":"animate","args":[["2012"],{"transition":{"duration":500,"easing":"linear"},"frame":{"duration":500,"redraw":true},"mode":"immediate"}],"label":"2012","value":"2012"},{"method":"animate","args":[["2013"],{"transition":{"duration":500,"easing":"linear"},"frame":{"duration":500,"redraw":true},"mode":"immediate"}],"label":"2013","value":"2013"},{"method":"animate","args":[["2014"],{"transition":{"duration":500,"easing":"linear"},"frame":{"duration":500,"redraw":true},"mode":"immediate"}],"label":"2014","value":"2014"},{"method":"animate","args":[["2015"],{"transition":{"duration":500,"easing":"linear"},"frame":{"duration":500,"redraw":true},"mode":"immediate"}],"label":"2015","value":"2015"},{"method":"animate","args":[["2016"],{"transition":{"duration":500,"easing":"linear"},"frame":{"duration":500,"redraw":true},"mode":"immediate"}],"label":"2016","value":"2016"}],"visible":true,"pad":{"t":40}}],"updatemenus":[{"type":"buttons","direction":"right","showactive":false,"y":0,"x":0,"yanchor":"top","xanchor":"right","pad":{"t":60,"r":5},"buttons":[{"label":"Play","method":"animate","args":[null,{"fromcurrent":true,"mode":"immediate","transition":{"duration":500,"easing":"linear"},"frame":{"duration":500,"redraw":true}}]}]}],"legend":{"yanchor":"top","y":0.5},"title":"<b>Public spending on elementary<br /> and secondary education (1997 - 2016)<\/b><br>(Values adjusted for inflation, in 2016 dollars)"},"source":"A","config":{"showSendToCloud":false},"data":[{"colorbar":{"title":"inf_adj_perchild","ticklen":2,"len":0.5,"lenmode":"fraction","y":1,"yanchor":"top","tickprefix":"$"},"colorscale":"Viridis","showscale":true,"locationmode":"USA-states","z":[3929.45,7548.49,3706.68,3891.27,4282.32,4380.31,6697.44,5625.31,6105.13,4453.58,4609.37,3231.66,3991.01,4440.08,4550.33,4616.66,4727.24,4037.39,3979.9,5921.9,5070.8,5516.71,5657.58,5569.09,3406.46,4324.66,4923.67,4706.67,4231.92,5062.44,7223.89,3956.54,7048.43,4222.5,4205.68,4764.31,4168.17,5079.02,5257.63,6058.28,4192.86,3991.77,3852,4341.95,3413.33,5629.54,4975.49,4903.53,5570.38,5789.64,5809.87],"locations":["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"frame":"1997","ids":["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"text":["Alabama,1997<br>Spending per pupil: $3929.45","Alaska,1997<br>Spending per pupil: $7548.49","Arizona,1997<br>Spending per pupil: $3706.68","Arkansas,1997<br>Spending per pupil: $3891.27","California,1997<br>Spending per pupil: $4282.32","Colorado,1997<br>Spending per pupil: $4380.31","Connecticut,1997<br>Spending per pupil: $6697.44","Delaware,1997<br>Spending per pupil: $5625.31","District of Columbia,1997<br>Spending per pupil: $6105.13","Florida,1997<br>Spending per pupil: $4453.58","Georgia,1997<br>Spending per pupil: $4609.37","Hawaii,1997<br>Spending per pupil: $3231.66","Idaho,1997<br>Spending per pupil: $3991.01","Illinois,1997<br>Spending per pupil: $4440.08","Indiana,1997<br>Spending per pupil: $4550.33","Iowa,1997<br>Spending per pupil: $4616.66","Kansas,1997<br>Spending per pupil: $4727.24","Kentucky,1997<br>Spending per pupil: $4037.39","Louisiana,1997<br>Spending per pupil: $3979.9","Maine,1997<br>Spending per pupil: $5921.9","Maryland,1997<br>Spending per pupil: $5070.8","Massachusetts,1997<br>Spending per pupil: $5516.71","Michigan,1997<br>Spending per pupil: $5657.58","Minnesota,1997<br>Spending per pupil: $5569.09","Mississippi,1997<br>Spending per pupil: $3406.46","Missouri,1997<br>Spending per pupil: $4324.66","Montana,1997<br>Spending per pupil: $4923.67","Nebraska,1997<br>Spending per pupil: $4706.67","Nevada,1997<br>Spending per pupil: $4231.92","New Hampshire,1997<br>Spending per pupil: $5062.44","New Jersey,1997<br>Spending per pupil: $7223.89","New Mexico,1997<br>Spending per pupil: $3956.54","New York,1997<br>Spending per pupil: $7048.43","North Carolina,1997<br>Spending per pupil: $4222.5","North Dakota,1997<br>Spending per pupil: $4205.68","Ohio,1997<br>Spending per pupil: $4764.31","Oklahoma,1997<br>Spending per pupil: $4168.17","Oregon,1997<br>Spending per pupil: $5079.02","Pennsylvania,1997<br>Spending per pupil: $5257.63","Rhode Island,1997<br>Spending per pupil: $6058.28","South Carolina,1997<br>Spending per pupil: $4192.86","South Dakota,1997<br>Spending per pupil: $3991.77","Tennessee,1997<br>Spending per pupil: $3852","Texas,1997<br>Spending per pupil: $4341.95","Utah,1997<br>Spending per pupil: $3413.33","Vermont,1997<br>Spending per pupil: $5629.54","Virginia,1997<br>Spending per pupil: $4975.49","Washington,1997<br>Spending per pupil: $4903.53","West Virginia,1997<br>Spending per pupil: $5570.38","Wisconsin,1997<br>Spending per pupil: $5789.64","Wyoming,1997<br>Spending per pupil: $5809.87"],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"type":"choropleth","marker":{"line":{"colorbar":{"title":"","ticklen":2},"cmin":3231.66,"cmax":18810,"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":false,"color":[3929.45,7548.49,3706.68,3891.27,4282.32,4380.31,6697.44,5625.31,6105.13,4453.58,4609.37,3231.66,3991.01,4440.08,4550.33,4616.66,4727.24,4037.39,3979.9,5921.9,5070.8,5516.71,5657.58,5569.09,3406.46,4324.66,4923.67,4706.67,4231.92,5062.44,7223.89,3956.54,7048.43,4222.5,4205.68,4764.31,4168.17,5079.02,5257.63,6058.28,4192.86,3991.77,3852,4341.95,3413.33,5629.54,4975.49,4903.53,5570.38,5789.64,5809.87]}},"geo":"geo","visible":true}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"frames":[{"name":"1997","data":[{"colorbar":{"title":"inf_adj_perchild","ticklen":2},"colorscale":"Viridis","showscale":true,"locationmode":"USA-states","z":[3929.45,7548.49,3706.68,3891.27,4282.32,4380.31,6697.44,5625.31,6105.13,4453.58,4609.37,3231.66,3991.01,4440.08,4550.33,4616.66,4727.24,4037.39,3979.9,5921.9,5070.8,5516.71,5657.58,5569.09,3406.46,4324.66,4923.67,4706.67,4231.92,5062.44,7223.89,3956.54,7048.43,4222.5,4205.68,4764.31,4168.17,5079.02,5257.63,6058.28,4192.86,3991.77,3852,4341.95,3413.33,5629.54,4975.49,4903.53,5570.38,5789.64,5809.87],"locations":["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"frame":"1997","ids":["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"text":["Alabama,1997<br>Spending per pupil: $3929.45","Alaska,1997<br>Spending per pupil: $7548.49","Arizona,1997<br>Spending per pupil: $3706.68","Arkansas,1997<br>Spending per pupil: $3891.27","California,1997<br>Spending per pupil: $4282.32","Colorado,1997<br>Spending per pupil: $4380.31","Connecticut,1997<br>Spending per pupil: $6697.44","Delaware,1997<br>Spending per pupil: $5625.31","District of Columbia,1997<br>Spending per pupil: $6105.13","Florida,1997<br>Spending per pupil: $4453.58","Georgia,1997<br>Spending per pupil: $4609.37","Hawaii,1997<br>Spending per pupil: $3231.66","Idaho,1997<br>Spending per pupil: $3991.01","Illinois,1997<br>Spending per pupil: $4440.08","Indiana,1997<br>Spending per pupil: $4550.33","Iowa,1997<br>Spending per pupil: $4616.66","Kansas,1997<br>Spending per pupil: $4727.24","Kentucky,1997<br>Spending per pupil: $4037.39","Louisiana,1997<br>Spending per pupil: $3979.9","Maine,1997<br>Spending per pupil: $5921.9","Maryland,1997<br>Spending per pupil: $5070.8","Massachusetts,1997<br>Spending per pupil: $5516.71","Michigan,1997<br>Spending per pupil: $5657.58","Minnesota,1997<br>Spending per pupil: $5569.09","Mississippi,1997<br>Spending per pupil: $3406.46","Missouri,1997<br>Spending per pupil: $4324.66","Montana,1997<br>Spending per pupil: $4923.67","Nebraska,1997<br>Spending per pupil: $4706.67","Nevada,1997<br>Spending per pupil: $4231.92","New Hampshire,1997<br>Spending per pupil: $5062.44","New Jersey,1997<br>Spending per pupil: $7223.89","New Mexico,1997<br>Spending per pupil: $3956.54","New York,1997<br>Spending per pupil: $7048.43","North Carolina,1997<br>Spending per pupil: $4222.5","North Dakota,1997<br>Spending per pupil: $4205.68","Ohio,1997<br>Spending per pupil: $4764.31","Oklahoma,1997<br>Spending per pupil: $4168.17","Oregon,1997<br>Spending per pupil: $5079.02","Pennsylvania,1997<br>Spending per pupil: $5257.63","Rhode Island,1997<br>Spending per pupil: $6058.28","South Carolina,1997<br>Spending per pupil: $4192.86","South Dakota,1997<br>Spending per pupil: $3991.77","Tennessee,1997<br>Spending per pupil: $3852","Texas,1997<br>Spending per pupil: $4341.95","Utah,1997<br>Spending per pupil: $3413.33","Vermont,1997<br>Spending per pupil: $5629.54","Virginia,1997<br>Spending per pupil: $4975.49","Washington,1997<br>Spending per pupil: $4903.53","West Virginia,1997<br>Spending per pupil: $5570.38","Wisconsin,1997<br>Spending per pupil: $5789.64","Wyoming,1997<br>Spending per pupil: $5809.87"],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"type":"choropleth","marker":{"line":{"colorbar":{"title":"","ticklen":2},"cmin":3231.66,"cmax":18810,"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":false,"color":[3929.45,7548.49,3706.68,3891.27,4282.32,4380.31,6697.44,5625.31,6105.13,4453.58,4609.37,3231.66,3991.01,4440.08,4550.33,4616.66,4727.24,4037.39,3979.9,5921.9,5070.8,5516.71,5657.58,5569.09,3406.46,4324.66,4923.67,4706.67,4231.92,5062.44,7223.89,3956.54,7048.43,4222.5,4205.68,4764.31,4168.17,5079.02,5257.63,6058.28,4192.86,3991.77,3852,4341.95,3413.33,5629.54,4975.49,4903.53,5570.38,5789.64,5809.87]}},"geo":"geo","visible":true}],"traces":[0]},{"name":"1998","data":[{"colorbar":{"title":"inf_adj_perchild","ticklen":2},"colorscale":"Viridis","showscale":true,"locationmode":"USA-states","z":[4163.14,7126.73,3715.62,4140.83,4652.52,4640.42,6392.75,5736.41,7192.65,4562.87,4795.3,3451.28,4104.62,4904.41,4804.6,5099.35,4831.37,4019.06,4208.1,6271.04,5101.85,5950.64,6032.54,5515.41,3585.15,4493.93,5033.03,4705.42,4325.09,5216.62,7607.89,4160.45,7369.8,4413.07,4559.08,5048.48,4369.05,5376.11,5943.75,6327.88,4409.77,4068.65,3984.47,4538.53,3524.34,6213.88,5330.57,5099.08,5678.04,5995.48,5918.81],"locations":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"frame":"1998","ids":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"text":["Alabama,1998<br>Spending per pupil: $4163.14","Alaska,1998<br>Spending per pupil: $7126.73","Arizona,1998<br>Spending per pupil: $3715.62","Arkansas,1998<br>Spending per pupil: $4140.83","California,1998<br>Spending per pupil: $4652.52","Colorado,1998<br>Spending per pupil: $4640.42","Connecticut,1998<br>Spending per pupil: $6392.75","Delaware,1998<br>Spending per pupil: $5736.41","District of Columbia,1998<br>Spending per pupil: $7192.65","Florida,1998<br>Spending per pupil: $4562.87","Georgia,1998<br>Spending per pupil: $4795.3","Hawaii,1998<br>Spending per pupil: $3451.28","Idaho,1998<br>Spending per pupil: $4104.62","Illinois,1998<br>Spending per pupil: $4904.41","Indiana,1998<br>Spending per pupil: $4804.6","Iowa,1998<br>Spending per pupil: $5099.35","Kansas,1998<br>Spending per pupil: $4831.37","Kentucky,1998<br>Spending per pupil: $4019.06","Louisiana,1998<br>Spending per pupil: $4208.1","Maine,1998<br>Spending per pupil: $6271.04","Maryland,1998<br>Spending per pupil: $5101.85","Massachusetts,1998<br>Spending per pupil: $5950.64","Michigan,1998<br>Spending per pupil: $6032.54","Minnesota,1998<br>Spending per pupil: $5515.41","Mississippi,1998<br>Spending per pupil: $3585.15","Missouri,1998<br>Spending per pupil: $4493.93","Montana,1998<br>Spending per pupil: $5033.03","Nebraska,1998<br>Spending per pupil: $4705.42","Nevada,1998<br>Spending per pupil: $4325.09","New Hampshire,1998<br>Spending per pupil: $5216.62","New Jersey,1998<br>Spending per pupil: $7607.89","New Mexico,1998<br>Spending per pupil: $4160.45","New York,1998<br>Spending per pupil: $7369.8","North Carolina,1998<br>Spending per pupil: $4413.07","North Dakota,1998<br>Spending per pupil: $4559.08","Ohio,1998<br>Spending per pupil: $5048.48","Oklahoma,1998<br>Spending per pupil: $4369.05","Oregon,1998<br>Spending per pupil: $5376.11","Pennsylvania,1998<br>Spending per pupil: $5943.75","Rhode Island,1998<br>Spending per pupil: $6327.88","South Carolina,1998<br>Spending per pupil: $4409.77","South Dakota,1998<br>Spending per pupil: $4068.65","Tennessee,1998<br>Spending per pupil: $3984.47","Texas,1998<br>Spending per pupil: $4538.53","Utah,1998<br>Spending per pupil: $3524.34","Vermont,1998<br>Spending per pupil: $6213.88","Virginia,1998<br>Spending per pupil: $5330.57","Washington,1998<br>Spending per pupil: $5099.08","West Virginia,1998<br>Spending per pupil: $5678.04","Wisconsin,1998<br>Spending per pupil: $5995.48","Wyoming,1998<br>Spending per pupil: $5918.81"],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"type":"choropleth","marker":{"line":{"colorbar":{"title":"","ticklen":2},"cmin":3231.66,"cmax":18810,"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":false,"color":[4163.14,7126.73,3715.62,4140.83,4652.52,4640.42,6392.75,5736.41,7192.65,4562.87,4795.3,3451.28,4104.62,4904.41,4804.6,5099.35,4831.37,4019.06,4208.1,6271.04,5101.85,5950.64,6032.54,5515.41,3585.15,4493.93,5033.03,4705.42,4325.09,5216.62,7607.89,4160.45,7369.8,4413.07,4559.08,5048.48,4369.05,5376.11,5943.75,6327.88,4409.77,4068.65,3984.47,4538.53,3524.34,6213.88,5330.57,5099.08,5678.04,5995.48,5918.81]}},"geo":"geo","visible":true}],"traces":[0]},{"name":"1999","data":[{"colorbar":{"title":"inf_adj_perchild","ticklen":2},"colorscale":"Viridis","showscale":true,"locationmode":"USA-states","z":[4434.19,7616.57,3810.46,4288.75,4847.54,4762.38,7073.68,5796.6,7726.88,4745.11,5090.76,3872.99,4300.49,5217.12,4913.33,5215.05,4884.45,4215.57,4411.92,6140.45,5336.08,6285.71,6247.04,5826.52,3720.85,4723.31,5111.67,4735.67,4489.8,5358.27,7706.44,4467.6,7691.91,4599.98,4726.81,5287.22,4580.03,5551.26,6168.17,6474.16,4675.48,4262.92,4126.58,4688.56,3665.53,6744.23,5432.64,5158.33,6065.44,6160.9,6399.61],"locations":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"frame":"1999","ids":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"text":["Alabama,1999<br>Spending per pupil: $4434.19","Alaska,1999<br>Spending per pupil: $7616.57","Arizona,1999<br>Spending per pupil: $3810.46","Arkansas,1999<br>Spending per pupil: $4288.75","California,1999<br>Spending per pupil: $4847.54","Colorado,1999<br>Spending per pupil: $4762.38","Connecticut,1999<br>Spending per pupil: $7073.68","Delaware,1999<br>Spending per pupil: $5796.6","District of Columbia,1999<br>Spending per pupil: $7726.88","Florida,1999<br>Spending per pupil: $4745.11","Georgia,1999<br>Spending per pupil: $5090.76","Hawaii,1999<br>Spending per pupil: $3872.99","Idaho,1999<br>Spending per pupil: $4300.49","Illinois,1999<br>Spending per pupil: $5217.12","Indiana,1999<br>Spending per pupil: $4913.33","Iowa,1999<br>Spending per pupil: $5215.05","Kansas,1999<br>Spending per pupil: $4884.45","Kentucky,1999<br>Spending per pupil: $4215.57","Louisiana,1999<br>Spending per pupil: $4411.92","Maine,1999<br>Spending per pupil: $6140.45","Maryland,1999<br>Spending per pupil: $5336.08","Massachusetts,1999<br>Spending per pupil: $6285.71","Michigan,1999<br>Spending per pupil: $6247.04","Minnesota,1999<br>Spending per pupil: $5826.52","Mississippi,1999<br>Spending per pupil: $3720.85","Missouri,1999<br>Spending per pupil: $4723.31","Montana,1999<br>Spending per pupil: $5111.67","Nebraska,1999<br>Spending per pupil: $4735.67","Nevada,1999<br>Spending per pupil: $4489.8","New Hampshire,1999<br>Spending per pupil: $5358.27","New Jersey,1999<br>Spending per pupil: $7706.44","New Mexico,1999<br>Spending per pupil: $4467.6","New York,1999<br>Spending per pupil: $7691.91","North Carolina,1999<br>Spending per pupil: $4599.98","North Dakota,1999<br>Spending per pupil: $4726.81","Ohio,1999<br>Spending per pupil: $5287.22","Oklahoma,1999<br>Spending per pupil: $4580.03","Oregon,1999<br>Spending per pupil: $5551.26","Pennsylvania,1999<br>Spending per pupil: $6168.17","Rhode Island,1999<br>Spending per pupil: $6474.16","South Carolina,1999<br>Spending per pupil: $4675.48","South Dakota,1999<br>Spending per pupil: $4262.92","Tennessee,1999<br>Spending per pupil: $4126.58","Texas,1999<br>Spending per pupil: $4688.56","Utah,1999<br>Spending per pupil: $3665.53","Vermont,1999<br>Spending per pupil: $6744.23","Virginia,1999<br>Spending per pupil: $5432.64","Washington,1999<br>Spending per pupil: $5158.33","West Virginia,1999<br>Spending per pupil: $6065.44","Wisconsin,1999<br>Spending per pupil: $6160.9","Wyoming,1999<br>Spending per pupil: $6399.61"],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"type":"choropleth","marker":{"line":{"colorbar":{"title":"","ticklen":2},"cmin":3231.66,"cmax":18810,"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":false,"color":[4434.19,7616.57,3810.46,4288.75,4847.54,4762.38,7073.68,5796.6,7726.88,4745.11,5090.76,3872.99,4300.49,5217.12,4913.33,5215.05,4884.45,4215.57,4411.92,6140.45,5336.08,6285.71,6247.04,5826.52,3720.85,4723.31,5111.67,4735.67,4489.8,5358.27,7706.44,4467.6,7691.91,4599.98,4726.81,5287.22,4580.03,5551.26,6168.17,6474.16,4675.48,4262.92,4126.58,4688.56,3665.53,6744.23,5432.64,5158.33,6065.44,6160.9,6399.61]}},"geo":"geo","visible":true}],"traces":[0]},{"name":"2000","data":[{"colorbar":{"title":"inf_adj_perchild","ticklen":2},"colorscale":"Viridis","showscale":true,"locationmode":"USA-states","z":[4597.63,7729.86,3937.63,4398.52,5117.81,4838.38,7257.18,6044.07,9001.08,4682.18,5248.7,4179.77,4248.99,5421.26,4972.57,5361.45,5008.49,4308.1,4474.45,6385.17,5431.98,6598.15,6439.03,6035.9,4028.21,4892.82,5202.48,4909.23,4523.98,5661.61,8273.93,4655.36,8174.84,4887.01,4936.84,5511.56,4726.01,5599.95,6210.31,6669.4,4978,4438.65,4427.3,5020.26,3685.21,7202.9,5946.75,5278.88,6338.94,6241.48,6683.59],"locations":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"frame":"2000","ids":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"text":["Alabama,2000<br>Spending per pupil: $4597.63","Alaska,2000<br>Spending per pupil: $7729.86","Arizona,2000<br>Spending per pupil: $3937.63","Arkansas,2000<br>Spending per pupil: $4398.52","California,2000<br>Spending per pupil: $5117.81","Colorado,2000<br>Spending per pupil: $4838.38","Connecticut,2000<br>Spending per pupil: $7257.18","Delaware,2000<br>Spending per pupil: $6044.07","District of Columbia,2000<br>Spending per pupil: $9001.08","Florida,2000<br>Spending per pupil: $4682.18","Georgia,2000<br>Spending per pupil: $5248.7","Hawaii,2000<br>Spending per pupil: $4179.77","Idaho,2000<br>Spending per pupil: $4248.99","Illinois,2000<br>Spending per pupil: $5421.26","Indiana,2000<br>Spending per pupil: $4972.57","Iowa,2000<br>Spending per pupil: $5361.45","Kansas,2000<br>Spending per pupil: $5008.49","Kentucky,2000<br>Spending per pupil: $4308.1","Louisiana,2000<br>Spending per pupil: $4474.45","Maine,2000<br>Spending per pupil: $6385.17","Maryland,2000<br>Spending per pupil: $5431.98","Massachusetts,2000<br>Spending per pupil: $6598.15","Michigan,2000<br>Spending per pupil: $6439.03","Minnesota,2000<br>Spending per pupil: $6035.9","Mississippi,2000<br>Spending per pupil: $4028.21","Missouri,2000<br>Spending per pupil: $4892.82","Montana,2000<br>Spending per pupil: $5202.48","Nebraska,2000<br>Spending per pupil: $4909.23","Nevada,2000<br>Spending per pupil: $4523.98","New Hampshire,2000<br>Spending per pupil: $5661.61","New Jersey,2000<br>Spending per pupil: $8273.93","New Mexico,2000<br>Spending per pupil: $4655.36","New York,2000<br>Spending per pupil: $8174.84","North Carolina,2000<br>Spending per pupil: $4887.01","North Dakota,2000<br>Spending per pupil: $4936.84","Ohio,2000<br>Spending per pupil: $5511.56","Oklahoma,2000<br>Spending per pupil: $4726.01","Oregon,2000<br>Spending per pupil: $5599.95","Pennsylvania,2000<br>Spending per pupil: $6210.31","Rhode Island,2000<br>Spending per pupil: $6669.4","South Carolina,2000<br>Spending per pupil: $4978","South Dakota,2000<br>Spending per pupil: $4438.65","Tennessee,2000<br>Spending per pupil: $4427.3","Texas,2000<br>Spending per pupil: $5020.26","Utah,2000<br>Spending per pupil: $3685.21","Vermont,2000<br>Spending per pupil: $7202.9","Virginia,2000<br>Spending per pupil: $5946.75","Washington,2000<br>Spending per pupil: $5278.88","West Virginia,2000<br>Spending per pupil: $6338.94","Wisconsin,2000<br>Spending per pupil: $6241.48","Wyoming,2000<br>Spending per pupil: $6683.59"],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"type":"choropleth","marker":{"line":{"colorbar":{"title":"","ticklen":2},"cmin":3231.66,"cmax":18810,"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":false,"color":[4597.63,7729.86,3937.63,4398.52,5117.81,4838.38,7257.18,6044.07,9001.08,4682.18,5248.7,4179.77,4248.99,5421.26,4972.57,5361.45,5008.49,4308.1,4474.45,6385.17,5431.98,6598.15,6439.03,6035.9,4028.21,4892.82,5202.48,4909.23,4523.98,5661.61,8273.93,4655.36,8174.84,4887.01,4936.84,5511.56,4726.01,5599.95,6210.31,6669.4,4978,4438.65,4427.3,5020.26,3685.21,7202.9,5946.75,5278.88,6338.94,6241.48,6683.59]}},"geo":"geo","visible":true}],"traces":[0]},{"name":"2001","data":[{"colorbar":{"title":"inf_adj_perchild","ticklen":2},"colorscale":"Viridis","showscale":true,"locationmode":"USA-states","z":[4651.03,7947.72,4002.37,4542.17,5559.02,5014.39,7502.93,6236.57,9786.31,4760.08,5495.22,4847.05,4466.61,5493.17,5100.13,5336.05,5212.9,4422.8,4664.65,6537.48,5747.3,6916.27,6379.45,5991.46,4073.54,5145.39,5359.11,5207.08,4599.39,5930.55,8330.17,4898.68,8463.82,4912.8,5051.31,5703.42,5008.81,5781.14,6017.8,7041.53,5252,4603.73,4473.61,5156.78,3819.23,7179.42,6102.48,5374.08,6412.53,6445.13,7043.74],"locations":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"frame":"2001","ids":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"text":["Alabama,2001<br>Spending per pupil: $4651.03","Alaska,2001<br>Spending per pupil: $7947.72","Arizona,2001<br>Spending per pupil: $4002.37","Arkansas,2001<br>Spending per pupil: $4542.17","California,2001<br>Spending per pupil: $5559.02","Colorado,2001<br>Spending per pupil: $5014.39","Connecticut,2001<br>Spending per pupil: $7502.93","Delaware,2001<br>Spending per pupil: $6236.57","District of Columbia,2001<br>Spending per pupil: $9786.31","Florida,2001<br>Spending per pupil: $4760.08","Georgia,2001<br>Spending per pupil: $5495.22","Hawaii,2001<br>Spending per pupil: $4847.05","Idaho,2001<br>Spending per pupil: $4466.61","Illinois,2001<br>Spending per pupil: $5493.17","Indiana,2001<br>Spending per pupil: $5100.13","Iowa,2001<br>Spending per pupil: $5336.05","Kansas,2001<br>Spending per pupil: $5212.9","Kentucky,2001<br>Spending per pupil: $4422.8","Louisiana,2001<br>Spending per pupil: $4664.65","Maine,2001<br>Spending per pupil: $6537.48","Maryland,2001<br>Spending per pupil: $5747.3","Massachusetts,2001<br>Spending per pupil: $6916.27","Michigan,2001<br>Spending per pupil: $6379.45","Minnesota,2001<br>Spending per pupil: $5991.46","Mississippi,2001<br>Spending per pupil: $4073.54","Missouri,2001<br>Spending per pupil: $5145.39","Montana,2001<br>Spending per pupil: $5359.11","Nebraska,2001<br>Spending per pupil: $5207.08","Nevada,2001<br>Spending per pupil: $4599.39","New Hampshire,2001<br>Spending per pupil: $5930.55","New Jersey,2001<br>Spending per pupil: $8330.17","New Mexico,2001<br>Spending per pupil: $4898.68","New York,2001<br>Spending per pupil: $8463.82","North Carolina,2001<br>Spending per pupil: $4912.8","North Dakota,2001<br>Spending per pupil: $5051.31","Ohio,2001<br>Spending per pupil: $5703.42","Oklahoma,2001<br>Spending per pupil: $5008.81","Oregon,2001<br>Spending per pupil: $5781.14","Pennsylvania,2001<br>Spending per pupil: $6017.8","Rhode Island,2001<br>Spending per pupil: $7041.53","South Carolina,2001<br>Spending per pupil: $5252","South Dakota,2001<br>Spending per pupil: $4603.73","Tennessee,2001<br>Spending per pupil: $4473.61","Texas,2001<br>Spending per pupil: $5156.78","Utah,2001<br>Spending per pupil: $3819.23","Vermont,2001<br>Spending per pupil: $7179.42","Virginia,2001<br>Spending per pupil: $6102.48","Washington,2001<br>Spending per pupil: $5374.08","West Virginia,2001<br>Spending per pupil: $6412.53","Wisconsin,2001<br>Spending per pupil: $6445.13","Wyoming,2001<br>Spending per pupil: $7043.74"],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"type":"choropleth","marker":{"line":{"colorbar":{"title":"","ticklen":2},"cmin":3231.66,"cmax":18810,"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":false,"color":[4651.03,7947.72,4002.37,4542.17,5559.02,5014.39,7502.93,6236.57,9786.31,4760.08,5495.22,4847.05,4466.61,5493.17,5100.13,5336.05,5212.9,4422.8,4664.65,6537.48,5747.3,6916.27,6379.45,5991.46,4073.54,5145.39,5359.11,5207.08,4599.39,5930.55,8330.17,4898.68,8463.82,4912.8,5051.31,5703.42,5008.81,5781.14,6017.8,7041.53,5252,4603.73,4473.61,5156.78,3819.23,7179.42,6102.48,5374.08,6412.53,6445.13,7043.74]}},"geo":"geo","visible":true}],"traces":[0]},{"name":"2002","data":[{"colorbar":{"title":"inf_adj_perchild","ticklen":2},"colorscale":"Viridis","showscale":true,"locationmode":"USA-states","z":[4741.52,8204.31,4070.7,4707.26,6028.86,5255.67,7815.85,6481.8,10712.19,4855.68,5768.27,5524.28,4708.8,5619.28,5268.24,5350,5436.49,4557.16,4870.51,6737.32,6100.81,7306.13,6382.51,6011.62,4144.42,5425.15,5546.42,5523.67,4689.37,6254.14,8454.4,5133.05,8827.96,4990.29,5188.04,5936.98,5288.8,5985.67,5878.05,7452.54,5555.58,4796.95,4546.41,5314.41,3961.17,7251.9,6298.72,5500.24,6483.22,6692.5,7354.2],"locations":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"frame":"2002","ids":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"text":["Alabama,2002<br>Spending per pupil: $4741.52","Alaska,2002<br>Spending per pupil: $8204.31","Arizona,2002<br>Spending per pupil: $4070.7","Arkansas,2002<br>Spending per pupil: $4707.26","California,2002<br>Spending per pupil: $6028.86","Colorado,2002<br>Spending per pupil: $5255.67","Connecticut,2002<br>Spending per pupil: $7815.85","Delaware,2002<br>Spending per pupil: $6481.8","District of Columbia,2002<br>Spending per pupil: $10712.19","Florida,2002<br>Spending per pupil: $4855.68","Georgia,2002<br>Spending per pupil: $5768.27","Hawaii,2002<br>Spending per pupil: $5524.28","Idaho,2002<br>Spending per pupil: $4708.8","Illinois,2002<br>Spending per pupil: $5619.28","Indiana,2002<br>Spending per pupil: $5268.24","Iowa,2002<br>Spending per pupil: $5350","Kansas,2002<br>Spending per pupil: $5436.49","Kentucky,2002<br>Spending per pupil: $4557.16","Louisiana,2002<br>Spending per pupil: $4870.51","Maine,2002<br>Spending per pupil: $6737.32","Maryland,2002<br>Spending per pupil: $6100.81","Massachusetts,2002<br>Spending per pupil: $7306.13","Michigan,2002<br>Spending per pupil: $6382.51","Minnesota,2002<br>Spending per pupil: $6011.62","Mississippi,2002<br>Spending per pupil: $4144.42","Missouri,2002<br>Spending per pupil: $5425.15","Montana,2002<br>Spending per pupil: $5546.42","Nebraska,2002<br>Spending per pupil: $5523.67","Nevada,2002<br>Spending per pupil: $4689.37","New Hampshire,2002<br>Spending per pupil: $6254.14","New Jersey,2002<br>Spending per pupil: $8454.4","New Mexico,2002<br>Spending per pupil: $5133.05","New York,2002<br>Spending per pupil: $8827.96","North Carolina,2002<br>Spending per pupil: $4990.29","North Dakota,2002<br>Spending per pupil: $5188.04","Ohio,2002<br>Spending per pupil: $5936.98","Oklahoma,2002<br>Spending per pupil: $5288.8","Oregon,2002<br>Spending per pupil: $5985.67","Pennsylvania,2002<br>Spending per pupil: $5878.05","Rhode Island,2002<br>Spending per pupil: $7452.54","South Carolina,2002<br>Spending per pupil: $5555.58","South Dakota,2002<br>Spending per pupil: $4796.95","Tennessee,2002<br>Spending per pupil: $4546.41","Texas,2002<br>Spending per pupil: $5314.41","Utah,2002<br>Spending per pupil: $3961.17","Vermont,2002<br>Spending per pupil: $7251.9","Virginia,2002<br>Spending per pupil: $6298.72","Washington,2002<br>Spending per pupil: $5500.24","West Virginia,2002<br>Spending per pupil: $6483.22","Wisconsin,2002<br>Spending per pupil: $6692.5","Wyoming,2002<br>Spending per pupil: $7354.2"],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"type":"choropleth","marker":{"line":{"colorbar":{"title":"","ticklen":2},"cmin":3231.66,"cmax":18810,"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":false,"color":[4741.52,8204.31,4070.7,4707.26,6028.86,5255.67,7815.85,6481.8,10712.19,4855.68,5768.27,5524.28,4708.8,5619.28,5268.24,5350,5436.49,4557.16,4870.51,6737.32,6100.81,7306.13,6382.51,6011.62,4144.42,5425.15,5546.42,5523.67,4689.37,6254.14,8454.4,5133.05,8827.96,4990.29,5188.04,5936.98,5288.8,5985.67,5878.05,7452.54,5555.58,4796.95,4546.41,5314.41,3961.17,7251.9,6298.72,5500.24,6483.22,6692.5,7354.2]}},"geo":"geo","visible":true}],"traces":[0]},{"name":"2003","data":[{"colorbar":{"title":"inf_adj_perchild","ticklen":2},"colorscale":"Viridis","showscale":true,"locationmode":"USA-states","z":[4830.53,8377.13,4268.26,4905.81,6108.57,5413.6,8033.41,6744.65,11454.93,5069.62,5851.63,5952.23,4674.34,5896.71,5495.08,5632.5,5495.96,4632.38,5050.54,6998.93,6201.05,7463.48,6870.29,6156.89,4421.75,5443.92,5729.9,5657.33,4790.59,6601.99,9054.4,5366.56,9189.33,5009.26,5575.98,6282.4,5166.85,5847,6555.43,7881.68,5610.97,4913.95,4643.94,5449.04,3933.18,8036.6,6362.8,5567.22,6568.33,6829.87,7533.26],"locations":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"frame":"2003","ids":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"text":["Alabama,2003<br>Spending per pupil: $4830.53","Alaska,2003<br>Spending per pupil: $8377.13","Arizona,2003<br>Spending per pupil: $4268.26","Arkansas,2003<br>Spending per pupil: $4905.81","California,2003<br>Spending per pupil: $6108.57","Colorado,2003<br>Spending per pupil: $5413.6","Connecticut,2003<br>Spending per pupil: $8033.41","Delaware,2003<br>Spending per pupil: $6744.65","District of Columbia,2003<br>Spending per pupil: $11454.93","Florida,2003<br>Spending per pupil: $5069.62","Georgia,2003<br>Spending per pupil: $5851.63","Hawaii,2003<br>Spending per pupil: $5952.23","Idaho,2003<br>Spending per pupil: $4674.34","Illinois,2003<br>Spending per pupil: $5896.71","Indiana,2003<br>Spending per pupil: $5495.08","Iowa,2003<br>Spending per pupil: $5632.5","Kansas,2003<br>Spending per pupil: $5495.96","Kentucky,2003<br>Spending per pupil: $4632.38","Louisiana,2003<br>Spending per pupil: $5050.54","Maine,2003<br>Spending per pupil: $6998.93","Maryland,2003<br>Spending per pupil: $6201.05","Massachusetts,2003<br>Spending per pupil: $7463.48","Michigan,2003<br>Spending per pupil: $6870.29","Minnesota,2003<br>Spending per pupil: $6156.89","Mississippi,2003<br>Spending per pupil: $4421.75","Missouri,2003<br>Spending per pupil: $5443.92","Montana,2003<br>Spending per pupil: $5729.9","Nebraska,2003<br>Spending per pupil: $5657.33","Nevada,2003<br>Spending per pupil: $4790.59","New Hampshire,2003<br>Spending per pupil: $6601.99","New Jersey,2003<br>Spending per pupil: $9054.4","New Mexico,2003<br>Spending per pupil: $5366.56","New York,2003<br>Spending per pupil: $9189.33","North Carolina,2003<br>Spending per pupil: $5009.26","North Dakota,2003<br>Spending per pupil: $5575.98","Ohio,2003<br>Spending per pupil: $6282.4","Oklahoma,2003<br>Spending per pupil: $5166.85","Oregon,2003<br>Spending per pupil: $5847","Pennsylvania,2003<br>Spending per pupil: $6555.43","Rhode Island,2003<br>Spending per pupil: $7881.68","South Carolina,2003<br>Spending per pupil: $5610.97","South Dakota,2003<br>Spending per pupil: $4913.95","Tennessee,2003<br>Spending per pupil: $4643.94","Texas,2003<br>Spending per pupil: $5449.04","Utah,2003<br>Spending per pupil: $3933.18","Vermont,2003<br>Spending per pupil: $8036.6","Virginia,2003<br>Spending per pupil: $6362.8","Washington,2003<br>Spending per pupil: $5567.22","West Virginia,2003<br>Spending per pupil: $6568.33","Wisconsin,2003<br>Spending per pupil: $6829.87","Wyoming,2003<br>Spending per pupil: $7533.26"],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"type":"choropleth","marker":{"line":{"colorbar":{"title":"","ticklen":2},"cmin":3231.66,"cmax":18810,"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":false,"color":[4830.53,8377.13,4268.26,4905.81,6108.57,5413.6,8033.41,6744.65,11454.93,5069.62,5851.63,5952.23,4674.34,5896.71,5495.08,5632.5,5495.96,4632.38,5050.54,6998.93,6201.05,7463.48,6870.29,6156.89,4421.75,5443.92,5729.9,5657.33,4790.59,6601.99,9054.4,5366.56,9189.33,5009.26,5575.98,6282.4,5166.85,5847,6555.43,7881.68,5610.97,4913.95,4643.94,5449.04,3933.18,8036.6,6362.8,5567.22,6568.33,6829.87,7533.26]}},"geo":"geo","visible":true}],"traces":[0]},{"name":"2004","data":[{"colorbar":{"title":"inf_adj_perchild","ticklen":2},"colorscale":"Viridis","showscale":true,"locationmode":"USA-states","z":[4878.82,8476.91,4411.8,5048.83,6169.31,5558.85,8238.85,6945.96,12073.88,5212.71,5894.49,6259.84,4594.57,6139.53,5682.5,5868.49,5538.96,4695.09,5198.16,7241.1,6270.24,7607.86,7319.44,6262.97,4641.4,5430.34,5878.7,5752.15,4802.24,6925.63,9600.63,5543.45,9520.67,5006.79,5881.39,6588.76,5027.16,5707.34,7172.24,8301.96,5623.3,4981.34,4716.52,5546.83,3868.31,8774.42,6363.89,5574.32,6610.41,6926.84,7617.16],"locations":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"frame":"2004","ids":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"text":["Alabama,2004<br>Spending per pupil: $4878.82","Alaska,2004<br>Spending per pupil: $8476.91","Arizona,2004<br>Spending per pupil: $4411.8","Arkansas,2004<br>Spending per pupil: $5048.83","California,2004<br>Spending per pupil: $6169.31","Colorado,2004<br>Spending per pupil: $5558.85","Connecticut,2004<br>Spending per pupil: $8238.85","Delaware,2004<br>Spending per pupil: $6945.96","District of Columbia,2004<br>Spending per pupil: $12073.88","Florida,2004<br>Spending per pupil: $5212.71","Georgia,2004<br>Spending per pupil: $5894.49","Hawaii,2004<br>Spending per pupil: $6259.84","Idaho,2004<br>Spending per pupil: $4594.57","Illinois,2004<br>Spending per pupil: $6139.53","Indiana,2004<br>Spending per pupil: $5682.5","Iowa,2004<br>Spending per pupil: $5868.49","Kansas,2004<br>Spending per pupil: $5538.96","Kentucky,2004<br>Spending per pupil: $4695.09","Louisiana,2004<br>Spending per pupil: $5198.16","Maine,2004<br>Spending per pupil: $7241.1","Maryland,2004<br>Spending per pupil: $6270.24","Massachusetts,2004<br>Spending per pupil: $7607.86","Michigan,2004<br>Spending per pupil: $7319.44","Minnesota,2004<br>Spending per pupil: $6262.97","Mississippi,2004<br>Spending per pupil: $4641.4","Missouri,2004<br>Spending per pupil: $5430.34","Montana,2004<br>Spending per pupil: $5878.7","Nebraska,2004<br>Spending per pupil: $5752.15","Nevada,2004<br>Spending per pupil: $4802.24","New Hampshire,2004<br>Spending per pupil: $6925.63","New Jersey,2004<br>Spending per pupil: $9600.63","New Mexico,2004<br>Spending per pupil: $5543.45","New York,2004<br>Spending per pupil: $9520.67","North Carolina,2004<br>Spending per pupil: $5006.79","North Dakota,2004<br>Spending per pupil: $5881.39","Ohio,2004<br>Spending per pupil: $6588.76","Oklahoma,2004<br>Spending per pupil: $5027.16","Oregon,2004<br>Spending per pupil: $5707.34","Pennsylvania,2004<br>Spending per pupil: $7172.24","Rhode Island,2004<br>Spending per pupil: $8301.96","South Carolina,2004<br>Spending per pupil: $5623.3","South Dakota,2004<br>Spending per pupil: $4981.34","Tennessee,2004<br>Spending per pupil: $4716.52","Texas,2004<br>Spending per pupil: $5546.83","Utah,2004<br>Spending per pupil: $3868.31","Vermont,2004<br>Spending per pupil: $8774.42","Virginia,2004<br>Spending per pupil: $6363.89","Washington,2004<br>Spending per pupil: $5574.32","West Virginia,2004<br>Spending per pupil: $6610.41","Wisconsin,2004<br>Spending per pupil: $6926.84","Wyoming,2004<br>Spending per pupil: $7617.16"],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"type":"choropleth","marker":{"line":{"colorbar":{"title":"","ticklen":2},"cmin":3231.66,"cmax":18810,"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":false,"color":[4878.82,8476.91,4411.8,5048.83,6169.31,5558.85,8238.85,6945.96,12073.88,5212.71,5894.49,6259.84,4594.57,6139.53,5682.5,5868.49,5538.96,4695.09,5198.16,7241.1,6270.24,7607.86,7319.44,6262.97,4641.4,5430.34,5878.7,5752.15,4802.24,6925.63,9600.63,5543.45,9520.67,5006.79,5881.39,6588.76,5027.16,5707.34,7172.24,8301.96,5623.3,4981.34,4716.52,5546.83,3868.31,8774.42,6363.89,5574.32,6610.41,6926.84,7617.16]}},"geo":"geo","visible":true}],"traces":[0]},{"name":"2005","data":[{"colorbar":{"title":"inf_adj_perchild","ticklen":2},"colorscale":"Viridis","showscale":true,"locationmode":"USA-states","z":[5064.42,8799.78,4430.02,5509.27,6209.08,5628.65,8357.78,7169.2,12693.27,5381.47,5823.98,6209.72,4564.25,6206.02,5935.68,5926.55,5515.64,5092.96,5316.55,7352.44,6440.03,7792.9,7303.21,6326.55,4771.67,5462.62,5871.3,5677.65,4921.26,7154.34,9936.87,5594.06,9834.22,5197.3,6008.8,6603.05,5265.04,5926.96,7375.63,8394.25,5764.63,5039.83,4818.62,5451.11,3863.61,9131.05,6686.05,5626.07,6666.76,6999.36,7832.05],"locations":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"frame":"2005","ids":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"text":["Alabama,2005<br>Spending per pupil: $5064.42","Alaska,2005<br>Spending per pupil: $8799.78","Arizona,2005<br>Spending per pupil: $4430.02","Arkansas,2005<br>Spending per pupil: $5509.27","California,2005<br>Spending per pupil: $6209.08","Colorado,2005<br>Spending per pupil: $5628.65","Connecticut,2005<br>Spending per pupil: $8357.78","Delaware,2005<br>Spending per pupil: $7169.2","District of Columbia,2005<br>Spending per pupil: $12693.27","Florida,2005<br>Spending per pupil: $5381.47","Georgia,2005<br>Spending per pupil: $5823.98","Hawaii,2005<br>Spending per pupil: $6209.72","Idaho,2005<br>Spending per pupil: $4564.25","Illinois,2005<br>Spending per pupil: $6206.02","Indiana,2005<br>Spending per pupil: $5935.68","Iowa,2005<br>Spending per pupil: $5926.55","Kansas,2005<br>Spending per pupil: $5515.64","Kentucky,2005<br>Spending per pupil: $5092.96","Louisiana,2005<br>Spending per pupil: $5316.55","Maine,2005<br>Spending per pupil: $7352.44","Maryland,2005<br>Spending per pupil: $6440.03","Massachusetts,2005<br>Spending per pupil: $7792.9","Michigan,2005<br>Spending per pupil: $7303.21","Minnesota,2005<br>Spending per pupil: $6326.55","Mississippi,2005<br>Spending per pupil: $4771.67","Missouri,2005<br>Spending per pupil: $5462.62","Montana,2005<br>Spending per pupil: $5871.3","Nebraska,2005<br>Spending per pupil: $5677.65","Nevada,2005<br>Spending per pupil: $4921.26","New Hampshire,2005<br>Spending per pupil: $7154.34","New Jersey,2005<br>Spending per pupil: $9936.87","New Mexico,2005<br>Spending per pupil: $5594.06","New York,2005<br>Spending per pupil: $9834.22","North Carolina,2005<br>Spending per pupil: $5197.3","North Dakota,2005<br>Spending per pupil: $6008.8","Ohio,2005<br>Spending per pupil: $6603.05","Oklahoma,2005<br>Spending per pupil: $5265.04","Oregon,2005<br>Spending per pupil: $5926.96","Pennsylvania,2005<br>Spending per pupil: $7375.63","Rhode Island,2005<br>Spending per pupil: $8394.25","South Carolina,2005<br>Spending per pupil: $5764.63","South Dakota,2005<br>Spending per pupil: $5039.83","Tennessee,2005<br>Spending per pupil: $4818.62","Texas,2005<br>Spending per pupil: $5451.11","Utah,2005<br>Spending per pupil: $3863.61","Vermont,2005<br>Spending per pupil: $9131.05","Virginia,2005<br>Spending per pupil: $6686.05","Washington,2005<br>Spending per pupil: $5626.07","West Virginia,2005<br>Spending per pupil: $6666.76","Wisconsin,2005<br>Spending per pupil: $6999.36","Wyoming,2005<br>Spending per pupil: $7832.05"],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"type":"choropleth","marker":{"line":{"colorbar":{"title":"","ticklen":2},"cmin":3231.66,"cmax":18810,"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":false,"color":[5064.42,8799.78,4430.02,5509.27,6209.08,5628.65,8357.78,7169.2,12693.27,5381.47,5823.98,6209.72,4564.25,6206.02,5935.68,5926.55,5515.64,5092.96,5316.55,7352.44,6440.03,7792.9,7303.21,6326.55,4771.67,5462.62,5871.3,5677.65,4921.26,7154.34,9936.87,5594.06,9834.22,5197.3,6008.8,6603.05,5265.04,5926.96,7375.63,8394.25,5764.63,5039.83,4818.62,5451.11,3863.61,9131.05,6686.05,5626.07,6666.76,6999.36,7832.05]}},"geo":"geo","visible":true}],"traces":[0]},{"name":"2006","data":[{"colorbar":{"title":"inf_adj_perchild","ticklen":2},"colorscale":"Viridis","showscale":true,"locationmode":"USA-states","z":[5407.32,9063.06,4514.06,5643.92,6300.95,5736.04,8669.98,7456.24,12837.14,5563.33,6009.02,6512.61,4491.36,6357.41,5752.85,6021.31,5742.75,5327.97,5613.88,7529.91,6772.53,7942.75,6638.87,6416.17,5051.04,5594.59,5976.07,5726.32,5172.06,7378.86,10251.83,5760.33,10220.62,5192.34,6063.29,6647.39,5325.42,6043.92,7460.14,8570.38,5885.49,5040.78,4795.75,5446.62,3827.66,9313.34,6996.52,5643.01,6765.06,7024.47,8415.47],"locations":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"frame":"2006","ids":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"text":["Alabama,2006<br>Spending per pupil: $5407.32","Alaska,2006<br>Spending per pupil: $9063.06","Arizona,2006<br>Spending per pupil: $4514.06","Arkansas,2006<br>Spending per pupil: $5643.92","California,2006<br>Spending per pupil: $6300.95","Colorado,2006<br>Spending per pupil: $5736.04","Connecticut,2006<br>Spending per pupil: $8669.98","Delaware,2006<br>Spending per pupil: $7456.24","District of Columbia,2006<br>Spending per pupil: $12837.14","Florida,2006<br>Spending per pupil: $5563.33","Georgia,2006<br>Spending per pupil: $6009.02","Hawaii,2006<br>Spending per pupil: $6512.61","Idaho,2006<br>Spending per pupil: $4491.36","Illinois,2006<br>Spending per pupil: $6357.41","Indiana,2006<br>Spending per pupil: $5752.85","Iowa,2006<br>Spending per pupil: $6021.31","Kansas,2006<br>Spending per pupil: $5742.75","Kentucky,2006<br>Spending per pupil: $5327.97","Louisiana,2006<br>Spending per pupil: $5613.88","Maine,2006<br>Spending per pupil: $7529.91","Maryland,2006<br>Spending per pupil: $6772.53","Massachusetts,2006<br>Spending per pupil: $7942.75","Michigan,2006<br>Spending per pupil: $6638.87","Minnesota,2006<br>Spending per pupil: $6416.17","Mississippi,2006<br>Spending per pupil: $5051.04","Missouri,2006<br>Spending per pupil: $5594.59","Montana,2006<br>Spending per pupil: $5976.07","Nebraska,2006<br>Spending per pupil: $5726.32","Nevada,2006<br>Spending per pupil: $5172.06","New Hampshire,2006<br>Spending per pupil: $7378.86","New Jersey,2006<br>Spending per pupil: $10251.83","New Mexico,2006<br>Spending per pupil: $5760.33","New York,2006<br>Spending per pupil: $10220.62","North Carolina,2006<br>Spending per pupil: $5192.34","North Dakota,2006<br>Spending per pupil: $6063.29","Ohio,2006<br>Spending per pupil: $6647.39","Oklahoma,2006<br>Spending per pupil: $5325.42","Oregon,2006<br>Spending per pupil: $6043.92","Pennsylvania,2006<br>Spending per pupil: $7460.14","Rhode Island,2006<br>Spending per pupil: $8570.38","South Carolina,2006<br>Spending per pupil: $5885.49","South Dakota,2006<br>Spending per pupil: $5040.78","Tennessee,2006<br>Spending per pupil: $4795.75","Texas,2006<br>Spending per pupil: $5446.62","Utah,2006<br>Spending per pupil: $3827.66","Vermont,2006<br>Spending per pupil: $9313.34","Virginia,2006<br>Spending per pupil: $6996.52","Washington,2006<br>Spending per pupil: $5643.01","West Virginia,2006<br>Spending per pupil: $6765.06","Wisconsin,2006<br>Spending per pupil: $7024.47","Wyoming,2006<br>Spending per pupil: $8415.47"],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"type":"choropleth","marker":{"line":{"colorbar":{"title":"","ticklen":2},"cmin":3231.66,"cmax":18810,"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":false,"color":[5407.32,9063.06,4514.06,5643.92,6300.95,5736.04,8669.98,7456.24,12837.14,5563.33,6009.02,6512.61,4491.36,6357.41,5752.85,6021.31,5742.75,5327.97,5613.88,7529.91,6772.53,7942.75,6638.87,6416.17,5051.04,5594.59,5976.07,5726.32,5172.06,7378.86,10251.83,5760.33,10220.62,5192.34,6063.29,6647.39,5325.42,6043.92,7460.14,8570.38,5885.49,5040.78,4795.75,5446.62,3827.66,9313.34,6996.52,5643.01,6765.06,7024.47,8415.47]}},"geo":"geo","visible":true}],"traces":[0]},{"name":"2007","data":[{"colorbar":{"title":"inf_adj_perchild","ticklen":2},"colorscale":"Viridis","showscale":true,"locationmode":"USA-states","z":[5830.14,9467.49,4610.43,5740.85,6640.99,5648.05,8952.79,7121.54,12505.06,5914.82,6265.66,7035.89,4460.6,6455.69,5764.89,6117.77,5993.64,5322.71,5858.89,7712.84,7297.54,8113.11,7323.38,6518.07,5043.43,5742.68,6163.59,6051.98,5460.34,7635.67,10377.77,5919.95,10584.57,5402.47,6083.74,6617.12,5527.74,6184.77,7543.27,9094.79,6036.14,5027.23,4860.15,5535.19,3831.43,9652.62,7293.71,5801.69,6800.64,7052.54,9360.83],"locations":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"frame":"2007","ids":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"text":["Alabama,2007<br>Spending per pupil: $5830.14","Alaska,2007<br>Spending per pupil: $9467.49","Arizona,2007<br>Spending per pupil: $4610.43","Arkansas,2007<br>Spending per pupil: $5740.85","California,2007<br>Spending per pupil: $6640.99","Colorado,2007<br>Spending per pupil: $5648.05","Connecticut,2007<br>Spending per pupil: $8952.79","Delaware,2007<br>Spending per pupil: $7121.54","District of Columbia,2007<br>Spending per pupil: $12505.06","Florida,2007<br>Spending per pupil: $5914.82","Georgia,2007<br>Spending per pupil: $6265.66","Hawaii,2007<br>Spending per pupil: $7035.89","Idaho,2007<br>Spending per pupil: $4460.6","Illinois,2007<br>Spending per pupil: $6455.69","Indiana,2007<br>Spending per pupil: $5764.89","Iowa,2007<br>Spending per pupil: $6117.77","Kansas,2007<br>Spending per pupil: $5993.64","Kentucky,2007<br>Spending per pupil: $5322.71","Louisiana,2007<br>Spending per pupil: $5858.89","Maine,2007<br>Spending per pupil: $7712.84","Maryland,2007<br>Spending per pupil: $7297.54","Massachusetts,2007<br>Spending per pupil: $8113.11","Michigan,2007<br>Spending per pupil: $7323.38","Minnesota,2007<br>Spending per pupil: $6518.07","Mississippi,2007<br>Spending per pupil: $5043.43","Missouri,2007<br>Spending per pupil: $5742.68","Montana,2007<br>Spending per pupil: $6163.59","Nebraska,2007<br>Spending per pupil: $6051.98","Nevada,2007<br>Spending per pupil: $5460.34","New Hampshire,2007<br>Spending per pupil: $7635.67","New Jersey,2007<br>Spending per pupil: $10377.77","New Mexico,2007<br>Spending per pupil: $5919.95","New York,2007<br>Spending per pupil: $10584.57","North Carolina,2007<br>Spending per pupil: $5402.47","North Dakota,2007<br>Spending per pupil: $6083.74","Ohio,2007<br>Spending per pupil: $6617.12","Oklahoma,2007<br>Spending per pupil: $5527.74","Oregon,2007<br>Spending per pupil: $6184.77","Pennsylvania,2007<br>Spending per pupil: $7543.27","Rhode Island,2007<br>Spending per pupil: $9094.79","South Carolina,2007<br>Spending per pupil: $6036.14","South Dakota,2007<br>Spending per pupil: $5027.23","Tennessee,2007<br>Spending per pupil: $4860.15","Texas,2007<br>Spending per pupil: $5535.19","Utah,2007<br>Spending per pupil: $3831.43","Vermont,2007<br>Spending per pupil: $9652.62","Virginia,2007<br>Spending per pupil: $7293.71","Washington,2007<br>Spending per pupil: $5801.69","West Virginia,2007<br>Spending per pupil: $6800.64","Wisconsin,2007<br>Spending per pupil: $7052.54","Wyoming,2007<br>Spending per pupil: $9360.83"],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"type":"choropleth","marker":{"line":{"colorbar":{"title":"","ticklen":2},"cmin":3231.66,"cmax":18810,"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":false,"color":[5830.14,9467.49,4610.43,5740.85,6640.99,5648.05,8952.79,7121.54,12505.06,5914.82,6265.66,7035.89,4460.6,6455.69,5764.89,6117.77,5993.64,5322.71,5858.89,7712.84,7297.54,8113.11,7323.38,6518.07,5043.43,5742.68,6163.59,6051.98,5460.34,7635.67,10377.77,5919.95,10584.57,5402.47,6083.74,6617.12,5527.74,6184.77,7543.27,9094.79,6036.14,5027.23,4860.15,5535.19,3831.43,9652.62,7293.71,5801.69,6800.64,7052.54,9360.83]}},"geo":"geo","visible":true}],"traces":[0]},{"name":"2008","data":[{"colorbar":{"title":"inf_adj_perchild","ticklen":2},"colorscale":"Viridis","showscale":true,"locationmode":"USA-states","z":[6209.25,10975.71,4800.47,5779.65,6817.61,6077.26,9281.36,7452.43,16309.51,6074.47,6577.97,7191.78,4522,6679.88,5499.74,6340.09,6240.26,5634.71,6361.47,7877.05,7782.05,8463.21,7015.96,6683.46,5191.87,5957.99,6287.38,6153.72,5553.69,8085.76,10650.76,6080.72,11062.26,5343.97,6324.14,6726.53,5601.93,6483.24,7709.97,9300.32,6362.45,5184.76,5096.93,5777.19,4097.51,10015.78,7511.58,6164.07,6834.64,7168.84,9480.08],"locations":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"frame":"2008","ids":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"text":["Alabama,2008<br>Spending per pupil: $6209.25","Alaska,2008<br>Spending per pupil: $10975.71","Arizona,2008<br>Spending per pupil: $4800.47","Arkansas,2008<br>Spending per pupil: $5779.65","California,2008<br>Spending per pupil: $6817.61","Colorado,2008<br>Spending per pupil: $6077.26","Connecticut,2008<br>Spending per pupil: $9281.36","Delaware,2008<br>Spending per pupil: $7452.43","District of Columbia,2008<br>Spending per pupil: $16309.51","Florida,2008<br>Spending per pupil: $6074.47","Georgia,2008<br>Spending per pupil: $6577.97","Hawaii,2008<br>Spending per pupil: $7191.78","Idaho,2008<br>Spending per pupil: $4522","Illinois,2008<br>Spending per pupil: $6679.88","Indiana,2008<br>Spending per pupil: $5499.74","Iowa,2008<br>Spending per pupil: $6340.09","Kansas,2008<br>Spending per pupil: $6240.26","Kentucky,2008<br>Spending per pupil: $5634.71","Louisiana,2008<br>Spending per pupil: $6361.47","Maine,2008<br>Spending per pupil: $7877.05","Maryland,2008<br>Spending per pupil: $7782.05","Massachusetts,2008<br>Spending per pupil: $8463.21","Michigan,2008<br>Spending per pupil: $7015.96","Minnesota,2008<br>Spending per pupil: $6683.46","Mississippi,2008<br>Spending per pupil: $5191.87","Missouri,2008<br>Spending per pupil: $5957.99","Montana,2008<br>Spending per pupil: $6287.38","Nebraska,2008<br>Spending per pupil: $6153.72","Nevada,2008<br>Spending per pupil: $5553.69","New Hampshire,2008<br>Spending per pupil: $8085.76","New Jersey,2008<br>Spending per pupil: $10650.76","New Mexico,2008<br>Spending per pupil: $6080.72","New York,2008<br>Spending per pupil: $11062.26","North Carolina,2008<br>Spending per pupil: $5343.97","North Dakota,2008<br>Spending per pupil: $6324.14","Ohio,2008<br>Spending per pupil: $6726.53","Oklahoma,2008<br>Spending per pupil: $5601.93","Oregon,2008<br>Spending per pupil: $6483.24","Pennsylvania,2008<br>Spending per pupil: $7709.97","Rhode Island,2008<br>Spending per pupil: $9300.32","South Carolina,2008<br>Spending per pupil: $6362.45","South Dakota,2008<br>Spending per pupil: $5184.76","Tennessee,2008<br>Spending per pupil: $5096.93","Texas,2008<br>Spending per pupil: $5777.19","Utah,2008<br>Spending per pupil: $4097.51","Vermont,2008<br>Spending per pupil: $10015.78","Virginia,2008<br>Spending per pupil: $7511.58","Washington,2008<br>Spending per pupil: $6164.07","West Virginia,2008<br>Spending per pupil: $6834.64","Wisconsin,2008<br>Spending per pupil: $7168.84","Wyoming,2008<br>Spending per pupil: $9480.08"],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"type":"choropleth","marker":{"line":{"colorbar":{"title":"","ticklen":2},"cmin":3231.66,"cmax":18810,"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":false,"color":[6209.25,10975.71,4800.47,5779.65,6817.61,6077.26,9281.36,7452.43,16309.51,6074.47,6577.97,7191.78,4522,6679.88,5499.74,6340.09,6240.26,5634.71,6361.47,7877.05,7782.05,8463.21,7015.96,6683.46,5191.87,5957.99,6287.38,6153.72,5553.69,8085.76,10650.76,6080.72,11062.26,5343.97,6324.14,6726.53,5601.93,6483.24,7709.97,9300.32,6362.45,5184.76,5096.93,5777.19,4097.51,10015.78,7511.58,6164.07,6834.64,7168.84,9480.08]}},"geo":"geo","visible":true}],"traces":[0]},{"name":"2009","data":[{"colorbar":{"title":"inf_adj_perchild","ticklen":2},"colorscale":"Viridis","showscale":true,"locationmode":"USA-states","z":[6106.87,11693.57,4860.04,6204.62,6663.1,5839.8,9889.04,7246.47,17352.28,5846.64,6493.7,7433.1,4600.06,7120.06,5614.69,6587.03,6327.54,5585.65,6664.95,8256.1,8055.76,8912.09,7121.33,7226.05,5249.91,6099.27,6424.45,6431.95,5565.95,8458.08,10871.92,6203.35,11495.22,5689.01,6496.02,6870.35,5649.79,6583.25,7857.23,9479.74,6386.24,5256.47,5308.37,5827.62,4180.58,10555.71,7520.18,6398.15,7253.32,7377.74,9733.59],"locations":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"frame":"2009","ids":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"text":["Alabama,2009<br>Spending per pupil: $6106.87","Alaska,2009<br>Spending per pupil: $11693.57","Arizona,2009<br>Spending per pupil: $4860.04","Arkansas,2009<br>Spending per pupil: $6204.62","California,2009<br>Spending per pupil: $6663.1","Colorado,2009<br>Spending per pupil: $5839.8","Connecticut,2009<br>Spending per pupil: $9889.04","Delaware,2009<br>Spending per pupil: $7246.47","District of Columbia,2009<br>Spending per pupil: $17352.28","Florida,2009<br>Spending per pupil: $5846.64","Georgia,2009<br>Spending per pupil: $6493.7","Hawaii,2009<br>Spending per pupil: $7433.1","Idaho,2009<br>Spending per pupil: $4600.06","Illinois,2009<br>Spending per pupil: $7120.06","Indiana,2009<br>Spending per pupil: $5614.69","Iowa,2009<br>Spending per pupil: $6587.03","Kansas,2009<br>Spending per pupil: $6327.54","Kentucky,2009<br>Spending per pupil: $5585.65","Louisiana,2009<br>Spending per pupil: $6664.95","Maine,2009<br>Spending per pupil: $8256.1","Maryland,2009<br>Spending per pupil: $8055.76","Massachusetts,2009<br>Spending per pupil: $8912.09","Michigan,2009<br>Spending per pupil: $7121.33","Minnesota,2009<br>Spending per pupil: $7226.05","Mississippi,2009<br>Spending per pupil: $5249.91","Missouri,2009<br>Spending per pupil: $6099.27","Montana,2009<br>Spending per pupil: $6424.45","Nebraska,2009<br>Spending per pupil: $6431.95","Nevada,2009<br>Spending per pupil: $5565.95","New Hampshire,2009<br>Spending per pupil: $8458.08","New Jersey,2009<br>Spending per pupil: $10871.92","New Mexico,2009<br>Spending per pupil: $6203.35","New York,2009<br>Spending per pupil: $11495.22","North Carolina,2009<br>Spending per pupil: $5689.01","North Dakota,2009<br>Spending per pupil: $6496.02","Ohio,2009<br>Spending per pupil: $6870.35","Oklahoma,2009<br>Spending per pupil: $5649.79","Oregon,2009<br>Spending per pupil: $6583.25","Pennsylvania,2009<br>Spending per pupil: $7857.23","Rhode Island,2009<br>Spending per pupil: $9479.74","South Carolina,2009<br>Spending per pupil: $6386.24","South Dakota,2009<br>Spending per pupil: $5256.47","Tennessee,2009<br>Spending per pupil: $5308.37","Texas,2009<br>Spending per pupil: $5827.62","Utah,2009<br>Spending per pupil: $4180.58","Vermont,2009<br>Spending per pupil: $10555.71","Virginia,2009<br>Spending per pupil: $7520.18","Washington,2009<br>Spending per pupil: $6398.15","West Virginia,2009<br>Spending per pupil: $7253.32","Wisconsin,2009<br>Spending per pupil: $7377.74","Wyoming,2009<br>Spending per pupil: $9733.59"],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"type":"choropleth","marker":{"line":{"colorbar":{"title":"","ticklen":2},"cmin":3231.66,"cmax":18810,"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":false,"color":[6106.87,11693.57,4860.04,6204.62,6663.1,5839.8,9889.04,7246.47,17352.28,5846.64,6493.7,7433.1,4600.06,7120.06,5614.69,6587.03,6327.54,5585.65,6664.95,8256.1,8055.76,8912.09,7121.33,7226.05,5249.91,6099.27,6424.45,6431.95,5565.95,8458.08,10871.92,6203.35,11495.22,5689.01,6496.02,6870.35,5649.79,6583.25,7857.23,9479.74,6386.24,5256.47,5308.37,5827.62,4180.58,10555.71,7520.18,6398.15,7253.32,7377.74,9733.59]}},"geo":"geo","visible":true}],"traces":[0]},{"name":"2010","data":[{"colorbar":{"title":"inf_adj_perchild","ticklen":2},"colorscale":"Viridis","showscale":true,"locationmode":"USA-states","z":[6029.24,11965.58,4727.08,6552.06,6376.72,5914.6,10059.7,7347.97,18810,5788.28,6346.89,6376.72,4521.46,7317.35,5721.39,6622.11,6091.07,5792.34,6689.43,8327.16,8164.04,8740.09,7166.57,6882.65,5269.2,6138.18,6693.11,6861.95,5622.13,8810.34,11295.35,6137.39,11774.31,5512.08,6878.11,7017.87,5715.59,6405.42,8131.08,9573.24,6205.86,5354.1,5413.68,5999.24,3767.27,10934.59,7463.48,6238.2,7977.22,7527.35,10162.95],"locations":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"frame":"2010","ids":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"text":["Alabama,2010<br>Spending per pupil: $6029.24","Alaska,2010<br>Spending per pupil: $11965.58","Arizona,2010<br>Spending per pupil: $4727.08","Arkansas,2010<br>Spending per pupil: $6552.06","California,2010<br>Spending per pupil: $6376.72","Colorado,2010<br>Spending per pupil: $5914.6","Connecticut,2010<br>Spending per pupil: $10059.7","Delaware,2010<br>Spending per pupil: $7347.97","District of Columbia,2010<br>Spending per pupil: $18810","Florida,2010<br>Spending per pupil: $5788.28","Georgia,2010<br>Spending per pupil: $6346.89","Hawaii,2010<br>Spending per pupil: $6376.72","Idaho,2010<br>Spending per pupil: $4521.46","Illinois,2010<br>Spending per pupil: $7317.35","Indiana,2010<br>Spending per pupil: $5721.39","Iowa,2010<br>Spending per pupil: $6622.11","Kansas,2010<br>Spending per pupil: $6091.07","Kentucky,2010<br>Spending per pupil: $5792.34","Louisiana,2010<br>Spending per pupil: $6689.43","Maine,2010<br>Spending per pupil: $8327.16","Maryland,2010<br>Spending per pupil: $8164.04","Massachusetts,2010<br>Spending per pupil: $8740.09","Michigan,2010<br>Spending per pupil: $7166.57","Minnesota,2010<br>Spending per pupil: $6882.65","Mississippi,2010<br>Spending per pupil: $5269.2","Missouri,2010<br>Spending per pupil: $6138.18","Montana,2010<br>Spending per pupil: $6693.11","Nebraska,2010<br>Spending per pupil: $6861.95","Nevada,2010<br>Spending per pupil: $5622.13","New Hampshire,2010<br>Spending per pupil: $8810.34","New Jersey,2010<br>Spending per pupil: $11295.35","New Mexico,2010<br>Spending per pupil: $6137.39","New York,2010<br>Spending per pupil: $11774.31","North Carolina,2010<br>Spending per pupil: $5512.08","North Dakota,2010<br>Spending per pupil: $6878.11","Ohio,2010<br>Spending per pupil: $7017.87","Oklahoma,2010<br>Spending per pupil: $5715.59","Oregon,2010<br>Spending per pupil: $6405.42","Pennsylvania,2010<br>Spending per pupil: $8131.08","Rhode Island,2010<br>Spending per pupil: $9573.24","South Carolina,2010<br>Spending per pupil: $6205.86","South Dakota,2010<br>Spending per pupil: $5354.1","Tennessee,2010<br>Spending per pupil: $5413.68","Texas,2010<br>Spending per pupil: $5999.24","Utah,2010<br>Spending per pupil: $3767.27","Vermont,2010<br>Spending per pupil: $10934.59","Virginia,2010<br>Spending per pupil: $7463.48","Washington,2010<br>Spending per pupil: $6238.2","West Virginia,2010<br>Spending per pupil: $7977.22","Wisconsin,2010<br>Spending per pupil: $7527.35","Wyoming,2010<br>Spending per pupil: $10162.95"],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"type":"choropleth","marker":{"line":{"colorbar":{"title":"","ticklen":2},"cmin":3231.66,"cmax":18810,"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":false,"color":[6029.24,11965.58,4727.08,6552.06,6376.72,5914.6,10059.7,7347.97,18810,5788.28,6346.89,6376.72,4521.46,7317.35,5721.39,6622.11,6091.07,5792.34,6689.43,8327.16,8164.04,8740.09,7166.57,6882.65,5269.2,6138.18,6693.11,6861.95,5622.13,8810.34,11295.35,6137.39,11774.31,5512.08,6878.11,7017.87,5715.59,6405.42,8131.08,9573.24,6205.86,5354.1,5413.68,5999.24,3767.27,10934.59,7463.48,6238.2,7977.22,7527.35,10162.95]}},"geo":"geo","visible":true}],"traces":[0]},{"name":"2011","data":[{"colorbar":{"title":"inf_adj_perchild","ticklen":2},"colorscale":"Viridis","showscale":true,"locationmode":"USA-states","z":[5976.07,11938.8,4489.2,6621.97,6158.28,5746.8,9784.72,7579.59,17640.29,5839.94,6147.79,5818.63,4250.51,7284.11,5462.8,6613.03,6003.26,5891.11,6691.13,8328.05,8061.69,8626.58,6903.25,6755.86,5082.05,5911.87,6655.69,6838.38,5671.13,9009.89,10745.86,5854.05,11843.75,5258.85,7030.95,7037.1,5048.35,6351.57,8055.3,9560.73,5992.8,5289.08,5530.25,5815.48,3972.93,10876.21,7243.08,6182.22,7943.07,7701.63,10462.71],"locations":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"frame":"2011","ids":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"text":["Alabama,2011<br>Spending per pupil: $5976.07","Alaska,2011<br>Spending per pupil: $11938.8","Arizona,2011<br>Spending per pupil: $4489.2","Arkansas,2011<br>Spending per pupil: $6621.97","California,2011<br>Spending per pupil: $6158.28","Colorado,2011<br>Spending per pupil: $5746.8","Connecticut,2011<br>Spending per pupil: $9784.72","Delaware,2011<br>Spending per pupil: $7579.59","District of Columbia,2011<br>Spending per pupil: $17640.29","Florida,2011<br>Spending per pupil: $5839.94","Georgia,2011<br>Spending per pupil: $6147.79","Hawaii,2011<br>Spending per pupil: $5818.63","Idaho,2011<br>Spending per pupil: $4250.51","Illinois,2011<br>Spending per pupil: $7284.11","Indiana,2011<br>Spending per pupil: $5462.8","Iowa,2011<br>Spending per pupil: $6613.03","Kansas,2011<br>Spending per pupil: $6003.26","Kentucky,2011<br>Spending per pupil: $5891.11","Louisiana,2011<br>Spending per pupil: $6691.13","Maine,2011<br>Spending per pupil: $8328.05","Maryland,2011<br>Spending per pupil: $8061.69","Massachusetts,2011<br>Spending per pupil: $8626.58","Michigan,2011<br>Spending per pupil: $6903.25","Minnesota,2011<br>Spending per pupil: $6755.86","Mississippi,2011<br>Spending per pupil: $5082.05","Missouri,2011<br>Spending per pupil: $5911.87","Montana,2011<br>Spending per pupil: $6655.69","Nebraska,2011<br>Spending per pupil: $6838.38","Nevada,2011<br>Spending per pupil: $5671.13","New Hampshire,2011<br>Spending per pupil: $9009.89","New Jersey,2011<br>Spending per pupil: $10745.86","New Mexico,2011<br>Spending per pupil: $5854.05","New York,2011<br>Spending per pupil: $11843.75","North Carolina,2011<br>Spending per pupil: $5258.85","North Dakota,2011<br>Spending per pupil: $7030.95","Ohio,2011<br>Spending per pupil: $7037.1","Oklahoma,2011<br>Spending per pupil: $5048.35","Oregon,2011<br>Spending per pupil: $6351.57","Pennsylvania,2011<br>Spending per pupil: $8055.3","Rhode Island,2011<br>Spending per pupil: $9560.73","South Carolina,2011<br>Spending per pupil: $5992.8","South Dakota,2011<br>Spending per pupil: $5289.08","Tennessee,2011<br>Spending per pupil: $5530.25","Texas,2011<br>Spending per pupil: $5815.48","Utah,2011<br>Spending per pupil: $3972.93","Vermont,2011<br>Spending per pupil: $10876.21","Virginia,2011<br>Spending per pupil: $7243.08","Washington,2011<br>Spending per pupil: $6182.22","West Virginia,2011<br>Spending per pupil: $7943.07","Wisconsin,2011<br>Spending per pupil: $7701.63","Wyoming,2011<br>Spending per pupil: $10462.71"],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"type":"choropleth","marker":{"line":{"colorbar":{"title":"","ticklen":2},"cmin":3231.66,"cmax":18810,"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":false,"color":[5976.07,11938.8,4489.2,6621.97,6158.28,5746.8,9784.72,7579.59,17640.29,5839.94,6147.79,5818.63,4250.51,7284.11,5462.8,6613.03,6003.26,5891.11,6691.13,8328.05,8061.69,8626.58,6903.25,6755.86,5082.05,5911.87,6655.69,6838.38,5671.13,9009.89,10745.86,5854.05,11843.75,5258.85,7030.95,7037.1,5048.35,6351.57,8055.3,9560.73,5992.8,5289.08,5530.25,5815.48,3972.93,10876.21,7243.08,6182.22,7943.07,7701.63,10462.71]}},"geo":"geo","visible":true}],"traces":[0]},{"name":"2012","data":[{"colorbar":{"title":"inf_adj_perchild","ticklen":2},"colorscale":"Viridis","showscale":true,"locationmode":"USA-states","z":[5651.53,11259.59,4328.55,5965.57,6191.02,5565.09,9855.78,8136.25,17892.38,5413.68,6058.33,5478.05,4106.7,7275.22,5404.34,6665.37,5925.22,5933.32,7014.28,8110.94,7906.3,8892.46,6684.29,6709.66,5168.58,5848.61,6478.23,7048.47,5365.8,9145.65,10906.02,5629.98,11856.53,5164.94,6951.4,7111.84,5034.7,6237.36,7956.6,9588.66,5942.91,5060.62,5307.38,5437.48,3939.36,11032.84,7175.37,6223.94,7580.58,7140.08,10445.43],"locations":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"frame":"2012","ids":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"text":["Alabama,2012<br>Spending per pupil: $5651.53","Alaska,2012<br>Spending per pupil: $11259.59","Arizona,2012<br>Spending per pupil: $4328.55","Arkansas,2012<br>Spending per pupil: $5965.57","California,2012<br>Spending per pupil: $6191.02","Colorado,2012<br>Spending per pupil: $5565.09","Connecticut,2012<br>Spending per pupil: $9855.78","Delaware,2012<br>Spending per pupil: $8136.25","District of Columbia,2012<br>Spending per pupil: $17892.38","Florida,2012<br>Spending per pupil: $5413.68","Georgia,2012<br>Spending per pupil: $6058.33","Hawaii,2012<br>Spending per pupil: $5478.05","Idaho,2012<br>Spending per pupil: $4106.7","Illinois,2012<br>Spending per pupil: $7275.22","Indiana,2012<br>Spending per pupil: $5404.34","Iowa,2012<br>Spending per pupil: $6665.37","Kansas,2012<br>Spending per pupil: $5925.22","Kentucky,2012<br>Spending per pupil: $5933.32","Louisiana,2012<br>Spending per pupil: $7014.28","Maine,2012<br>Spending per pupil: $8110.94","Maryland,2012<br>Spending per pupil: $7906.3","Massachusetts,2012<br>Spending per pupil: $8892.46","Michigan,2012<br>Spending per pupil: $6684.29","Minnesota,2012<br>Spending per pupil: $6709.66","Mississippi,2012<br>Spending per pupil: $5168.58","Missouri,2012<br>Spending per pupil: $5848.61","Montana,2012<br>Spending per pupil: $6478.23","Nebraska,2012<br>Spending per pupil: $7048.47","Nevada,2012<br>Spending per pupil: $5365.8","New Hampshire,2012<br>Spending per pupil: $9145.65","New Jersey,2012<br>Spending per pupil: $10906.02","New Mexico,2012<br>Spending per pupil: $5629.98","New York,2012<br>Spending per pupil: $11856.53","North Carolina,2012<br>Spending per pupil: $5164.94","North Dakota,2012<br>Spending per pupil: $6951.4","Ohio,2012<br>Spending per pupil: $7111.84","Oklahoma,2012<br>Spending per pupil: $5034.7","Oregon,2012<br>Spending per pupil: $6237.36","Pennsylvania,2012<br>Spending per pupil: $7956.6","Rhode Island,2012<br>Spending per pupil: $9588.66","South Carolina,2012<br>Spending per pupil: $5942.91","South Dakota,2012<br>Spending per pupil: $5060.62","Tennessee,2012<br>Spending per pupil: $5307.38","Texas,2012<br>Spending per pupil: $5437.48","Utah,2012<br>Spending per pupil: $3939.36","Vermont,2012<br>Spending per pupil: $11032.84","Virginia,2012<br>Spending per pupil: $7175.37","Washington,2012<br>Spending per pupil: $6223.94","West Virginia,2012<br>Spending per pupil: $7580.58","Wisconsin,2012<br>Spending per pupil: $7140.08","Wyoming,2012<br>Spending per pupil: $10445.43"],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"type":"choropleth","marker":{"line":{"colorbar":{"title":"","ticklen":2},"cmin":3231.66,"cmax":18810,"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":false,"color":[5651.53,11259.59,4328.55,5965.57,6191.02,5565.09,9855.78,8136.25,17892.38,5413.68,6058.33,5478.05,4106.7,7275.22,5404.34,6665.37,5925.22,5933.32,7014.28,8110.94,7906.3,8892.46,6684.29,6709.66,5168.58,5848.61,6478.23,7048.47,5365.8,9145.65,10906.02,5629.98,11856.53,5164.94,6951.4,7111.84,5034.7,6237.36,7956.6,9588.66,5942.91,5060.62,5307.38,5437.48,3939.36,11032.84,7175.37,6223.94,7580.58,7140.08,10445.43]}},"geo":"geo","visible":true}],"traces":[0]},{"name":"2013","data":[{"colorbar":{"title":"inf_adj_perchild","ticklen":2},"colorscale":"Viridis","showscale":true,"locationmode":"USA-states","z":[5737.53,11627.92,4080.33,5888.41,6117.39,5588.17,9967.26,8059.15,17281.25,5381.09,5919.91,5368.93,4196.29,7318.48,5231.47,6789.69,5991.03,5833.59,6184.22,7923.62,8037.68,8982.03,6510.56,6807.54,5151.48,5915.88,6468.64,7154.84,5389.46,9220.25,11298.86,5641.39,12587.49,5169.59,6967.19,6834.96,5072.38,6181.43,8634.43,9803.02,6020.29,5029.15,5226.24,5399.05,4070.46,11287.84,7234.89,6150.15,7324.33,7105.46,10247.96],"locations":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"frame":"2013","ids":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"text":["Alabama,2013<br>Spending per pupil: $5737.53","Alaska,2013<br>Spending per pupil: $11627.92","Arizona,2013<br>Spending per pupil: $4080.33","Arkansas,2013<br>Spending per pupil: $5888.41","California,2013<br>Spending per pupil: $6117.39","Colorado,2013<br>Spending per pupil: $5588.17","Connecticut,2013<br>Spending per pupil: $9967.26","Delaware,2013<br>Spending per pupil: $8059.15","District of Columbia,2013<br>Spending per pupil: $17281.25","Florida,2013<br>Spending per pupil: $5381.09","Georgia,2013<br>Spending per pupil: $5919.91","Hawaii,2013<br>Spending per pupil: $5368.93","Idaho,2013<br>Spending per pupil: $4196.29","Illinois,2013<br>Spending per pupil: $7318.48","Indiana,2013<br>Spending per pupil: $5231.47","Iowa,2013<br>Spending per pupil: $6789.69","Kansas,2013<br>Spending per pupil: $5991.03","Kentucky,2013<br>Spending per pupil: $5833.59","Louisiana,2013<br>Spending per pupil: $6184.22","Maine,2013<br>Spending per pupil: $7923.62","Maryland,2013<br>Spending per pupil: $8037.68","Massachusetts,2013<br>Spending per pupil: $8982.03","Michigan,2013<br>Spending per pupil: $6510.56","Minnesota,2013<br>Spending per pupil: $6807.54","Mississippi,2013<br>Spending per pupil: $5151.48","Missouri,2013<br>Spending per pupil: $5915.88","Montana,2013<br>Spending per pupil: $6468.64","Nebraska,2013<br>Spending per pupil: $7154.84","Nevada,2013<br>Spending per pupil: $5389.46","New Hampshire,2013<br>Spending per pupil: $9220.25","New Jersey,2013<br>Spending per pupil: $11298.86","New Mexico,2013<br>Spending per pupil: $5641.39","New York,2013<br>Spending per pupil: $12587.49","North Carolina,2013<br>Spending per pupil: $5169.59","North Dakota,2013<br>Spending per pupil: $6967.19","Ohio,2013<br>Spending per pupil: $6834.96","Oklahoma,2013<br>Spending per pupil: $5072.38","Oregon,2013<br>Spending per pupil: $6181.43","Pennsylvania,2013<br>Spending per pupil: $8634.43","Rhode Island,2013<br>Spending per pupil: $9803.02","South Carolina,2013<br>Spending per pupil: $6020.29","South Dakota,2013<br>Spending per pupil: $5029.15","Tennessee,2013<br>Spending per pupil: $5226.24","Texas,2013<br>Spending per pupil: $5399.05","Utah,2013<br>Spending per pupil: $4070.46","Vermont,2013<br>Spending per pupil: $11287.84","Virginia,2013<br>Spending per pupil: $7234.89","Washington,2013<br>Spending per pupil: $6150.15","West Virginia,2013<br>Spending per pupil: $7324.33","Wisconsin,2013<br>Spending per pupil: $7105.46","Wyoming,2013<br>Spending per pupil: $10247.96"],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"type":"choropleth","marker":{"line":{"colorbar":{"title":"","ticklen":2},"cmin":3231.66,"cmax":18810,"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":false,"color":[5737.53,11627.92,4080.33,5888.41,6117.39,5588.17,9967.26,8059.15,17281.25,5381.09,5919.91,5368.93,4196.29,7318.48,5231.47,6789.69,5991.03,5833.59,6184.22,7923.62,8037.68,8982.03,6510.56,6807.54,5151.48,5915.88,6468.64,7154.84,5389.46,9220.25,11298.86,5641.39,12587.49,5169.59,6967.19,6834.96,5072.38,6181.43,8634.43,9803.02,6020.29,5029.15,5226.24,5399.05,4070.46,11287.84,7234.89,6150.15,7324.33,7105.46,10247.96]}},"geo":"geo","visible":true}],"traces":[0]},{"name":"2014","data":[{"colorbar":{"title":"inf_adj_perchild","ticklen":2},"colorscale":"Viridis","showscale":true,"locationmode":"USA-states","z":[5780.11,11504.83,4230.1,5903.22,6239.97,5766.69,10294.52,8147.89,16982.93,5517.44,5946.18,5976.66,4132.83,7547.2,5154.22,6913.13,6032.17,5734.82,6183.72,8088.48,8082.85,9340.28,6459.82,6924.47,5149.14,5984.15,6623.21,7177.94,5366.25,9400.56,11724.94,5591.38,12890.74,5066.61,7004.94,6922.35,5042.36,6365.6,8561.96,9792.14,6225.47,5160.02,5342.28,5504.92,3983.1,11462.97,7330.3,6415.44,7242.8,7100.68,10226.78],"locations":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"frame":"2014","ids":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"text":["Alabama,2014<br>Spending per pupil: $5780.11","Alaska,2014<br>Spending per pupil: $11504.83","Arizona,2014<br>Spending per pupil: $4230.1","Arkansas,2014<br>Spending per pupil: $5903.22","California,2014<br>Spending per pupil: $6239.97","Colorado,2014<br>Spending per pupil: $5766.69","Connecticut,2014<br>Spending per pupil: $10294.52","Delaware,2014<br>Spending per pupil: $8147.89","District of Columbia,2014<br>Spending per pupil: $16982.93","Florida,2014<br>Spending per pupil: $5517.44","Georgia,2014<br>Spending per pupil: $5946.18","Hawaii,2014<br>Spending per pupil: $5976.66","Idaho,2014<br>Spending per pupil: $4132.83","Illinois,2014<br>Spending per pupil: $7547.2","Indiana,2014<br>Spending per pupil: $5154.22","Iowa,2014<br>Spending per pupil: $6913.13","Kansas,2014<br>Spending per pupil: $6032.17","Kentucky,2014<br>Spending per pupil: $5734.82","Louisiana,2014<br>Spending per pupil: $6183.72","Maine,2014<br>Spending per pupil: $8088.48","Maryland,2014<br>Spending per pupil: $8082.85","Massachusetts,2014<br>Spending per pupil: $9340.28","Michigan,2014<br>Spending per pupil: $6459.82","Minnesota,2014<br>Spending per pupil: $6924.47","Mississippi,2014<br>Spending per pupil: $5149.14","Missouri,2014<br>Spending per pupil: $5984.15","Montana,2014<br>Spending per pupil: $6623.21","Nebraska,2014<br>Spending per pupil: $7177.94","Nevada,2014<br>Spending per pupil: $5366.25","New Hampshire,2014<br>Spending per pupil: $9400.56","New Jersey,2014<br>Spending per pupil: $11724.94","New Mexico,2014<br>Spending per pupil: $5591.38","New York,2014<br>Spending per pupil: $12890.74","North Carolina,2014<br>Spending per pupil: $5066.61","North Dakota,2014<br>Spending per pupil: $7004.94","Ohio,2014<br>Spending per pupil: $6922.35","Oklahoma,2014<br>Spending per pupil: $5042.36","Oregon,2014<br>Spending per pupil: $6365.6","Pennsylvania,2014<br>Spending per pupil: $8561.96","Rhode Island,2014<br>Spending per pupil: $9792.14","South Carolina,2014<br>Spending per pupil: $6225.47","South Dakota,2014<br>Spending per pupil: $5160.02","Tennessee,2014<br>Spending per pupil: $5342.28","Texas,2014<br>Spending per pupil: $5504.92","Utah,2014<br>Spending per pupil: $3983.1","Vermont,2014<br>Spending per pupil: $11462.97","Virginia,2014<br>Spending per pupil: $7330.3","Washington,2014<br>Spending per pupil: $6415.44","West Virginia,2014<br>Spending per pupil: $7242.8","Wisconsin,2014<br>Spending per pupil: $7100.68","Wyoming,2014<br>Spending per pupil: $10226.78"],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"type":"choropleth","marker":{"line":{"colorbar":{"title":"","ticklen":2},"cmin":3231.66,"cmax":18810,"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":false,"color":[5780.11,11504.83,4230.1,5903.22,6239.97,5766.69,10294.52,8147.89,16982.93,5517.44,5946.18,5976.66,4132.83,7547.2,5154.22,6913.13,6032.17,5734.82,6183.72,8088.48,8082.85,9340.28,6459.82,6924.47,5149.14,5984.15,6623.21,7177.94,5366.25,9400.56,11724.94,5591.38,12890.74,5066.61,7004.94,6922.35,5042.36,6365.6,8561.96,9792.14,6225.47,5160.02,5342.28,5504.92,3983.1,11462.97,7330.3,6415.44,7242.8,7100.68,10226.78]}},"geo":"geo","visible":true}],"traces":[0]},{"name":"2015","data":[{"colorbar":{"title":"inf_adj_perchild","ticklen":2},"colorscale":"Viridis","showscale":true,"locationmode":"USA-states","z":[5763.54,12108.48,4145.14,5912.35,6761.43,5874.13,10561.04,8229.12,17096.82,5541.45,6082.12,5536.77,4140.37,7663.34,5155.53,7052.83,6063.31,5811,6269.08,8379.64,8196.36,9509.73,6565.84,7148.72,5257.99,6111.19,6565.07,7289.62,5424.31,9629.52,11518.04,6033.19,13300.28,5201.92,7476.3,7072.5,4958.69,6642.77,8830.53,9961.4,6287.85,5208.84,5278.42,5601.95,3941.24,11718.89,7418.36,6731.1,7289.83,7150.86,10327.04],"locations":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"frame":"2015","ids":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"text":["Alabama,2015<br>Spending per pupil: $5763.54","Alaska,2015<br>Spending per pupil: $12108.48","Arizona,2015<br>Spending per pupil: $4145.14","Arkansas,2015<br>Spending per pupil: $5912.35","California,2015<br>Spending per pupil: $6761.43","Colorado,2015<br>Spending per pupil: $5874.13","Connecticut,2015<br>Spending per pupil: $10561.04","Delaware,2015<br>Spending per pupil: $8229.12","District of Columbia,2015<br>Spending per pupil: $17096.82","Florida,2015<br>Spending per pupil: $5541.45","Georgia,2015<br>Spending per pupil: $6082.12","Hawaii,2015<br>Spending per pupil: $5536.77","Idaho,2015<br>Spending per pupil: $4140.37","Illinois,2015<br>Spending per pupil: $7663.34","Indiana,2015<br>Spending per pupil: $5155.53","Iowa,2015<br>Spending per pupil: $7052.83","Kansas,2015<br>Spending per pupil: $6063.31","Kentucky,2015<br>Spending per pupil: $5811","Louisiana,2015<br>Spending per pupil: $6269.08","Maine,2015<br>Spending per pupil: $8379.64","Maryland,2015<br>Spending per pupil: $8196.36","Massachusetts,2015<br>Spending per pupil: $9509.73","Michigan,2015<br>Spending per pupil: $6565.84","Minnesota,2015<br>Spending per pupil: $7148.72","Mississippi,2015<br>Spending per pupil: $5257.99","Missouri,2015<br>Spending per pupil: $6111.19","Montana,2015<br>Spending per pupil: $6565.07","Nebraska,2015<br>Spending per pupil: $7289.62","Nevada,2015<br>Spending per pupil: $5424.31","New Hampshire,2015<br>Spending per pupil: $9629.52","New Jersey,2015<br>Spending per pupil: $11518.04","New Mexico,2015<br>Spending per pupil: $6033.19","New York,2015<br>Spending per pupil: $13300.28","North Carolina,2015<br>Spending per pupil: $5201.92","North Dakota,2015<br>Spending per pupil: $7476.3","Ohio,2015<br>Spending per pupil: $7072.5","Oklahoma,2015<br>Spending per pupil: $4958.69","Oregon,2015<br>Spending per pupil: $6642.77","Pennsylvania,2015<br>Spending per pupil: $8830.53","Rhode Island,2015<br>Spending per pupil: $9961.4","South Carolina,2015<br>Spending per pupil: $6287.85","South Dakota,2015<br>Spending per pupil: $5208.84","Tennessee,2015<br>Spending per pupil: $5278.42","Texas,2015<br>Spending per pupil: $5601.95","Utah,2015<br>Spending per pupil: $3941.24","Vermont,2015<br>Spending per pupil: $11718.89","Virginia,2015<br>Spending per pupil: $7418.36","Washington,2015<br>Spending per pupil: $6731.1","West Virginia,2015<br>Spending per pupil: $7289.83","Wisconsin,2015<br>Spending per pupil: $7150.86","Wyoming,2015<br>Spending per pupil: $10327.04"],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"type":"choropleth","marker":{"line":{"colorbar":{"title":"","ticklen":2},"cmin":3231.66,"cmax":18810,"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":false,"color":[5763.54,12108.48,4145.14,5912.35,6761.43,5874.13,10561.04,8229.12,17096.82,5541.45,6082.12,5536.77,4140.37,7663.34,5155.53,7052.83,6063.31,5811,6269.08,8379.64,8196.36,9509.73,6565.84,7148.72,5257.99,6111.19,6565.07,7289.62,5424.31,9629.52,11518.04,6033.19,13300.28,5201.92,7476.3,7072.5,4958.69,6642.77,8830.53,9961.4,6287.85,5208.84,5278.42,5601.95,3941.24,11718.89,7418.36,6731.1,7289.83,7150.86,10327.04]}},"geo":"geo","visible":true}],"traces":[0]},{"name":"2016","data":[{"colorbar":{"title":"inf_adj_perchild","ticklen":2},"colorscale":"Viridis","showscale":true,"locationmode":"USA-states","z":[5671.34,10626.98,4145.82,5927.9,7165.3,6062.13,10810.38,8438.22,17657.53,5503.66,6248.02,5722.68,4201.14,7732.13,5200.25,7137.38,6009.28,5881.51,6219.2,8453.94,7328.09,9491.46,6589.71,7341.19,5354.27,6148.11,6667.79,7474.58,5543.25,9824.14,11593.92,5859.29,12767.29,5193.97,7546.12,7329.43,4895.7,6843.22,9129.47,10197.31,6383.63,5296.57,5232.17,5629.72,4073.49,12033.19,7275.21,7177.63,7254.25,7109.84,10589.43],"locations":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"frame":"2016","ids":["AL","AK","AZ","AR","CA","CO","CT","DE",null,"FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"text":["Alabama,2016<br>Spending per pupil: $5671.34","Alaska,2016<br>Spending per pupil: $10626.98","Arizona,2016<br>Spending per pupil: $4145.82","Arkansas,2016<br>Spending per pupil: $5927.9","California,2016<br>Spending per pupil: $7165.3","Colorado,2016<br>Spending per pupil: $6062.13","Connecticut,2016<br>Spending per pupil: $10810.38","Delaware,2016<br>Spending per pupil: $8438.22","District of Columbia,2016<br>Spending per pupil: $17657.53","Florida,2016<br>Spending per pupil: $5503.66","Georgia,2016<br>Spending per pupil: $6248.02","Hawaii,2016<br>Spending per pupil: $5722.68","Idaho,2016<br>Spending per pupil: $4201.14","Illinois,2016<br>Spending per pupil: $7732.13","Indiana,2016<br>Spending per pupil: $5200.25","Iowa,2016<br>Spending per pupil: $7137.38","Kansas,2016<br>Spending per pupil: $6009.28","Kentucky,2016<br>Spending per pupil: $5881.51","Louisiana,2016<br>Spending per pupil: $6219.2","Maine,2016<br>Spending per pupil: $8453.94","Maryland,2016<br>Spending per pupil: $7328.09","Massachusetts,2016<br>Spending per pupil: $9491.46","Michigan,2016<br>Spending per pupil: $6589.71","Minnesota,2016<br>Spending per pupil: $7341.19","Mississippi,2016<br>Spending per pupil: $5354.27","Missouri,2016<br>Spending per pupil: $6148.11","Montana,2016<br>Spending per pupil: $6667.79","Nebraska,2016<br>Spending per pupil: $7474.58","Nevada,2016<br>Spending per pupil: $5543.25","New Hampshire,2016<br>Spending per pupil: $9824.14","New Jersey,2016<br>Spending per pupil: $11593.92","New Mexico,2016<br>Spending per pupil: $5859.29","New York,2016<br>Spending per pupil: $12767.29","North Carolina,2016<br>Spending per pupil: $5193.97","North Dakota,2016<br>Spending per pupil: $7546.12","Ohio,2016<br>Spending per pupil: $7329.43","Oklahoma,2016<br>Spending per pupil: $4895.7","Oregon,2016<br>Spending per pupil: $6843.22","Pennsylvania,2016<br>Spending per pupil: $9129.47","Rhode Island,2016<br>Spending per pupil: $10197.31","South Carolina,2016<br>Spending per pupil: $6383.63","South Dakota,2016<br>Spending per pupil: $5296.57","Tennessee,2016<br>Spending per pupil: $5232.17","Texas,2016<br>Spending per pupil: $5629.72","Utah,2016<br>Spending per pupil: $4073.49","Vermont,2016<br>Spending per pupil: $12033.19","Virginia,2016<br>Spending per pupil: $7275.21","Washington,2016<br>Spending per pupil: $7177.63","West Virginia,2016<br>Spending per pupil: $7254.25","Wisconsin,2016<br>Spending per pupil: $7109.84","Wyoming,2016<br>Spending per pupil: $10589.43"],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"type":"choropleth","marker":{"line":{"colorbar":{"title":"","ticklen":2},"cmin":3231.66,"cmax":18810,"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":false,"color":[5671.34,10626.98,4145.82,5927.9,7165.3,6062.13,10810.38,8438.22,17657.53,5503.66,6248.02,5722.68,4201.14,7732.13,5200.25,7137.38,6009.28,5881.51,6219.2,8453.94,7328.09,9491.46,6589.71,7341.19,5354.27,6148.11,6667.79,7474.58,5543.25,9824.14,11593.92,5859.29,12767.29,5193.97,7546.12,7329.43,4895.7,6843.22,9129.47,10197.31,6383.63,5296.57,5232.17,5629.72,4073.49,12033.19,7275.21,7177.63,7254.25,7109.84,10589.43]}},"geo":"geo","visible":true}],"traces":[0]}],"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<p>I recently went back to this dataset and played around some more with other variables and other chart types. Here is the trend over time in spending on libraries by state. If we assume that more $$ = better libraries, then California, Illinois, and New York seem like good places for book lovers. But, since we don’t know how many libraries are in each state, or how the money is allocated, this might not be true.</p>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="us-spending-on-education_files/figure-html5/library_spend_plot-1.png" width="624" /></p>
+</div>
+<p>I looked at one year, 2016, and made a map using a package called <code>{statebins}</code> to create a cool looking map which shows state spending on higher education. Lighter colors indicate higher spending per pupil.</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="us-spending-on-education_files/figure-html5/higher_ed_plot-1.png" width="624" /></p>
+</div>
+<h1 id="spending-and-achievement">Spending and Achievement</h1>
+<p>This was all well and fun but what does one do with this data besides make some pretty-ish maps? I was curious about the relationship between state spending on education and student achievement. If states spend more per pupil, does that translate to higher student outcomes?</p>
+<p>I used graduation rates from the <a href="nces.ed.gov/">National Center on Education Statistics</a> as a proxy of achievement. They have data from the 2010-2011 school year through 2017-2018 school year. These graphs by year show that graduation rates were climbing across the board during all seven years. If you go back to my first map, you’ll remember that spending on education has also increased over time. Are the two trends related?</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="us-spending-on-education_files/figure-html5/graduation_plot-1.png" width="624" /></p>
+</div>
+<p>I merged together these two datasets for 2011 to 2016, since these are the years I have data for both spending and graduation rates. The following series of graphs show how spending is related to graduation rates for each state. The dashed line is the linear relationship between the two, while the dots indicate the individual states. While in general, more state spending is associated with higher graduation rates, there are several states that don’t follow this pattern. For example, Alaska spends a lot per student, but has low graduation rates. But Utah has lower expenditures, and high graduation rates.</p>
+<p>I’d like to point out that this is a very simplistic model. It predicts student outcomes based on only one variable, state spending. As many of us know, states vary greatly in terms of student diversity, budgets, number of teachers and many other factors which may impact student outcomes. This model doesn’t account for any of those variations, so the interpretation is quite limited in scope, too.</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="us-spending-on-education_files/figure-html5/grad_spend_plot-1.png" width="624" /></p>
+</div>
+<p>You might be thinking, “changing spending doesn’t really change graduation rates.” When we look at the dotted line, that definitely seems to be the message. A jump in spending, like from $4,000 per pupil to $6,000 per pupil is associated with a small percentage point change in graduation rates. But to be clear,</p>
+<p><u><strong>I am not endorsing a reduction in state spending on education.</strong></u></p>
+<p>The Learning Policy Institute, an education policy and research organization, developed a <a href="https://learningpolicyinstitute.org/sites/default/files/product-files/How_Money_Matters_REPORT.pdf">report</a> summarizing research which definitively shows that money matters. It finds that on average, across contexts, increased investment in education led to higher student outcomes.</p>
+<p>The LPI report and other studies (see More Readings, below) find that how and where money is spent is important to increasing student outcomes. Investing in high quality teachers, focusing on disadvantaged students (such as low-income, English language learners or students with special needs), and investing in Pre-K education are promising candidates for improving students’ learning.</p>
+<p>In future posts, I’d like to look more closely at specific states which have lower than average spending per pupil AND high graduation rates. With this kind of information, we might be able to glean more insights into what kind of spending translates to higher outcomes and assess if these practices could be effective elsewhere.</p>
+<h3 id="more-readings">More Readings</h3>
+<p><a href="https://www.npr.org/sections/ed/2016/04/25/468157856/can-more-money-fix-americas-schools">Can More Money Fix America’s Schools?</a> from NPR</p>
+<p><a href="https://www.brookings.edu/blog/up-front/2016/07/21/why-money-matters-for-improving-education/">Why money matters for improving education</a> from Brookings</p>
+<p><a href="https://www.educationnext.org/costs-cutting-school-spending-lessons-from-great-recession/">The Costs of Cutting School Spending</a> from Education Next</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom"></div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>

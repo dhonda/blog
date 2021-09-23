@@ -1,7 +1,7 @@
 ---
 title: "US Spending on Education"
 description: |
-  How much do US states spend on public education? How is spending realted to student achievement?
+  How much do US states spend on public education? How is spending related to student achievement?
 author:
   - name: Delanie Honda
     url: {}
