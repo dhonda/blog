@@ -1,0 +1,207 @@
+---
+title: "US Spending on Education"
+description: |
+  How much do US states spend on public education? How is spending realted to student achievement?
+author:
+  - name: Delanie Honda
+    url: {}
+date: 09-16-2021
+preview: unsplash_graduation.jpg
+output:
+  distill::distill_article:
+    self_contained: false
+draft: false
+---
+
+```{r global_us_spend, echo = FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
+```
+
+```{r setup, include = FALSE}
+library(tidyverse)
+library(plotly)
+#install.packages("statebins")
+library(statebins)
+
+kids <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-15/kids.csv')
+
+graduation <- readxl::read_xls("graduation_rates.xls")
+```
+
+![Photo by Photo by Vasily Koloda on Unsplash](unsplash_graduation.jpg "Students throw graduation caps in the air in front of a building")
+
+# About
+
+From the [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday) repo:
+
+> A weekly data project aimed at the R ecosystem. As this project was borne out of the R4DS Online Learning Community and the R for Data Science textbook, an emphasis was placed on understanding how to summarize and arrange data to make meaningful charts with {ggplot2}, {tidyr}, {dplyr}, and other tools in the {tidyverse} ecosystem.
+
+> Every week we post a raw dataset, a chart or article related to that dataset, and ask you to explore the data. While the dataset will be "tamed", it will not always be tidy! As such you might need to apply various R for Data Science techniques to wrangle the data into a true tidy format. The goal of TidyTuesday is to apply your R skills, get feedback, explore other's work, and connect with the greater \#RStats community! As such we encourage everyone of all skills to participate!
+
+Although I haven't participated in many Tidy Tuesday weeks, it has been a great resource for practicing R and data analysis/wrangling/visualization skills. I've also found the \#rstats community on Twitter very welcoming and helpful to everyone. I highly recommend playing with datasets or just scrolling through the Tidy Tuesday submissions for inspiration.
+
+Around this time last year, the Tidy Tuesday dataset was about US education spending. The dataset comes from the [Urban Institute](https://datacatalog.urban.org/search/type/dataset) and has tracked a number of variables such as SNAP spending, public spending on libraries and parks and recreation, and others from 1997 to 2018.
+
+# Exploration
+
+At the time I was quite excited to make a choropleth map (I still am). I even made it animate! This map is pretty simple; it shows that state spending per pupil (adjusted for inflation) has steadily increased across all states over the past decade. Lighter colors - greens and yellows - indicate higher levels of spending per pupil.
+
+```{r pk12_spending, echo = FALSE, include = FALSE}
+kids_pk12_spend <- kids %>%
+  subset(variable == "PK12ed")
+
+kids_pk12_spend$code <- state.abb[match(kids_pk12_spend$state, state.name)]
+kids_pk12_spend$code[9] <- "DC"
+
+kids_pk12_spend$inf_adj_perchild <- kids_pk12_spend$inf_adj_perchild*1000
+kids_pk12_spend$inf_adj_perchild <- round(kids_pk12_spend$inf_adj_perchild, 2)
+
+g <- list(
+  scope = 'usa',
+  projection = list(type = 'albers usa'),
+  showlakes = TRUE,
+  lakecolor = toRGB('white')
+)
+
+f <- list(
+  size = 14
+)
+
+fig <- plot_geo(kids_pk12_spend, locationmode = "USA-states") %>%
+  add_trace(z = ~inf_adj_perchild, color = ~inf_adj_perchild, colorscale = 'Viridis', locations = ~code, frame = ~year, ids = ~code, text = ~paste0(state, ",", year, "<br>", "Spending per pupil: $", inf_adj_perchild), hoverinfo = "text") %>%
+  colorbar(tickprefix = "$") %>%
+  layout(geo = g, title = ~paste0("<b>Public spending on elementary\n and secondary education (1997 - 2016)</b>", "<br>", "(Values adjusted for inflation, in 2016 dollars)"))
+```
+
+```{r pk12_spending_plot, echo = FALSE, fig.height=7}
+fig
+```
+
+I recently went back to this dataset and played around some more with other variables and other chart types. Here is the trend over time in spending on libraries by state. If we assume that more \$\$ = better libraries, then California, Illinois, and New York seem like good places for book lovers. But, since we don't know how many libraries are in each state, or how the money is allocated, this might not be true.
+
+```{r library_spend, echo = FALSE}
+lib_spend <- kids %>% 
+  subset(variable == "lib")
+
+lib_spend_plot <- ggplot(lib_spend, aes(x = year, y = inf_adj)) + 
+  geom_line() + 
+  facet_wrap(vars(state)) +
+  theme(axis.text.x=element_text(angle=90, size=8)) +
+  ylab("Dollars (adjusted for inflation)") +
+  xlab("Year")+
+  ggtitle("Library spending by state")+
+  scale_y_continuous(labels = scales::dollar_format()) +
+  labs(caption = "Source: Urban Institute via Tidy Tuesday")
+```
+
+```{r library_spend_plot, echo = FALSE, fig.height=7.5}
+lib_spend_plot
+```
+
+I looked at one year, 2016, and made a map using a package called `{statebins}` to create a cool looking map which shows state spending on higher education. Lighter colors indicate higher spending per pupil.
+
+```{r higher_ed, echo = FALSE, include = FALSE}
+higherEd_spend <- kids %>%
+  subset(variable == "highered")
+
+higherEd_spend$inf_adj <- higherEd_spend$inf_adj_perchild <- higherEd_spend$inf_adj_perchild*1000
+
+highEd_plot <- ggplot(subset(higherEd_spend, year == 2016), aes(state = state, fill = inf_adj_perchild)) +
+  geom_statebins() +
+  theme_void() +
+  scale_fill_distiller(palette = "YlGn")+
+  theme(
+    legend.position = "bottom"
+  ) +
+  labs(title = "State spending per pupil, higher education (2016)", 
+       fill = "Dollars (adjusted for inflation)",
+       caption = "Source: Urban Institute via Tidy Tuesday")
+```
+
+```{r higher_ed_plot, echo = FALSE}
+highEd_plot
+```
+
+# Spending and Achievement
+
+This was all well and fun but what does one do with this data besides make some pretty-ish maps? I was curious about the relationship between state spending on education and student achievement. If states spend more per pupil, does that translate to higher student outcomes?
+
+I used graduation rates from the [National Center on Education Statistics](nces.ed.gov/) as a proxy of achievement. They have data from the 2010-2011 school year through 2017-2018 school year. These graphs by year show that graduation rates were climbing across the board during all seven years. If you go back to my first map, you'll remember that spending on education has also increased over time. Are the two trends related?
+
+```{r graduation, echo = FALSE, include = FALSE}
+graduation <- graduation[, c(1,2, 4, 6, 8, 9, 10, 11, 12)]
+
+graduation <- graduation %>%
+  dplyr::rename("state" = "Table 219.46. Public high school 4-year adjusted cohort graduation rate (ACGR), by selected student characteristics and state: 2010-11 through 2017-18", "2011" ="...2","2012" = "...4", "2013" = "...6" , "2014" =  "...8", "2015" = "...9", "2016" = "...10", "2017" = "...11", "2018" = "...12")
+
+graduation <- graduation[-c(1:6),]
+graduation <- graduation[-c(52:64),]
+
+graduation$state[1] <- "Alabama"
+graduation <- graduation %>%
+  gather("2011":"2018", key = "year", value = "percent")
+
+graduation$percent <- as.numeric(graduation$percent)
+graduation$year <- as.numeric(graduation$year)
+
+grad_state <- ggplot(graduation, aes(x = year, y = percent)) +
+  geom_line() + 
+  facet_wrap(~state) +
+  theme(axis.text.x=element_text(angle=90, size=8))+
+  xlab("Year") +
+  ylab("Percent graduated") +
+  ggtitle("Graduation rates by state")
+```
+
+```{r graduation_plot, echo = FALSE, fig.height=7.5}
+grad_state
+```
+
+I merged together these two datasets for 2011 to 2016, since these are the years I have data for both spending and graduation rates. The following series of graphs show how spending is related to graduation rates for each state. The dashed line is the linear relationship between the two, while the dots indicate the individual states. While in general, more state spending is associated with higher graduation rates, there are several states that don't follow this pattern. For example, Alaska spends a lot per student, but has low graduation rates. But Utah has lower expenditures, and high graduation rates.
+
+I'd like to point out that this is a very simplistic model. It predicts student outcomes based on only one variable, state spending. As many of us know, states vary greatly in terms of student diversity, budgets, number of teachers and many other factors which may impact student outcomes. This model doesn't account for any of those variations, so the interpretation is quite limited in scope, too.
+
+```{r grad_spend, echo = FALSE, include = FALSE}
+kids_pk12_spend_11_16 <- kids_pk12_spend %>% subset(year %in% c(2011:2016))
+
+graduation_11_16 <- graduation %>% subset(year %in% c(2011:2016))
+
+df <- inner_join(kids_pk12_spend_11_16, graduation_11_16, by = c("state","year"))
+
+#remove DC, it is skewing results
+df <- df[-c(9,60, 111, 162, 213, 264),]
+df$inf_adj_perchildl2 <- log(df$inf_adj_perchild, base = 2)
+
+relationship <- ggplot(df, aes(x = inf_adj_perchild, y = percent)) + 
+  geom_point(color = "#40B0A6") + 
+  geom_smooth(method = lm, se = FALSE, linetype = "dashed", color = "#E1BE6A") + 
+  geom_text(label = df$code, check_overlap = TRUE, hjust = -0.5) + facet_wrap(vars(year), ncol = 2) +
+  labs(title = "Graduation rates and state spending (2011 - 2016)", 
+       x = "Dollars (adjusted for inflation)", 
+       y = "Percent graduated") +
+  scale_x_continuous(labels = scales::dollar_format()) +
+  scale_y_continuous(labels= scales::percent_format())+
+  ylim(60, max(df$percent))
+```
+
+```{r grad_spend_plot, echo = FALSE, fig.height=7}
+relationship
+```
+
+You might be thinking, "changing spending doesn't really change graduation rates." When we look at the dotted line, that definitely seems to be the message. A jump in spending, like from \$4,000 per pupil to \$6,000 per pupil is associated with a small percentage point change in graduation rates. But to be clear,
+
+[**I am not endorsing a reduction in state spending on education.**]{.ul}
+
+The Learning Policy Institute, an education policy and research organization, developed a [report](https://learningpolicyinstitute.org/sites/default/files/product-files/How_Money_Matters_REPORT.pdf) summarizing research which definitively shows that money matters. It finds that on average, across contexts, increased investment in education led to higher student outcomes.
+
+The LPI report and other studies (see More Readings, below) find that how and where money is spent is important to increasing student outcomes. Investing in high quality teachers, focusing on disadvantaged students (such as low-income, English language learners or students with special needs), and investing in Pre-K education are promising candidates for improving students' learning.
+
+In future posts, I'd like to look more closely at specific states which have lower than average spending per pupil AND high graduation rates. With this kind of information, we might be able to glean more insights into what kind of spending translates to higher outcomes and assess if these practices could be effective elsewhere.
+
+### More Readings
+
+[Can More Money Fix America's Schools?](https://www.npr.org/sections/ed/2016/04/25/468157856/can-more-money-fix-americas-schools) from NPR
+
+[Why money matters for improving education](https://www.brookings.edu/blog/up-front/2016/07/21/why-money-matters-for-improving-education/) from Brookings
+
+[The Costs of Cutting School Spending](https://www.educationnext.org/costs-cutting-school-spending-lessons-from-great-recession/) from Education Next
