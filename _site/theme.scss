@@ -1,0 +1,124 @@
+/* -- scss: defaults */
+$teal: #40B0A6;
+$teal-dark: #2D8C86;
+$brown: #4A4237;
+$body-color: #333333;
+
+$font-heading: "Overpass", sans-serif;
+$font-body: "Quattrocento Sans", sans-serif;
+
+@import url("https://fonts.googleapis.com/css2?family=Overpass");
+@import url("https://fonts.googleapis.com/css2?family=Quattrocento+Sans");
+
+/*--scss:rules--*/
+
+/* Navbar */
+.navbar {
+  font-family: $font-heading;
+
+  .navbar-brand {
+    font-family: $font-heading;
+    font-weight: 600;
+    color: $teal;
+
+    &:hover {
+      color: $teal !important;
+      text-decoration: none;
+      cursor: default;
+    }
+  }
+
+  a {
+    font-family: $font-heading;
+
+    &.active {
+      color: $teal-dark !important;
+    }
+
+    &:hover {
+      color: $teal-dark;
+    }
+  }
+}
+
+/* Headers */
+h1 {
+  font-family: $font-heading;
+  color: $teal;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-heading;
+  color: $brown;
+}
+
+/* Body */
+body,
+p {
+  font-family: $font-body;
+  color: $body-color;
+}
+
+/* Icons */
+.quarto-about {
+  .about-links {
+    a {
+      color: $teal !important;
+    }
+
+    i {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+/* image */
+.quarto-about {
+  .about-image img {
+    border: 2px solid $brown !important;
+  }
+}
+
+
+/* Links in articles */
+d-article {
+  a {
+    border-bottom: 2px solid;
+    text-decoration: none;
+  }
+}
+
+/* Cards */
+.publication-card {
+  border: 1px solid $brown;
+  border-radius: 1rem;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.project-card {
+  border: 1px solid #fff;
+  border-radius: 1rem;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+  background: rgba(74, 66, 55, 0.4);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+}
